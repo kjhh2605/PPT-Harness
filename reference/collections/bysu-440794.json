@@ -1,0 +1,104 @@
+{
+  "id": "bysu-440794",
+  "title": "촬영 스튜디오 회사소개서",
+  "sourceUrl": "https://notefolio.net/bysu.ppt/440794",
+  "author": "bysu",
+  "slides": [
+    {
+      "id": "S-bysu-440794-01",
+      "order": 1,
+      "title": "ALL STUDIO · 표지",
+      "description": "좌측 초대형 워드마크와 넓은 여백, 하단 우측 정렬 소개 문구, 우측 38% 세로 스튜디오 이미지",
+      "type": "light",
+      "file": "S-bysu-440794-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/440794",
+      "preview": "previews/S-bysu-440794-01.png",
+      "layout": "좌측 초대형 워드마크와 넓은 여백, 하단 우측 정렬 소개 문구, 우측 38% 세로 스튜디오 이미지",
+      "tags": [
+        "표지",
+        "비대칭 2단",
+        "건축 이미지"
+      ]
+    },
+    {
+      "id": "S-bysu-440794-02",
+      "order": 2,
+      "title": "1/ INTRODUCE · 촬영 서비스",
+      "description": "47%와 53%로 나눈 2단; 왼쪽 소개와 로고, 오른쪽 두 개 번호 서비스 설명",
+      "type": "light",
+      "file": "S-bysu-440794-02.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/440794",
+      "preview": "previews/S-bysu-440794-02.png",
+      "layout": "47%와 53%로 나눈 2단; 왼쪽 소개와 로고, 오른쪽 두 개 번호 서비스 설명",
+      "tags": [
+        "소개",
+        "2단",
+        "번호형 설명"
+      ]
+    },
+    {
+      "id": "S-bysu-440794-03",
+      "order": 3,
+      "title": "2/ PRODUCT PROCESS · 제품 촬영 과정",
+      "description": "상단 제목·3행 설명, 중앙 다섯 개 연결 원, 하단 네 개 혜택 열",
+      "type": "light",
+      "file": "S-bysu-440794-03.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/440794",
+      "preview": "previews/S-bysu-440794-03.png",
+      "layout": "상단 제목·3행 설명, 중앙 다섯 개 연결 원, 하단 네 개 혜택 열",
+      "tags": [
+        "프로세스",
+        "5단계",
+        "4열 혜택"
+      ]
+    },
+    {
+      "id": "S-bysu-440794-04",
+      "order": 4,
+      "title": "4/ STUDIO · 공간 소개",
+      "description": "4열 2행 모자이크: 2열 설명 패널, 건축 사진 4개, 로고 타일, 촬영 장비 사진",
+      "type": "light",
+      "file": "S-bysu-440794-04.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/440794",
+      "preview": "previews/S-bysu-440794-04.png",
+      "layout": "4열 2행 모자이크: 2열 설명 패널, 건축 사진 4개, 로고 타일, 촬영 장비 사진",
+      "tags": [
+        "공간 소개",
+        "모자이크",
+        "사진 그리드"
+      ]
+    },
+    {
+      "id": "S-bysu-440794-05",
+      "order": 5,
+      "title": "ALL STUDIO · 올인원 콘텐츠 파트너",
+      "description": "스튜디오 공간 배경과 왼쪽 중앙의 겹친 사각 소개 카드",
+      "type": "light",
+      "file": "S-bysu-440794-05.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/440794",
+      "preview": "previews/S-bysu-440794-05.png",
+      "layout": "스튜디오 공간 배경과 왼쪽 중앙의 겹친 사각 소개 카드",
+      "tags": [
+        "소개",
+        "겹친 카드",
+        "배경 공간"
+      ]
+    },
+    {
+      "id": "S-bysu-440794-06",
+      "order": 6,
+      "title": "ALL STUDIO · 연락처와 위치",
+      "description": "좌측 상단 워드마크와 대형 여백, 하단 두 열 연락처 및 우측 약도",
+      "type": "light",
+      "file": "S-bysu-440794-06.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/440794",
+      "preview": "previews/S-bysu-440794-06.png",
+      "layout": "좌측 상단 워드마크와 대형 여백, 하단 두 열 연락처 및 우측 약도",
+      "tags": [
+        "마무리",
+        "연락처",
+        "약도"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "id": "bysu-453416",
+  "title": "헬스케어 스타트업 IR자료",
+  "source_url": "https://notefolio.net/bysu.ppt/453416",
+  "pages": [
+    {
+      "id": "S-bysu-453416-01",
+      "title": "Fibud · 운동 강사의 성장을 돕는 교육 솔루션",
+      "html": "reference/slides/S-bysu-453416-01.html",
+      "preview": "reference/previews/S-bysu-453416-01.png",
+      "layout": "좌하단 대형 Fibud 워드마크와 우측 높이가 다른 휴대폰 2대",
+      "summary": "좌하단 대형 Fibud 워드마크와 우측 높이가 다른 휴대폰 2대"
+    },
+    {
+      "id": "S-bysu-453416-02",
+      "title": "자격증 및 교육의 비교 선택이 어려운 운동 강사",
+      "html": "reference/slides/S-bysu-453416-02.html",
+      "preview": "reference/previews/S-bysu-453416-02.png",
+      "layout": "상단 제목 아래 동등한 반원형 지표 2개와 하단 2열 핵심 설명",
+      "summary": "상단 제목 아래 동등한 반원형 지표 2개와 하단 2열 핵심 설명"
+    },
+    {
+      "id": "S-bysu-453416-03",
+      "title": "운동 강사를 위한 교육 정보부터 매칭까지",
+      "html": "reference/slides/S-bysu-453416-03.html",
+      "preview": "reference/previews/S-bysu-453416-03.png",
+      "layout": "두 솔루션 설명과 하단 라운드 받침 위 앱 화면 2개",
+      "summary": "두 솔루션 설명과 하단 라운드 받침 위 앱 화면 2개"
+    },
+    {
+      "id": "S-bysu-453416-04",
+      "title": "피벗 커리어 · 교육 정보 솔루션",
+      "html": "reference/slides/S-bysu-453416-04.html",
+      "preview": "reference/previews/S-bysu-453416-04.png",
+      "layout": "좌측 42% 설명 패널과 우측 교육 목록·수강평 휴대폰 2개",
+      "summary": "좌측 42% 설명 패널과 우측 교육 목록·수강평 휴대폰 2개"
+    },
+    {
+      "id": "S-bysu-453416-05",
+      "title": "피벗 커리어 · 경쟁 서비스 비교",
+      "html": "reference/slides/S-bysu-453416-05.html",
+      "preview": "reference/previews/S-bysu-453416-05.png",
+      "layout": "경쟁사 3개와 Fibud의 7개 항목 비교표 및 우측 세로 강조 열",
+      "summary": "경쟁사 3개와 Fibud의 7개 항목 비교표 및 우측 세로 강조 열"
+    },
+    {
+      "id": "S-bysu-453416-06",
+      "title": "민간 협회 관리 솔루션 제공",
+      "html": "reference/slides/S-bysu-453416-06.html",
+      "preview": "reference/previews/S-bysu-453416-06.png",
+      "layout": "중앙 웹 관리 대시보드와 우측 겹친 지도 앱, 하단 곡선 띠의 2행 메시지",
+      "summary": "중앙 웹 관리 대시보드와 우측 겹친 지도 앱, 하단 곡선 띠의 2행 메시지"
+    }
+  ]
+}

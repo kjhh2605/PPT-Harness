@@ -1,0 +1,98 @@
+{
+  "id": "bysu-441794",
+  "title": "커리어 플랫폼 광고 소개서",
+  "sourceUrl": "https://notefolio.net/bysu.ppt/441794",
+  "author": "bysu",
+  "slides": [
+    {
+      "id": "S-bysu-441794-01",
+      "order": 1,
+      "title": "잇지제주 상품 소개서",
+      "description": "좌측 표지 문구, 중앙 하단 마스코트와 우측 기울어진 휴대폰 2대",
+      "type": "light",
+      "file": "S-bysu-441794-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/441794",
+      "preview": "previews/S-bysu-441794-01.png",
+      "layout": "좌측 표지 문구, 중앙 하단 마스코트와 우측 기울어진 휴대폰 2대",
+      "tags": [
+        "표지",
+        "디바이스 목업"
+      ]
+    },
+    {
+      "id": "S-bysu-441794-02",
+      "order": 2,
+      "title": "매년 10만 명 이상의 방문자",
+      "description": "좌상단 설명과 화면 하단·오른쪽을 채운 상승 면적 곡선",
+      "type": "light",
+      "file": "S-bysu-441794-02.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/441794",
+      "preview": "previews/S-bysu-441794-02.png",
+      "layout": "좌상단 설명과 화면 하단·오른쪽을 채운 상승 면적 곡선",
+      "tags": [
+        "성장",
+        "면적 그래프"
+      ]
+    },
+    {
+      "id": "S-bysu-441794-03",
+      "order": 3,
+      "title": "단 한번에 2030 타깃 광고",
+      "description": "좌상단 메시지와 하단 노트북, 우측 SNS·오픈채팅 스마트폰",
+      "type": "light",
+      "file": "S-bysu-441794-03.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/441794",
+      "preview": "previews/S-bysu-441794-03.png",
+      "layout": "좌상단 메시지와 하단 노트북, 우측 SNS·오픈채팅 스마트폰",
+      "tags": [
+        "채널 소개",
+        "디바이스 목업"
+      ]
+    },
+    {
+      "id": "S-bysu-441794-04",
+      "order": 4,
+      "title": "기업과 기관이 청년들과 연결됩니다",
+      "description": "왼쪽 후기 카드와 오른쪽 4행 엇갈린 로고 타일",
+      "type": "light",
+      "file": "S-bysu-441794-04.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/441794",
+      "preview": "previews/S-bysu-441794-04.png",
+      "layout": "왼쪽 후기 카드와 오른쪽 4행 엇갈린 로고 타일",
+      "tags": [
+        "후기",
+        "고객사 로고"
+      ]
+    },
+    {
+      "id": "S-bysu-441794-05",
+      "order": 5,
+      "title": "효율적인 예산을 활용하세요",
+      "description": "회색 문제 카드 뒤에 흰색 해결 카드가 겹치고 우상단 마스코트",
+      "type": "light",
+      "file": "S-bysu-441794-05.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/441794",
+      "preview": "previews/S-bysu-441794-05.png",
+      "layout": "회색 문제 카드 뒤에 흰색 해결 카드가 겹치고 우상단 마스코트",
+      "tags": [
+        "문제 해결",
+        "예산 타깃"
+      ]
+    },
+    {
+      "id": "S-bysu-441794-06",
+      "order": 6,
+      "title": "한 번에 쉽고 간단하게",
+      "description": "왼쪽 4단계 2×2 프로세스와 오른쪽 7개 채널 선택 패널",
+      "type": "light",
+      "file": "S-bysu-441794-06.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/441794",
+      "preview": "previews/S-bysu-441794-06.png",
+      "layout": "왼쪽 4단계 2×2 프로세스와 오른쪽 7개 채널 선택 패널",
+      "tags": [
+        "광고 절차",
+        "프로세스"
+      ]
+    }
+  ]
+}

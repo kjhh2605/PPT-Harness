@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="source" content="https://notefolio.net/bysu.ppt/452912">
+<meta name="reference-image" content="slide-06.webp">
+<title>픽앤센스와 함께 시작하세요 · Gnar</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root {
+  /* Gnar 브랜드 토큰 — Deep Indigo Ink (H 283). 원천: design/palettes/brand.json */
+  --hue: 283;
+  --bg: #EDE9E6;  /* 배경 */
+  --surface: #F7F3EF;  /* 카드·패널 */
+  --text: #262321;  /* 본문 */
+  --muted: #666260;  /* 보조 글자·캡션 */
+  --border: #D1CDCA;  /* 선·격자·비포커스 막대 */
+  --ink: #37356A;  /* 제목·강조 문장 */
+  --hero: #5A54AF;  /* 강조 한 곳(핵심 숫자·포커스 막대·구분선) */
+  --support: #8183A4;  /* 보조 막대·아이콘 */
+  --tint: #DEDFF5;  /* 콜아웃·표 머리 배경 띠 */
+  --brown: #826144;  /* 따뜻한 중립 1 */
+  --taupe: #736756;  /* 따뜻한 중립 2 */
+  --chart-1: var(--hero);
+  --chart-2: var(--support);
+  --chart-3: var(--brown);
+  --chart-4: var(--taupe);
+  --chart-5: var(--border);
+}
+
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+} }
+
+:root[data-theme="dark"] {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+}
+
+/* 발표별 색상 교체 레시피 (oklch 지원 브라우저). hex 토큰은 PPTX 변환용 기준값이며,
+ * 다른 색상으로 바꿀 때는 design/scripts/ladder.py 에 hue 값을 넣어 hex를 다시 생성한다.
+ *   light: ink oklch(.36 .09 H) hero oklch(.50 .14 H) support oklch(.62 .05 H) tint oklch(.91 .03 H)
+ *   dark : ink oklch(.86 .07 H) hero oklch(.70 .14 H) support oklch(.56 .05 H) tint oklch(.29 .04 H) */
+
+
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+.viewport { width: 100%; height: 100%; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center; overflow: hidden; }
+.slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; flex-shrink: 0; fill: var(--text); background: var(--surface); transform-origin: center center; }
+h1, h2, h3, p, figure { margin: 0; }
+svg { display: block; }
+.eyebrow { font-size: 25px; font-weight: 650; color: var(--muted); letter-spacing: -.4px; }
+.slide-title { font-size: 64px; font-weight: 750; line-height: 1.25; letter-spacing: -2.3px; color: var(--ink); word-break: keep-all; }
+.slide-copy { font-size: 28px; line-height: 1.6; letter-spacing: -.6px; color: var(--muted); word-break: keep-all; }
+.slide-header { position: absolute; top: 112px; left: 132px; right: 132px; }
+.slide-header .eyebrow { margin-bottom: 20px; }
+.slide-header .slide-copy { margin-top: 25px; }
+.slide-footer { position: absolute; left: 132px; right: 132px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; font-size: 20px; line-height: 1; color: var(--muted); }
+.wordmark { color: var(--ink); font-size: 30px; font-weight: 800; letter-spacing: -1.4px; }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, .viewport { width: 1920px; height: 1080px; overflow: visible; }
+  .slide { transform: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+
+.slide{background:var(--bg)}
+.kicker{position:absolute;left:100px;top:88px;font-size:36px;font-weight:800;color:var(--ink);line-height:1.2}
+.title{position:absolute;left:100px;top:154px;font-size:49px;line-height:1.42;letter-spacing:-1.9px;font-weight:750;color:var(--text)}
+.card{position:absolute;background:var(--surface);border-radius:46px}
+.card h2{font-size:34px;line-height:1.45;letter-spacing:-1px;font-weight:720;color:var(--text)}
+.card p{font-size:28px;line-height:1.68;letter-spacing:-.9px;color:var(--muted);word-break:keep-all}
+svg text{font-family:'Pretendard Variable',Pretendard,sans-serif}
+.progress{position:absolute;left:112px;right:96px;top:545px;height:14px;border-radius:20px;background:var(--border)}.progress span{display:block;width:315px;height:14px;border-radius:20px;background:var(--hero)}.step-icon{position:absolute;top:420px;width:99px;height:99px}.step{top:604px;width:315px;height:274px;padding:38px 40px}.step h2{font-size:32px;letter-spacing:-1.2px;white-space:nowrap}.step p{font-size:28px;line-height:1.7;margin-top:17px;letter-spacing:-.9px}
+</style>
+</head>
+<body>
+<div class="viewport"><main class="slide" data-slide-id="S-bysu-452912-06" aria-label="픽앤센스와 함께 시작하세요"><p class="kicker">Why us</p><h1 class="title">우리 브랜드에 딱 맞는 공동구매<br>픽앤센스와 함께 시작하세요.</h1><div class="progress"><span></span></div><div class="step-icon" style="left:113px"><svg viewBox="0 0 160 160" style="" aria-label="phone" role="img"><path d="M40 23q-16 8-19 23 8 55 63 88 18 4 33-15l-28-27-17 14q-27-16-37-40l16-16Z" fill="var(--support)"/><path d="M80 19q47 8 52 51M78 40q27 6 31 30" stroke="var(--support)" stroke-width="10" fill="none"/></svg></div><section class="card step" style="left:107px"><h2>브랜드 컨택</h2><p>판매 제품을 선정하고<br>브랜드 및 제조사와<br>협의합니다.</p></section><div class="step-icon" style="left:462px"><svg viewBox="0 0 160 160" style="" aria-label="grid" role="img"><g fill="var(--support)"><rect x="22" y="23" width="48" height="48" rx="8"/><rect x="22" y="82" width="48" height="48" rx="8"/><rect x="81" y="82" width="48" height="48" rx="8"/></g><path d="M105 21v48M81 45h48" stroke="var(--support)" stroke-width="9" stroke-linecap="round"/></svg></div><section class="card step" style="left:456px"><h2>가격 설계</h2><p>공동구매에서 진행할<br>제품의 적정 가격을<br>선정합니다.</p></section><div class="step-icon" style="left:811px"><svg viewBox="0 0 160 160" style="" aria-label="person" role="img"><ellipse cx="80" cy="50" rx="27" ry="31" fill="var(--support)"/><path d="M34 138q0-52 46-52t46 52Z" fill="var(--support)"/></svg></div><section class="card step" style="left:805px"><h2>인플루언서 매칭</h2><p>제품과 적합한<br>인플루언서를 선정해<br>홍보를 준비합니다.</p></section><div class="step-icon" style="left:1160px"><svg viewBox="0 0 160 160" style="" aria-label="wallet" role="img"><rect x="24" y="34" width="111" height="94" rx="20" fill="var(--support)"/><path d="M32 44h91" stroke="var(--border)" stroke-width="5"/><rect x="78" y="63" width="62" height="37" rx="8" fill="var(--border)"/><circle cx="91" cy="81" r="7" fill="var(--surface)"/></svg></div><section class="card step" style="left:1154px"><h2>공동구매 진행</h2><p>인플루언서 채널을<br>통해 공동구매를<br>진행합니다.</p></section><div class="step-icon" style="left:1509px"><svg viewBox="0 0 160 160" style="" aria-label="coins" role="img"><g fill="var(--border)" stroke="var(--support)" stroke-width="3"><ellipse cx="81" cy="139" rx="47" ry="12"/><path d="M34 122v16c0 15 94 15 94 0v-16"/><ellipse cx="81" cy="122" rx="47" ry="12"/></g><ellipse cx="82" cy="72" rx="53" ry="60" fill="var(--border)" stroke="var(--support)" stroke-width="5"/><ellipse cx="77" cy="71" rx="43" ry="51" fill="var(--tint)" stroke="var(--support)" stroke-width="3"/><text x="77" y="94" text-anchor="middle" font-size="69" font-weight="750" fill="var(--ink)">$</text></svg></div><section class="card step" style="left:1503px"><h2>정산 및 N차 기획</h2><p>판매 정산 후 다음<br>N차 공동구매를<br>기획합니다.</p></section></main></div>
+<script>
+(() => {
+  const slide = document.querySelector('.slide');
+  const fit = () => { slide.style.transform = `scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
+  const theme = new URLSearchParams(location.search).get('theme');
+  if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+  addEventListener('resize', fit); fit();
+  // file:// frames have isolated origins; relay navigation without reading parent DOM.
+  if (parent !== window) document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', 'Escape', 'f', 'F'].includes(event.key)) return;
+    if (event.target.closest('button,input,textarea,select,[contenteditable],.carousel-controls,.carousel-nav')) return;
+    queueMicrotask(() => {
+      if (!event.defaultPrevented) parent.postMessage({ type: 'gnar-slide-key', key: event.key, shiftKey: event.shiftKey }, '*');
+    });
+  });
+
+})();
+</script>
+</body>
+</html>

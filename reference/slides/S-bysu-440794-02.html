@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="source" content="https://notefolio.net/bysu.ppt/440794">
+<meta name="reference-image" content="slide-02.webp">
+<title>1/ INTRODUCE · 촬영 서비스 · Gnar</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root {
+  /* Gnar 브랜드 토큰 — Deep Indigo Ink (H 283). 원천: design/palettes/brand.json */
+  --hue: 283;
+  --bg: #EDE9E6;  /* 배경 */
+  --surface: #F7F3EF;  /* 카드·패널 */
+  --text: #262321;  /* 본문 */
+  --muted: #666260;  /* 보조 글자·캡션 */
+  --border: #D1CDCA;  /* 선·격자·비포커스 막대 */
+  --ink: #37356A;  /* 제목·강조 문장 */
+  --hero: #5A54AF;  /* 강조 한 곳(핵심 숫자·포커스 막대·구분선) */
+  --support: #8183A4;  /* 보조 막대·아이콘 */
+  --tint: #DEDFF5;  /* 콜아웃·표 머리 배경 띠 */
+  --brown: #826144;  /* 따뜻한 중립 1 */
+  --taupe: #736756;  /* 따뜻한 중립 2 */
+  --chart-1: var(--hero);
+  --chart-2: var(--support);
+  --chart-3: var(--brown);
+  --chart-4: var(--taupe);
+  --chart-5: var(--border);
+}
+
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+} }
+
+:root[data-theme="dark"] {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+}
+
+/* 발표별 색상 교체 레시피 (oklch 지원 브라우저). hex 토큰은 PPTX 변환용 기준값이며,
+ * 다른 색상으로 바꿀 때는 design/scripts/ladder.py 에 hue 값을 넣어 hex를 다시 생성한다.
+ *   light: ink oklch(.36 .09 H) hero oklch(.50 .14 H) support oklch(.62 .05 H) tint oklch(.91 .03 H)
+ *   dark : ink oklch(.86 .07 H) hero oklch(.70 .14 H) support oklch(.56 .05 H) tint oklch(.29 .04 H) */
+
+
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+.viewport { width: 100%; height: 100%; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center; overflow: hidden; }
+.slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; flex-shrink: 0; fill: var(--text); background: var(--surface); transform-origin: center center; }
+h1, h2, h3, p, figure { margin: 0; }
+svg { display: block; }
+.eyebrow { font-size: 25px; font-weight: 650; color: var(--muted); letter-spacing: -.4px; }
+.slide-title { font-size: 64px; font-weight: 750; line-height: 1.25; letter-spacing: -2.3px; color: var(--ink); word-break: keep-all; }
+.slide-copy { font-size: 28px; line-height: 1.6; letter-spacing: -.6px; color: var(--muted); word-break: keep-all; }
+.slide-header { position: absolute; top: 112px; left: 132px; right: 132px; }
+.slide-header .eyebrow { margin-bottom: 20px; }
+.slide-header .slide-copy { margin-top: 25px; }
+.slide-footer { position: absolute; left: 132px; right: 132px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; font-size: 20px; line-height: 1; color: var(--muted); }
+.wordmark { color: var(--ink); font-size: 30px; font-weight: 800; letter-spacing: -1.4px; }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, .viewport { width: 1920px; height: 1080px; overflow: visible; }
+  .slide { transform: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+
+.slide{background:var(--surface)}.title{font-size:72px;line-height:1.15;font-weight:500;letter-spacing:-3.6px;color:var(--ink)}.display{font-size:124px;font-weight:450;line-height:1.2;min-height:149px;letter-spacing:-8px;color:var(--ink)}.copy{font-size:28px;line-height:1.65;letter-spacing:-.9px;color:var(--muted);word-break:keep-all}.arrow{width:48px;height:48px;color:var(--muted)}.room{width:100%;height:100%;object-fit:cover}.logo{width:290px;height:245px}.label{font-size:28px;line-height:1.4;font-weight:650;color:var(--text)}
+
+.intro-left{position:absolute;inset:0 53% 0 0;padding:62px 55px}.intro-left .copy{margin-top:28px;max-width:740px}.intro-logo{position:absolute;left:60px;bottom:60px}.intro-right{position:absolute;inset:0 0 0 47%;background:var(--bg);padding:76px 80px 60px 100px}.intro-right article+article{margin-top:68px}.intro-right header{display:flex;align-items:center;gap:58px;border-bottom:2px solid var(--border);padding-bottom:26px;margin-bottom:26px;font-size:28px}.intro-right h2{font-size:30px;font-weight:650}.intro-right .arrow{margin-left:auto;width:36px;height:36px}.intro-right .copy{font-size:28px;line-height:1.65}.intro-left .title{font-size:70px}
+
+</style>
+</head>
+<body>
+<div class="viewport"><main class="slide" data-slide-id="S-bysu-440794-02" aria-label="1/ INTRODUCE · 촬영 서비스">
+<section class="intro-left"><h1 class="title">1/ INTRODUCE</h1><p class="copy">All studio는 브랜드 캠페인 촬영 + 제품 촬영, 공간 대관을 진행하는 ‘올인원 비주얼 스튜디오’입니다. 브랜드의 감도와 방향성을 고려해 콘텐츠를 기획 · 제작하며, 단순한 결과물 그 이상의 경험을 제공합니다. 클라이언트의 패션 콘텐츠를 체계적으로 설계하고 만족도 높은 비주얼을 완성 드립니다.</p><div class="intro-logo"><svg class="logo" viewBox="0 0 290 245" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><path id="logoarc" d="M35 85 Q145 -25 255 85"/></defs><text font-size="29" font-weight="500" fill="var(--ink)" letter-spacing="3"><textPath href="#logoarc" startOffset="50%" text-anchor="middle">ALL STUDIO</textPath></text><path d="M94 194 L145 67 L196 194 M116 146 Q172 136 145 67" fill="none" stroke="var(--ink)" stroke-width="4"/><path d="M145 67 L196 194 L180 194 Z" fill="var(--ink)"/><text x="145" y="225" fill="var(--muted)" font-size="20" text-anchor="middle">photographer &amp; film maker</text></svg></div></section>
+<section class="intro-right"><article><header><span>01</span><h2>누끼 촬영</h2><svg class="arrow" viewBox="0 0 48 48" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 36 L38 6 M9 6 H38 V35" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></header><p class="copy">의류 바닥컷과 고스트컷 촬영에 특화된 비주얼 콘텐츠 스튜디오입니다. 누끼 전문 포토그래퍼 및 리터쳐가 한 팀으로 구성되어, 고객사와의 실시간 피드백을 기반으로 완벽한 결과물을 제공합니다. 합리적인 비용에 고효율 시스템으로 일회성이 아닌 꾸준한 재계약을 통해 함께 성장함에 중점을 두고 있습니다. 원하시는 레퍼런스를 공유해 주시면 그에 맞춘 최적의 견적과 빠른 납기를 제공해 드립니다.</p></article><article><header><span>02</span><h2>룩북 촬영</h2><svg class="arrow" viewBox="0 0 48 48" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 36 L38 6 M9 6 H38 V35" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></header><p class="copy">올스튜디오 대표 포토그래퍼가 룩북 촬영에 필요한 모든 촬영 결과물을 담당합니다. 레퍼런스 컨설팅부터 현장 디렉팅 등 촬영 전반을 아우르며 촬영 외에도 모델 · 장소 · 아티스트 섭외 등 기획부터 결과물까지 풀 프로덕션 대응이 가능합니다. 고객의 신뢰와 브랜드의 시각적 파트너로 함께 성장함에 중점을 두고 있습니다. 트렌드에 맞는 촬영 스타일을 추구하며, 촬영 준비에 들어가는 시간과 에너지를 절감시켜 드립니다.</p></article></section></main></div>
+<script>
+(() => {
+  const slide = document.querySelector('.slide');
+  const fit = () => { slide.style.transform = `scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
+  const theme = new URLSearchParams(location.search).get('theme');
+  if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+  addEventListener('resize', fit); fit();
+  // file:// frames have isolated origins; relay navigation without reading parent DOM.
+  if (parent !== window) document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', 'Escape', 'f', 'F'].includes(event.key)) return;
+    if (event.target.closest('button,input,textarea,select,[contenteditable],.carousel-controls,.carousel-nav')) return;
+    queueMicrotask(() => {
+      if (!event.defaultPrevented) parent.postMessage({ type: 'gnar-slide-key', key: event.key, shiftKey: event.shiftKey }, '*');
+    });
+  });
+})();
+</script>
+</body>
+</html>

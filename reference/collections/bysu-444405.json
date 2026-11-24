@@ -1,0 +1,104 @@
+{
+  "id": "bysu-444405",
+  "title": "컨설팅 회사 회사소개서",
+  "sourceUrl": "https://notefolio.net/bysu.ppt/444405",
+  "author": "bysu",
+  "slides": [
+    {
+      "id": "S-bysu-444405-01",
+      "order": 1,
+      "title": "Headless · 표지",
+      "description": "좌상단 두 줄 설명과 좌하단 Headless 워드마크, 우하단의 큰 아이소메트릭 퍼즐 윤곽을 유지했다.",
+      "type": "dark",
+      "file": "S-bysu-444405-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/444405",
+      "preview": "previews/S-bysu-444405-01.png",
+      "layout": "좌상단 설명 · 좌하단 대형 워드마크 · 우하단 퍼즐 윤곽",
+      "tags": [
+        "표지",
+        "워드마크",
+        "비대칭"
+      ]
+    },
+    {
+      "id": "S-bysu-444405-02",
+      "order": 2,
+      "title": "실행 없는 전략은 무의미합니다",
+      "description": "중앙 제목 아래 8개의 원을 가로로 겹쳐 전 주기를 표시하고, 하단 28%를 메시지 띠로 구성했다.",
+      "type": "light",
+      "file": "S-bysu-444405-02.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/444405",
+      "preview": "previews/S-bysu-444405-02.png",
+      "layout": "8개 원형 단계 · 하단 전폭 메시지",
+      "tags": [
+        "프로세스",
+        "8단계",
+        "원형"
+      ]
+    },
+    {
+      "id": "S-bysu-444405-03",
+      "order": 3,
+      "title": "헤드리스의 철학",
+      "description": "왼쪽 카드에 2×2 순환도, 오른쪽 카드에 118억을 중심으로 15+·20+의 원을 겹쳤다. 원본 수치를 유지했다.",
+      "type": "light",
+      "file": "S-bysu-444405-03.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/444405",
+      "preview": "previews/S-bysu-444405-03.png",
+      "layout": "상단 2행 제목 · 하단 2카드 · 순환도와 3개 실적 원",
+      "tags": [
+        "철학",
+        "순환도",
+        "KPI"
+      ]
+    },
+    {
+      "id": "S-bysu-444405-04",
+      "order": 4,
+      "title": "헤드리스의 차별성",
+      "description": "동일 높이의 가로 알약 4행을 쌓고 오른쪽 절반을 겹쳐 차별점을 표시했다. 상단 Headless 옆 체크를 단일 hero로 두었다.",
+      "type": "light",
+      "file": "S-bysu-444405-04.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/444405",
+      "preview": "previews/S-bysu-444405-04.png",
+      "layout": "좌측 기존 방식 · 우측 대안의 4행 알약형 비교",
+      "tags": [
+        "비교",
+        "4행",
+        "알약형"
+      ]
+    },
+    {
+      "id": "S-bysu-444405-05",
+      "order": 5,
+      "title": "초기사업검증 컨설팅",
+      "description": "STEP 1~4 점선과 4개의 세로 카드를 정렬하고 내부 항목을 3·3·2·2개로 유지했다.",
+      "type": "light",
+      "file": "S-bysu-444405-05.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/444405",
+      "preview": "previews/S-bysu-444405-05.png",
+      "layout": "수평 점선 타임라인 · 4단계 카드",
+      "tags": [
+        "프로세스",
+        "4단계",
+        "MVP"
+      ]
+    },
+    {
+      "id": "S-bysu-444405-06",
+      "order": 6,
+      "title": "분야를 넘나드는 기획 · 브랜딩 · 운영 경험",
+      "description": "9개 산업을 영문/국문 쌍으로 3×3 배치하고 원본의 F&B·Local Business·IT Solution 세 면을 tint로 구별했다.",
+      "type": "light",
+      "file": "S-bysu-444405-06.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/444405",
+      "preview": "previews/S-bysu-444405-06.png",
+      "layout": "상단 설명 · 중앙 소개문 · 하단 3×3 산업 그리드",
+      "tags": [
+        "산업",
+        "3×3 그리드",
+        "이중 언어"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="source" content="https://notefolio.net/bysu.ppt/440794">
+<meta name="reference-image" content="slide-05.webp">
+<title>ALL STUDIO · 올인원 콘텐츠 파트너 · Gnar</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root {
+  /* Gnar 브랜드 토큰 — Deep Indigo Ink (H 283). 원천: design/palettes/brand.json */
+  --hue: 283;
+  --bg: #EDE9E6;  /* 배경 */
+  --surface: #F7F3EF;  /* 카드·패널 */
+  --text: #262321;  /* 본문 */
+  --muted: #666260;  /* 보조 글자·캡션 */
+  --border: #D1CDCA;  /* 선·격자·비포커스 막대 */
+  --ink: #37356A;  /* 제목·강조 문장 */
+  --hero: #5A54AF;  /* 강조 한 곳(핵심 숫자·포커스 막대·구분선) */
+  --support: #8183A4;  /* 보조 막대·아이콘 */
+  --tint: #DEDFF5;  /* 콜아웃·표 머리 배경 띠 */
+  --brown: #826144;  /* 따뜻한 중립 1 */
+  --taupe: #736756;  /* 따뜻한 중립 2 */
+  --chart-1: var(--hero);
+  --chart-2: var(--support);
+  --chart-3: var(--brown);
+  --chart-4: var(--taupe);
+  --chart-5: var(--border);
+}
+
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+} }
+
+:root[data-theme="dark"] {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+}
+
+/* 발표별 색상 교체 레시피 (oklch 지원 브라우저). hex 토큰은 PPTX 변환용 기준값이며,
+ * 다른 색상으로 바꿀 때는 design/scripts/ladder.py 에 hue 값을 넣어 hex를 다시 생성한다.
+ *   light: ink oklch(.36 .09 H) hero oklch(.50 .14 H) support oklch(.62 .05 H) tint oklch(.91 .03 H)
+ *   dark : ink oklch(.86 .07 H) hero oklch(.70 .14 H) support oklch(.56 .05 H) tint oklch(.29 .04 H) */
+
+
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+.viewport { width: 100%; height: 100%; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center; overflow: hidden; }
+.slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; flex-shrink: 0; fill: var(--text); background: var(--surface); transform-origin: center center; }
+h1, h2, h3, p, figure { margin: 0; }
+svg { display: block; }
+.eyebrow { font-size: 25px; font-weight: 650; color: var(--muted); letter-spacing: -.4px; }
+.slide-title { font-size: 64px; font-weight: 750; line-height: 1.25; letter-spacing: -2.3px; color: var(--ink); word-break: keep-all; }
+.slide-copy { font-size: 28px; line-height: 1.6; letter-spacing: -.6px; color: var(--muted); word-break: keep-all; }
+.slide-header { position: absolute; top: 112px; left: 132px; right: 132px; }
+.slide-header .eyebrow { margin-bottom: 20px; }
+.slide-header .slide-copy { margin-top: 25px; }
+.slide-footer { position: absolute; left: 132px; right: 132px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; font-size: 20px; line-height: 1; color: var(--muted); }
+.wordmark { color: var(--ink); font-size: 30px; font-weight: 800; letter-spacing: -1.4px; }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, .viewport { width: 1920px; height: 1080px; overflow: visible; }
+  .slide { transform: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+
+.slide{background:var(--surface)}.title{font-size:72px;line-height:1.15;font-weight:500;letter-spacing:-3.6px;color:var(--ink)}.display{font-size:124px;font-weight:450;line-height:1.2;min-height:149px;letter-spacing:-8px;color:var(--ink)}.copy{font-size:28px;line-height:1.65;letter-spacing:-.9px;color:var(--muted);word-break:keep-all}.arrow{width:48px;height:48px;color:var(--muted)}.room{width:100%;height:100%;object-fit:cover}.logo{width:290px;height:245px}.label{font-size:28px;line-height:1.4;font-weight:650;color:var(--text)}
+
+.story-room{position:absolute;inset:0 0 0 500px;overflow:hidden}.story-room svg{width:100%;height:100%;object-fit:cover}.story-mask{position:absolute;inset:0 auto 0 0;width:650px;background:var(--surface)}.story-eyebrow{position:absolute;top:62px;left:56px;font-size:24px;color:var(--muted)}.story-backing{position:absolute;left:226px;top:284px;width:865px;height:603px;background:var(--surface)}.story-card{position:absolute;left:200px;top:257px;width:865px;min-height:600px;background:var(--bg);padding:54px 68px}.story-card header{display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid var(--hero);padding-bottom:28px;margin-bottom:32px}.story-card h1{font-size:54px;font-weight:500;letter-spacing:-2px}.story-card .arrow{width:36px;height:36px;color:var(--ink)}.story-card p+p{margin-top:18px}.story-card .copy{font-size:27px;line-height:1.62}
+
+</style>
+</head>
+<body>
+<div class="viewport"><main class="slide" data-slide-id="S-bysu-440794-05" aria-label="ALL STUDIO · 올인원 콘텐츠 파트너">
+<div class="story-room"><svg class="room" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="800" height="600" fill="var(--bg)"/><path d="M0 0H800V105L0 80Z" fill="var(--surface)"/><path d="M0 430L800 425V600H0Z" fill="var(--border)"/><path d="M0 38L800 125 M80 0L800 72 M0 92L800 176" fill="none" stroke="var(--surface)" stroke-width="12"/><path d="M0 110L800 160" fill="none" stroke="var(--border)" stroke-width="4"/><path d="M350 435V305A105 105 0 0 1 560 305V435Z" fill="var(--border)"/><path d="M370 435V310A85 85 0 0 1 540 310V435Z" fill="var(--bg)"/><path d="M650 440V370H685V300H720V230H755V440Z" fill="var(--surface)"/><path d="M580 500L800 470V520L580 550Z" fill="var(--surface)"/></svg></div><div class="story-mask"></div><p class="story-eyebrow">All-in-one Studio for Brand Visuals</p><div class="story-backing"></div><article class="story-card"><header><h1>ALL STUDIO</h1><svg class="arrow" viewBox="0 0 48 48" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 36 L38 6 M9 6 H38 V35" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></header><p class="copy">올스튜디오는 룩북과 제품 촬영, 스튜디오 대관까지 브랜드가 필요로 하는 시각 콘텐츠 제작을 한 공간에서 해결할 수 있는 올인원 파트너입니다.</p><p class="copy">촬영 결과물의 퀄리티뿐 아니라 전체 진행 과정에서의 커뮤니케이션과 납기 대응, 현장 운영에 있어 실질적인 만족을 제공하는 것을 목표로 합니다. 대형 호리존 스튜디오와 촬영 전담 인력이 상주하는 시스템을 기반으로 브랜드의 상황과 타임라인에 최적화된 솔루션을 제안드립니다.</p><p class="copy">기획 단계에서부터 함께 고민하며, 단순한 외주 업체가 아닌 브랜드의 콘텐츠 파트너로서 진정성 있게 함께하겠습니다.</p></article></main></div>
+<script>
+(() => {
+  const slide = document.querySelector('.slide');
+  const fit = () => { slide.style.transform = `scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
+  const theme = new URLSearchParams(location.search).get('theme');
+  if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+  addEventListener('resize', fit); fit();
+  // file:// frames have isolated origins; relay navigation without reading parent DOM.
+  if (parent !== window) document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', 'Escape', 'f', 'F'].includes(event.key)) return;
+    if (event.target.closest('button,input,textarea,select,[contenteditable],.carousel-controls,.carousel-nav')) return;
+    queueMicrotask(() => {
+      if (!event.defaultPrevented) parent.postMessage({ type: 'gnar-slide-key', key: event.key, shiftKey: event.shiftKey }, '*');
+    });
+  });
+})();
+</script>
+</body>
+</html>

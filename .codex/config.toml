@@ -1,0 +1,8 @@
+# Gnar-PPT project only. Keep the selected account, model and permissions.
+# Claude continues to use .claude/ and the existing shared SKILL.md files.
+developer_instructions = """
+이 저장소에서 Gnar PPT 제작·재구성·레퍼런스 임포트·덱 정리 요청을 처리하는 메인 에이전트는 해당 gnar-* 스킬과 함께 skills/gnar-slides/references/codex-runtime.md를 읽고 따른다.
+Codex에서는 그 문서의 실행 매핑이 공유 스킬의 Claude Agent/Sonnet/Opus 호출 예시를 대신한다. 기존 Claude 설정과 공용 스킬 본문은 수정하지 않는다.
+청중 검수와 윤문은 각각 gnar-audience-reviewer, gnar-slide-humanizer 사용자 정의 서브에이전트에 위임한다. 검수자는 전달받은 데이터만 검토하고 JSON을 반환하며 메인이 저장·검증한다. 검수 도중 다른 제작 스킬을 실행하지 않는다.
+"""
+

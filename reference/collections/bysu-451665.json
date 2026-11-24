@@ -1,0 +1,99 @@
+{
+  "id": "bysu-451665",
+  "title": "글로벌 물류회사 회사소개서",
+  "sourceUrl": "https://notefolio.net/bysu.ppt/451665",
+  "author": "bysu",
+  "slides": [
+    {
+      "id": "S-bysu-451665-01",
+      "order": 1,
+      "title": "표지",
+      "description": "좌하단 기업명과 우상단 공중에 매달린 컨테이너",
+      "type": "light",
+      "file": "S-bysu-451665-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/451665",
+      "preview": "previews/S-bysu-451665-01.png",
+      "layout": "좌하단 기업명과 우상단 공중에 매달린 컨테이너",
+      "tags": [
+        "표지",
+        "비대칭",
+        "물류"
+      ]
+    },
+    {
+      "id": "S-bysu-451665-02",
+      "order": 2,
+      "title": "검증된 경험과 확장된 서비스",
+      "description": "상단 세 줄 소개 아래 동일 크기 서비스 카드 3개",
+      "type": "light",
+      "file": "S-bysu-451665-02.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/451665",
+      "preview": "previews/S-bysu-451665-02.png",
+      "layout": "상단 세 줄 소개 아래 동일 크기 서비스 카드 3개",
+      "tags": [
+        "3열 카드",
+        "회사소개"
+      ]
+    },
+    {
+      "id": "S-bysu-451665-03",
+      "order": 3,
+      "title": "복잡한 시장에서의 완결형 솔루션",
+      "description": "Problem과 Solution의 3행 알약형 항목을 좌우 대응",
+      "type": "light",
+      "file": "S-bysu-451665-03.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/451665",
+      "preview": "previews/S-bysu-451665-03.png",
+      "layout": "Problem과 Solution의 3행 알약형 항목을 좌우 대응",
+      "tags": [
+        "비교",
+        "문제 해결"
+      ]
+    },
+    {
+      "id": "S-bysu-451665-04",
+      "order": 4,
+      "title": "특송 and 이커머스",
+      "description": "하단 점묘 세계지도 위 7개 국가 핀 라벨",
+      "type": "light",
+      "file": "S-bysu-451665-04.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/451665",
+      "preview": "previews/S-bysu-451665-04.png",
+      "layout": "하단 점묘 세계지도 위 7개 국가 핀 라벨",
+      "tags": [
+        "지도",
+        "글로벌 네트워크"
+      ]
+    },
+    {
+      "id": "S-bysu-451665-05",
+      "order": 5,
+      "title": "고위험 국가 걱정마세요",
+      "description": "우측 미주 지도와 좌하단 중첩 원 3개에서 결과 원으로 연결",
+      "type": "light",
+      "file": "S-bysu-451665-05.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/451665",
+      "preview": "previews/S-bysu-451665-05.png",
+      "layout": "우측 미주 지도와 좌하단 중첩 원 3개에서 결과 원으로 연결",
+      "tags": [
+        "지도",
+        "프로세스"
+      ]
+    },
+    {
+      "id": "S-bysu-451665-06",
+      "order": 6,
+      "title": "자체 개발 LMS 시스템",
+      "description": "주문부터 배송까지 대각선으로 내려가는 5단계 프로세스",
+      "type": "light",
+      "file": "S-bysu-451665-06.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/451665",
+      "preview": "previews/S-bysu-451665-06.png",
+      "layout": "주문부터 배송까지 대각선으로 내려가는 5단계 프로세스",
+      "tags": [
+        "프로세스",
+        "계단형"
+      ]
+    }
+  ]
+}

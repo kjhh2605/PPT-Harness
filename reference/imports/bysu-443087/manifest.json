@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "id": "bysu-443087",
+  "title": "인테리어 회사 제안서",
+  "source_url": "https://notefolio.net/bysu.ppt/443087",
+  "pages": [
+    {
+      "id": "S-bysu-443087-01",
+      "title": "Store Management Proposal",
+      "html": "reference/slides/S-bysu-443087-01.html",
+      "preview": "reference/previews/S-bysu-443087-01.png",
+      "layout": "좌상단 3행 영문 표제와 우측에 겹친 3개의 반원, 하단 연락처",
+      "summary": "좌상단 3행 영문 표제와 우측에 겹친 3개의 반원, 하단 연락처"
+    },
+    {
+      "id": "S-bysu-443087-02",
+      "title": "HISTORY OF IDS",
+      "html": "reference/slides/S-bysu-443087-02.html",
+      "preview": "reference/previews/S-bysu-443087-02.png",
+      "layout": "네 시기의 가로 연혁과 1·2·3·5개 이력 카드, 왼쪽 아래 3행 슬로건",
+      "summary": "네 시기의 가로 연혁과 1·2·3·5개 이력 카드, 왼쪽 아래 3행 슬로건"
+    },
+    {
+      "id": "S-bysu-443087-03",
+      "title": "WORKING CONCEPT",
+      "html": "reference/slides/S-bysu-443087-03.html",
+      "preview": "reference/previews/S-bysu-443087-03.png",
+      "layout": "상단 좌우 제목·설명과 브래킷 아래 7개 업무, 3열에서 2·6번 항목이 두 칸 병합",
+      "summary": "상단 좌우 제목·설명과 브래킷 아래 7개 업무, 3열에서 2·6번 항목이 두 칸 병합"
+    },
+    {
+      "id": "S-bysu-443087-04",
+      "title": "SI 매뉴얼 공사 SM 도입 개요 — 현행 업무 프로세스",
+      "html": "reference/slides/S-bysu-443087-04.html",
+      "preview": "reference/previews/S-bysu-443087-04.png",
+      "layout": "위쪽 2열 개요·현안, 아래쪽 5단계에서 두 경로로 분기되는 현행 프로세스",
+      "summary": "위쪽 2열 개요·현안, 아래쪽 5단계에서 두 경로로 분기되는 현행 프로세스"
+    },
+    {
+      "id": "S-bysu-443087-05",
+      "title": "SI 매뉴얼 공사 SM 도입 개요 — SM 제도 도입 필요",
+      "html": "reference/slides/S-bysu-443087-05.html",
+      "preview": "reference/previews/S-bysu-443087-05.png",
+      "layout": "왼쪽 3행 현안·검토 기준 매트릭스와 오른쪽 SM 제도 결론 패널, 상단 체크 메시지",
+      "summary": "왼쪽 3행 현안·검토 기준 매트릭스와 오른쪽 SM 제도 결론 패널, 상단 체크 메시지"
+    },
+    {
+      "id": "S-bysu-443087-06",
+      "title": "WORKING PROCESS — Objective",
+      "html": "reference/slides/S-bysu-443087-06.html",
+      "preview": "reference/previews/S-bysu-443087-06.png",
+      "layout": "L자 배경의 왼쪽 Objective·Role·Result 내비게이션과 오른쪽 아래 3행 아이콘·제목·본문",
+      "summary": "L자 배경의 왼쪽 Objective·Role·Result 내비게이션과 오른쪽 아래 3행 아이콘·제목·본문"
+    }
+  ]
+}

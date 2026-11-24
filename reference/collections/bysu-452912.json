@@ -1,0 +1,103 @@
+{
+  "id": "bysu-452912",
+  "title": "인플루언서 마케팅 서비스 회사소개서",
+  "sourceUrl": "https://notefolio.net/bysu.ppt/452912",
+  "author": "bysu",
+  "slides": [
+    {
+      "id": "S-bysu-452912-01",
+      "order": 1,
+      "title": "Pick&Sense · 표지",
+      "description": "넓은 단색 배경, 상단 양끝 영문 문구, 하단 좌측 대형 워드마크와 우측 소셜 아이콘",
+      "type": "brand",
+      "file": "S-bysu-452912-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/452912",
+      "preview": "previews/S-bysu-452912-01.png",
+      "layout": "넓은 단색 배경, 상단 양끝 영문 문구, 하단 좌측 대형 워드마크와 우측 소셜 아이콘",
+      "tags": [
+        "표지",
+        "대형 타이포"
+      ]
+    },
+    {
+      "id": "S-bysu-452912-02",
+      "order": 2,
+      "title": "좋은 제품을 어떻게 보여주느냐",
+      "description": "좌측 60%의 넓은 여백과 하단 소개 문구, 우측 40%의 대각선 명함 콜라주",
+      "type": "light",
+      "file": "S-bysu-452912-02.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/452912",
+      "preview": "previews/S-bysu-452912-02.png",
+      "layout": "좌측 60%의 넓은 여백과 하단 소개 문구, 우측 40%의 대각선 명함 콜라주",
+      "tags": [
+        "회사소개",
+        "비대칭 2단",
+        "명함 콜라주"
+      ]
+    },
+    {
+      "id": "S-bysu-452912-03",
+      "order": 3,
+      "title": "우리 브랜드에도 공동구매가 필요할까요?",
+      "description": "상단 좌측 질문 아래 동일한 크기의 세로형 카드 3개, 카드별 제목·설명·우하단 아이콘",
+      "type": "light",
+      "file": "S-bysu-452912-03.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/452912",
+      "preview": "previews/S-bysu-452912-03.png",
+      "layout": "상단 좌측 질문 아래 동일한 크기의 세로형 카드 3개, 카드별 제목·설명·우하단 아이콘",
+      "tags": [
+        "공동구매",
+        "3단 카드",
+        "서비스 가치"
+      ]
+    },
+    {
+      "id": "S-bysu-452912-04",
+      "order": 4,
+      "title": "인스타그램을 통한 구매 전환",
+      "description": "좌측 시장 규모 숫자와 우측 크기가 다른 3개 버블 차트, 큰 흰 원호를 활용한 비대칭 정보 배치",
+      "type": "light",
+      "file": "S-bysu-452912-04.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/452912",
+      "preview": "previews/S-bysu-452912-04.png",
+      "layout": "좌측 시장 규모 숫자와 우측 크기가 다른 3개 버블 차트, 큰 흰 원호를 활용한 비대칭 정보 배치",
+      "tags": [
+        "시장 규모",
+        "버블 차트",
+        "통계"
+      ]
+    },
+    {
+      "id": "S-bysu-452912-05",
+      "order": 5,
+      "title": "픽앤센스만의 4가지 특징",
+      "description": "4개의 가로형 카드를 2×2로 배치, 각 카드의 원형 아이콘과 설명, 중앙에 겹쳐진 브랜드 원",
+      "type": "light",
+      "file": "S-bysu-452912-05.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/452912",
+      "preview": "previews/S-bysu-452912-05.png",
+      "layout": "4개의 가로형 카드를 2×2로 배치, 각 카드의 원형 아이콘과 설명, 중앙에 겹쳐진 브랜드 원",
+      "tags": [
+        "핵심 특징",
+        "2×2 카드",
+        "아이콘"
+      ]
+    },
+    {
+      "id": "S-bysu-452912-06",
+      "order": 6,
+      "title": "픽앤센스와 함께 시작하세요",
+      "description": "상단 좌측 제목, 중단 5개 아이콘과 가로 진행선, 하단 5개 단계 설명 카드",
+      "type": "light",
+      "file": "S-bysu-452912-06.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/452912",
+      "preview": "previews/S-bysu-452912-06.png",
+      "layout": "상단 좌측 제목, 중단 5개 아이콘과 가로 진행선, 하단 5개 단계 설명 카드",
+      "tags": [
+        "프로세스",
+        "5단계",
+        "타임라인"
+      ]
+    }
+  ]
+}

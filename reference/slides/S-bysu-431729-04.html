@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="source" content="https://notefolio.net/bysu.ppt/431729">
+<meta name="reference-image" content="slide-04.webp">
+<title>어떻게 활용하면 좋을까? · Gnar</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root {
+  /* Gnar 브랜드 토큰 — Deep Indigo Ink (H 283). 원천: design/palettes/brand.json */
+  --hue: 283;
+  --bg: #EDE9E6;  /* 배경 */
+  --surface: #F7F3EF;  /* 카드·패널 */
+  --text: #262321;  /* 본문 */
+  --muted: #666260;  /* 보조 글자·캡션 */
+  --border: #D1CDCA;  /* 선·격자·비포커스 막대 */
+  --ink: #37356A;  /* 제목·강조 문장 */
+  --hero: #5A54AF;  /* 강조 한 곳(핵심 숫자·포커스 막대·구분선) */
+  --support: #8183A4;  /* 보조 막대·아이콘 */
+  --tint: #DEDFF5;  /* 콜아웃·표 머리 배경 띠 */
+  --brown: #826144;  /* 따뜻한 중립 1 */
+  --taupe: #736756;  /* 따뜻한 중립 2 */
+  --chart-1: var(--hero);
+  --chart-2: var(--support);
+  --chart-3: var(--brown);
+  --chart-4: var(--taupe);
+  --chart-5: var(--border);
+}
+
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+} }
+
+:root[data-theme="dark"] {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+}
+
+/* 발표별 색상 교체 레시피 (oklch 지원 브라우저). hex 토큰은 PPTX 변환용 기준값이며,
+ * 다른 색상으로 바꿀 때는 design/scripts/ladder.py 에 hue 값을 넣어 hex를 다시 생성한다.
+ *   light: ink oklch(.36 .09 H) hero oklch(.50 .14 H) support oklch(.62 .05 H) tint oklch(.91 .03 H)
+ *   dark : ink oklch(.86 .07 H) hero oklch(.70 .14 H) support oklch(.56 .05 H) tint oklch(.29 .04 H) */
+
+
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+.viewport { width: 100%; height: 100%; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center; overflow: hidden; }
+.slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; flex-shrink: 0; fill: var(--text); background: var(--surface); transform-origin: center center; }
+h1, h2, h3, p, figure { margin: 0; }
+svg { display: block; }
+.eyebrow { font-size: 25px; font-weight: 650; color: var(--muted); letter-spacing: -.4px; }
+.slide-title { font-size: 64px; font-weight: 750; line-height: 1.25; letter-spacing: -2.3px; color: var(--ink); word-break: keep-all; }
+.slide-copy { font-size: 28px; line-height: 1.6; letter-spacing: -.6px; color: var(--muted); word-break: keep-all; }
+.slide-header { position: absolute; top: 112px; left: 132px; right: 132px; }
+.slide-header .eyebrow { margin-bottom: 20px; }
+.slide-header .slide-copy { margin-top: 25px; }
+.slide-footer { position: absolute; left: 132px; right: 132px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; font-size: 20px; line-height: 1; color: var(--muted); }
+.wordmark { color: var(--ink); font-size: 30px; font-weight: 800; letter-spacing: -1.4px; }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, .viewport { width: 1920px; height: 1080px; overflow: visible; }
+  .slide { transform: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+
+.slide{background:var(--bg);color:var(--text)}
+.art{position:absolute;inset:0;width:1920px;height:1080px}
+.copy{font-size:28px;line-height:1.64;letter-spacing:-.7px;color:var(--text);word-break:keep-all}
+.logo{display:flex;align-items:center;gap:8px;color:var(--text);font-size:48px;font-weight:850;letter-spacing:-2px}
+.logo svg{width:52px;height:60px;overflow:visible}
+.muted{color:var(--muted)}.ink{color:var(--ink)}.hero{color:var(--hero)}
+.chip{display:inline-block;border-radius:40px;background:var(--tint);color:var(--ink);padding:10px 24px;font-weight:700;font-size:28px;line-height:1}
+.page-title{font-size:56px;line-height:1.25;font-weight:800;letter-spacing:-1.5px}
+.small-logo{font-size:30px;letter-spacing:-1px}.small-logo svg{width:32px;height:39px}
+.use-panel{position:absolute;left:362px;top:270px;width:1208px;border-radius:48px;padding:58px 80px 68px;background:var(--surface)}.use-panel h1{display:flex;align-items:center;gap:18px;font-size:44px;letter-spacing:-1.5px;margin:0}.use-note{width:44px;height:50px}.use-rule{border-top:2px dashed var(--border);margin:43px 0 38px}.use-panel h2{font-size:29px;letter-spacing:-1px;white-space:nowrap;font-weight:650;margin:0 0 24px}.use-panel .copy{font-size:28px;line-height:1.62;letter-spacing:-.85px}.business-logo{position:absolute;left:1315px;top:793px}
+</style>
+</head>
+<body>
+<div class="viewport"><main class="slide" data-slide-id="S-bysu-431729-04" aria-label="어떻게 활용하면 좋을까?"><svg class="art" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" ><g fill="none" stroke="var(--tint)" stroke-width="4"><circle cx="25" cy="45" r="83"/><path d="M270 -55h85l-92 113 92 111h-85l-95-111z"/><rect x="540" y="-30" width="75" height="185"/><circle cx="690" cy="-20" r="47"/><path d="M810 -15a90 90 0 0 0 180 0h-48a42 42 0 0 1-84 0z"/><circle cx="1205" cy="45" r="83"/><path d="M1450 -55h85l-92 113 92 111h-85l-95-111z"/><rect x="1720" y="-30" width="75" height="185"/><circle cx="1870" cy="-20" r="47"/><path d="M-37 270a90 90 0 0 0 180 0h-48a42 42 0 0 1-84 0z"/><circle cx="358" cy="330" r="83"/><path d="M603 230h85l-92 113 92 111h-85l-95-111z"/><rect x="873" y="255" width="75" height="185"/><circle cx="1023" cy="265" r="47"/><path d="M1143 270a90 90 0 0 0 180 0h-48a42 42 0 0 1-84 0z"/><circle cx="1538" cy="330" r="83"/><path d="M1783 230h85l-92 113 92 111h-85l-95-111z"/><rect x="-50" y="540" width="75" height="185"/><circle cx="100" cy="550" r="47"/><path d="M220 555a90 90 0 0 0 180 0h-48a42 42 0 0 1-84 0z"/><circle cx="615" cy="615" r="83"/><path d="M860 515h85l-92 113 92 111h-85l-95-111z"/><rect x="1130" y="540" width="75" height="185"/><circle cx="1280" cy="550" r="47"/><path d="M1400 555a90 90 0 0 0 180 0h-48a42 42 0 0 1-84 0z"/><circle cx="1795" cy="615" r="83"/><path d="M13 800h85l-92 113 92 111h-85l-95-111z"/><rect x="283" y="825" width="75" height="185"/><circle cx="433" cy="835" r="47"/><path d="M553 840a90 90 0 0 0 180 0h-48a42 42 0 0 1-84 0z"/><circle cx="948" cy="900" r="83"/><path d="M1193 800h85l-92 113 92 111h-85l-95-111z"/><rect x="1463" y="825" width="75" height="185"/><circle cx="1613" cy="835" r="47"/><path d="M1733 840a90 90 0 0 0 180 0h-48a42 42 0 0 1-84 0z"/></g></svg><section class="use-panel"><h1><svg class="use-note" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" ><path d="M28 6v36c0 11-21 14-21 1 0-9 12-12 18-8V7h10c1 11 8 17 19 18v10c-10-1-17-4-22-10" fill="var(--ink)"/></svg><span>어떻게 <strong class="hero">활용</strong>하면 좋을까?</span></h1><div class="use-rule"></div><h2><span class="ink">트렌드 포스 (Trend Forces)</span> : 2024년 한국 틱톡을 더 크게 뒤흔들 유저들의 문화적 변화</h2><p class="copy">지금 소개하는 5가지의 트렌드 포스는 틱톡에서 관측된 새로운 유저들의 유입, 커뮤니티 형성 방식,<br>혹은 새로운 콘텐츠 생성/소비 문화의 탄생으로 해석될 수 있습니다. 브랜드는 이를 참고하여<br>틱톡에서의 마케팅 방향을 결정하고, 2024년에는 이러한 대규모 행동 변화가 또다른 트렌드의<br>생성이나 발전으로 이어질 수 있음을 이해하고, 적합한 전략을 수립할 수 있습니다.</p></section><div class="business-logo"><div class="logo small-logo"><svg class="" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" ><path d="M28 6v36c0 11-21 14-21 1 0-9 12-12 18-8V7h10c1 11 8 17 19 18v10c-10-1-17-4-22-10" fill="var(--ink)"/></svg><span>TikTok <span style="font-weight:400">for Business</span></span></div></div></main></div>
+<script>
+(() => {
+  const slide = document.querySelector('.slide');
+  const fit = () => { slide.style.transform = `scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
+  const theme = new URLSearchParams(location.search).get('theme');
+  if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+  addEventListener('resize', fit); fit();
+  // file:// frames have isolated origins; relay navigation without reading parent DOM.
+  if (parent !== window) document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', 'Escape', 'f', 'F'].includes(event.key)) return;
+    if (event.target.closest('button,input,textarea,select,[contenteditable],.carousel-controls,.carousel-nav')) return;
+    queueMicrotask(() => {
+      if (!event.defaultPrevented) parent.postMessage({ type: 'gnar-slide-key', key: event.key, shiftKey: event.shiftKey }, '*');
+    });
+  });
+})();
+</script>
+</body>
+</html>

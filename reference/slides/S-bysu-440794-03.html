@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="source" content="https://notefolio.net/bysu.ppt/440794">
+<meta name="reference-image" content="slide-03.webp">
+<title>2/ PRODUCT PROCESS · 제품 촬영 과정 · Gnar</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root {
+  /* Gnar 브랜드 토큰 — Deep Indigo Ink (H 283). 원천: design/palettes/brand.json */
+  --hue: 283;
+  --bg: #EDE9E6;  /* 배경 */
+  --surface: #F7F3EF;  /* 카드·패널 */
+  --text: #262321;  /* 본문 */
+  --muted: #666260;  /* 보조 글자·캡션 */
+  --border: #D1CDCA;  /* 선·격자·비포커스 막대 */
+  --ink: #37356A;  /* 제목·강조 문장 */
+  --hero: #5A54AF;  /* 강조 한 곳(핵심 숫자·포커스 막대·구분선) */
+  --support: #8183A4;  /* 보조 막대·아이콘 */
+  --tint: #DEDFF5;  /* 콜아웃·표 머리 배경 띠 */
+  --brown: #826144;  /* 따뜻한 중립 1 */
+  --taupe: #736756;  /* 따뜻한 중립 2 */
+  --chart-1: var(--hero);
+  --chart-2: var(--support);
+  --chart-3: var(--brown);
+  --chart-4: var(--taupe);
+  --chart-5: var(--border);
+}
+
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+} }
+
+:root[data-theme="dark"] {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+}
+
+/* 발표별 색상 교체 레시피 (oklch 지원 브라우저). hex 토큰은 PPTX 변환용 기준값이며,
+ * 다른 색상으로 바꿀 때는 design/scripts/ladder.py 에 hue 값을 넣어 hex를 다시 생성한다.
+ *   light: ink oklch(.36 .09 H) hero oklch(.50 .14 H) support oklch(.62 .05 H) tint oklch(.91 .03 H)
+ *   dark : ink oklch(.86 .07 H) hero oklch(.70 .14 H) support oklch(.56 .05 H) tint oklch(.29 .04 H) */
+
+
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+.viewport { width: 100%; height: 100%; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center; overflow: hidden; }
+.slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; flex-shrink: 0; fill: var(--text); background: var(--surface); transform-origin: center center; }
+h1, h2, h3, p, figure { margin: 0; }
+svg { display: block; }
+.eyebrow { font-size: 25px; font-weight: 650; color: var(--muted); letter-spacing: -.4px; }
+.slide-title { font-size: 64px; font-weight: 750; line-height: 1.25; letter-spacing: -2.3px; color: var(--ink); word-break: keep-all; }
+.slide-copy { font-size: 28px; line-height: 1.6; letter-spacing: -.6px; color: var(--muted); word-break: keep-all; }
+.slide-header { position: absolute; top: 112px; left: 132px; right: 132px; }
+.slide-header .eyebrow { margin-bottom: 20px; }
+.slide-header .slide-copy { margin-top: 25px; }
+.slide-footer { position: absolute; left: 132px; right: 132px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; font-size: 20px; line-height: 1; color: var(--muted); }
+.wordmark { color: var(--ink); font-size: 30px; font-weight: 800; letter-spacing: -1.4px; }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, .viewport { width: 1920px; height: 1080px; overflow: visible; }
+  .slide { transform: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+
+.slide{background:var(--surface)}.title{font-size:72px;line-height:1.15;font-weight:500;letter-spacing:-3.6px;color:var(--ink)}.display{font-size:124px;font-weight:450;line-height:1.2;min-height:149px;letter-spacing:-8px;color:var(--ink)}.copy{font-size:28px;line-height:1.65;letter-spacing:-.9px;color:var(--muted);word-break:keep-all}.arrow{width:48px;height:48px;color:var(--muted)}.room{width:100%;height:100%;object-fit:cover}.logo{width:290px;height:245px}.label{font-size:28px;line-height:1.4;font-weight:650;color:var(--text)}
+
+.process-head{position:absolute;left:56px;right:56px;top:60px;border-bottom:2px solid var(--ink);padding-bottom:52px}.process-head .copy{margin-top:26px}.process-flow{position:absolute;left:240px;right:240px;top:435px;display:flex;align-items:center;justify-content:space-between}.circles{display:flex}.step{width:270px;height:270px;border-radius:50%;background:var(--bg);display:flex;justify-content:center;align-items:center;text-align:center;font-size:28px;line-height:1.55;color:var(--muted);margin-left:-30px}.step:first-child{margin-left:0;background:var(--hero);color:var(--surface);position:relative;z-index:2}.process-flow .arrow{flex:0 0 42px}.benefits{position:absolute;left:56px;right:56px;top:810px;border-top:2px solid var(--border);padding-top:48px;display:grid;grid-template-columns:repeat(4,1fr);gap:50px}.benefits h2{font-size:28px;font-weight:650;margin:0 0 12px}.benefits .copy{font-size:27px;line-height:1.6}
+
+</style>
+</head>
+<body>
+<div class="viewport"><main class="slide" data-slide-id="S-bysu-440794-03" aria-label="2/ PRODUCT PROCESS · 제품 촬영 과정">
+<div class="process-head"><h1 class="title">2/ PRODUCT PROCESS</h1><p class="copy">제품의 소재, 핏, 컬러에 최적화된 촬영을 기반으로, 포토그래퍼와의 직접 상담을 통해 브랜드의 톤앤매너를 일관되게 유지합니다.<br>행잉컷, 고스트컷, 바닥컷 등 다양한 스타일의 제품 촬영 서비스를 제공하고 있습니다.<br>현재 패션 대기업 계열사들과 안정적인 파트너십을 바탕으로 다양한 프로젝트를 수행 중입니다.</p></div>
+<div class="process-flow"><svg class="arrow" viewBox="0 0 48 48" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 24 H43 M25 6 L43 24 L25 42" fill="none" stroke="currentColor" stroke-width="2.5"/></svg><div class="circles"><div class="step step-0">촬영 의뢰 및<br>일정 확정</div><div class="step step-1">상품 수령</div><div class="step step-2">스튜디오 촬영<br>(현장 참관 가능)</div><div class="step step-3">리터칭 후 고해상도<br>이미지 전달</div><div class="step step-4">제품 회수</div></div><svg class="arrow" viewBox="0 0 48 48" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 24 H43 M25 6 L43 24 L25 42" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></div>
+<div class="benefits"><article><h2>빠른 납기 준수</h2><p class="copy">최소 2~4일, 최대 7일 이내 납품을 원칙으로 하여 촬영 후 결과물을 신속하게 받아보실 수 있습니다.</p></article><article><h2>실시간 소통</h2><p class="copy">포토그래퍼와 웹디자이너가 함께 참여하는 단체 채팅방을 통해 실시간 커뮤니케이션이 가능하며, 요청사항을 빠르게 반영합니다.</p></article><article><h2>디테일컷 제공</h2><p class="copy">제품의 특성과 질감을 효과적으로 전달할 수 있도록 디테일컷을 타사 대비 할인가에 제공해드립니다.</p></article><article><h2>무제한 수정</h2><p class="copy">최종 결과물에 만족하실 때까지 무제한 수정 요청이 가능하며, 퀄리티를 최우선으로 반영해드립니다.</p></article></div></main></div>
+<script>
+(() => {
+  const slide = document.querySelector('.slide');
+  const fit = () => { slide.style.transform = `scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
+  const theme = new URLSearchParams(location.search).get('theme');
+  if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+  addEventListener('resize', fit); fit();
+  // file:// frames have isolated origins; relay navigation without reading parent DOM.
+  if (parent !== window) document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', 'Escape', 'f', 'F'].includes(event.key)) return;
+    if (event.target.closest('button,input,textarea,select,[contenteditable],.carousel-controls,.carousel-nav')) return;
+    queueMicrotask(() => {
+      if (!event.defaultPrevented) parent.postMessage({ type: 'gnar-slide-key', key: event.key, shiftKey: event.shiftKey }, '*');
+    });
+  });
+})();
+</script>
+</body>
+</html>

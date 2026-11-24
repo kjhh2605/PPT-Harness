@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="source" content="https://notefolio.net/bysu.ppt/443087">
+<meta name="reference-image" content="slide-03.webp">
+<title>WORKING CONCEPT · Gnar</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root {
+  /* Gnar 브랜드 토큰 — Deep Indigo Ink (H 283). 원천: design/palettes/brand.json */
+  --hue: 283;
+  --bg: #EDE9E6;  /* 배경 */
+  --surface: #F7F3EF;  /* 카드·패널 */
+  --text: #262321;  /* 본문 */
+  --muted: #666260;  /* 보조 글자·캡션 */
+  --border: #D1CDCA;  /* 선·격자·비포커스 막대 */
+  --ink: #37356A;  /* 제목·강조 문장 */
+  --hero: #5A54AF;  /* 강조 한 곳(핵심 숫자·포커스 막대·구분선) */
+  --support: #8183A4;  /* 보조 막대·아이콘 */
+  --tint: #DEDFF5;  /* 콜아웃·표 머리 배경 띠 */
+  --brown: #826144;  /* 따뜻한 중립 1 */
+  --taupe: #736756;  /* 따뜻한 중립 2 */
+  --chart-1: var(--hero);
+  --chart-2: var(--support);
+  --chart-3: var(--brown);
+  --chart-4: var(--taupe);
+  --chart-5: var(--border);
+}
+
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+} }
+
+:root[data-theme="dark"] {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+}
+
+/* 발표별 색상 교체 레시피 (oklch 지원 브라우저). hex 토큰은 PPTX 변환용 기준값이며,
+ * 다른 색상으로 바꿀 때는 design/scripts/ladder.py 에 hue 값을 넣어 hex를 다시 생성한다.
+ *   light: ink oklch(.36 .09 H) hero oklch(.50 .14 H) support oklch(.62 .05 H) tint oklch(.91 .03 H)
+ *   dark : ink oklch(.86 .07 H) hero oklch(.70 .14 H) support oklch(.56 .05 H) tint oklch(.29 .04 H) */
+
+
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+.viewport { width: 100%; height: 100%; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center; overflow: hidden; }
+.slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; flex-shrink: 0; fill: var(--text); background: var(--surface); transform-origin: center center; }
+h1, h2, h3, p, figure { margin: 0; }
+svg { display: block; }
+.eyebrow { font-size: 25px; font-weight: 650; color: var(--muted); letter-spacing: -.4px; }
+.slide-title { font-size: 64px; font-weight: 750; line-height: 1.25; letter-spacing: -2.3px; color: var(--ink); word-break: keep-all; }
+.slide-copy { font-size: 28px; line-height: 1.6; letter-spacing: -.6px; color: var(--muted); word-break: keep-all; }
+.slide-header { position: absolute; top: 112px; left: 132px; right: 132px; }
+.slide-header .eyebrow { margin-bottom: 20px; }
+.slide-header .slide-copy { margin-top: 25px; }
+.slide-footer { position: absolute; left: 132px; right: 132px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; font-size: 20px; line-height: 1; color: var(--muted); }
+.wordmark { color: var(--ink); font-size: 30px; font-weight: 800; letter-spacing: -1.4px; }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, .viewport { width: 1920px; height: 1080px; overflow: visible; }
+  .slide { transform: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+
+.slide{background:var(--bg);font-weight:400}
+.page-head{position:absolute;left:96px;right:96px;top:90px;display:flex;gap:28px;align-items:center;font-size:25px;line-height:1.3}
+.page-head .section{color:var(--muted)}.page-head .name{font-weight:600;color:var(--ink)}.page-head .num{margin-left:auto;color:var(--muted);font-size:22px}
+.panel{background:var(--surface);border:1px solid var(--border)}
+.copy{font-size:28px;line-height:1.55;color:var(--muted);word-break:keep-all}
+.muted{color:var(--muted)}.ink{color:var(--ink)}
+.cover{background:var(--bg)}.cover-title{position:absolute;left:92px;top:92px;font-size:88px;font-weight:400;line-height:1.07;min-height:300px;letter-spacing:-3px;color:var(--text)}
+.cover-art{position:absolute;left:1142px;top:0;width:778px;height:1080px}
+.cover-contact{position:absolute;left:92px;bottom:76px;font-size:25px;line-height:1.6;color:var(--muted)}.cover-contact b{display:block;font-weight:550;color:var(--text);margin-bottom:6px}.cover-contact dt{float:left;width:88px}.cover-contact dd{margin-left:88px}.cover-contact dl{margin:0}
+.cover-address{position:absolute;right:90px;bottom:76px;font-size:24px;color:var(--muted)}
+.cover-page{position:absolute;right:92px;top:98px;color:var(--muted);font-size:22px}
+.timeline{position:absolute;left:96px;right:96px;top:246px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.year{display:flex;align-items:center;gap:18px;font-size:28px;color:var(--ink);margin-bottom:36px;white-space:nowrap}.year:after{content:'';height:2px;background:var(--border);flex:1}.timeline-col:first-child .year:after{background:var(--hero)}
+.history-card{padding:12px 18px;min-height:120px;margin-bottom:14px;font-size:28px;line-height:1.28;color:var(--muted);word-break:keep-all}.history-card.founding{background:var(--tint);color:var(--ink)}
+.history-slogan{position:absolute;left:96px;top:774px;font-size:61px;line-height:1.18;letter-spacing:-2px;color:var(--muted)}.history-slogan b{display:block;color:var(--ink);font-weight:550}
+.concept-heading{position:absolute;left:96px;top:204px;font-size:64px;line-height:1.3;letter-spacing:-2px;font-weight:550}.concept-heading span{display:block;color:var(--muted)}.concept-heading strong{font-weight:550;color:var(--ink)}
+.concept-copy{position:absolute;right:96px;top:227px;width:740px;text-align:right;font-size:28px;line-height:1.6;color:var(--muted)}
+.bracket{position:absolute;left:96px;right:96px;top:436px;height:44px;display:flex;align-items:center;gap:26px;font-size:25px;white-space:nowrap;color:var(--ink)}.bracket:before,.bracket:after{content:'';flex:1;min-width:80px;border-top:2px solid var(--border);height:28px;transform:translateY(6px)}.bracket:before{border-left:2px solid var(--border)}.bracket:after{border-right:2px solid var(--border)}
+.work-grid{position:absolute;left:96px;right:96px;top:506px;display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:148px;gap:26px}
+.work-item{position:relative;padding:22px 32px 20px 79px}.work-item.wide{grid-column:span 2}.work-item h3{font-size:29px;font-weight:600;line-height:1.3;color:var(--ink);margin:0 0 10px}.work-item p{font-size:28px;color:var(--muted);line-height:1.3}.step{position:absolute;left:32px;top:26px;font-size:21px;font-weight:650;width:27px;height:27px;display:grid;place-items:center;border-radius:50%;background:var(--tint);color:var(--ink)}.work-item:first-child{border-top:4px solid var(--hero);padding-top:19px}
+.overview-top{position:absolute;left:96px;right:96px;top:230px;display:grid;grid-template-columns:1fr 1fr;gap:74px}.overview-top h2{font-size:29px;color:var(--ink);font-weight:600;padding-bottom:20px;border-bottom:2px solid var(--border);margin:0 0 20px}.overview-top ul{padding:0 0 0 29px;margin:0;font-size:28px;line-height:1.35;color:var(--muted);word-break:keep-all}
+.process{position:absolute;left:96px;right:96px;top:518px;height:474px;padding:38px 48px}.process h2{font-size:28px;color:var(--ink);font-weight:650}.process-arrows{position:absolute;left:50px;right:50px;top:130px;width:calc(100% - 100px);height:300px;overflow:visible}
+.process-grid{position:absolute;left:48px;right:48px;top:130px;display:grid;grid-template-columns:repeat(5,1fr);gap:36px;height:294px}.process-box{background:var(--bg);display:flex;justify-content:center;align-items:center;text-align:center;color:var(--ink);font-size:28px;line-height:1.5;word-break:keep-all;padding:12px}.process-stack{display:grid;grid-template-rows:1fr 1fr;gap:36px}.process-box.tint{background:var(--tint)}.process-box.key{background:var(--hero);color:#E8E4E1}.process-box.negative{background:var(--text);color:#E8E4E1}.process-labels{position:absolute;left:calc(60% + 8px);right:48px;top:34px;display:grid;grid-template-columns:1fr 1fr;gap:36px;text-align:center;font-size:25px;line-height:1.6;color:var(--muted)}
+.criteria-layout{position:absolute;left:96px;right:96px;top:468px;display:grid;grid-template-columns:240px 442px 442px 95px 445px;grid-template-rows:88px repeat(3,132px);gap:16px}
+.criteria-layout .cell{display:flex;align-items:center;justify-content:center;text-align:center;padding:15px;font-size:28px;line-height:1.55;word-break:keep-all}.criteria-layout .col-head{background:var(--tint);color:var(--ink);font-weight:650}.criteria-layout .row-name{font-weight:650;color:var(--ink)}.criteria-layout .detail{color:var(--muted)}.criteria-layout .solution-head{grid-column:5;background:var(--hero);color:#E8E4E1;font-weight:650}.criteria-layout .solution{grid-column:5;grid-row:2/5;font-size:28px;line-height:1.65;flex-direction:column;color:var(--muted)}.criteria-layout .solution strong{font-weight:650;color:var(--ink);margin-top:10px}.criteria-layout .arrow{grid-column:4;grid-row:2/5;font-size:64px;color:var(--muted)}
+.criteria-intro{position:absolute;right:96px;top:284px;width:445px;text-align:center;color:var(--ink);font-size:29px;line-height:1.55;font-weight:600}.criteria-intro svg{margin:0 auto 18px}
+.objective-nav{position:absolute;left:96px;top:335px;color:var(--muted);font-size:64px;line-height:1.25;letter-spacing:-2px;font-weight:550;padding-left:46px}.objective-nav strong{color:var(--ink);font-weight:550}.objective-nav .pointer{position:absolute;left:0;top:17px;font-size:30px;color:var(--hero)}
+.objective-panel{position:absolute;left:596px;right:0;top:352px;bottom:0;background:var(--surface);padding:48px 70px 36px 76px}.objective-row{display:grid;grid-template-columns:60px 265px 1fr;gap:26px;align-items:start;padding:25px 0 26px;min-height:204px;border-bottom:1px solid var(--border)}.objective-row:last-child{border:0}.objective-icon{width:60px;height:60px;background:var(--tint);display:grid;place-items:center}.objective-icon svg{width:40px;height:40px;color:var(--ink)}.objective-row h3{font-size:28px;line-height:1.5;letter-spacing:-.5px;color:var(--ink);font-weight:650;padding-top:6px}.objective-row p{font-size:28px;line-height:1.65;letter-spacing:-.5px;color:var(--muted);word-break:keep-all;padding-top:4px}
+
+</style>
+</head>
+<body>
+<div class="viewport"><main class="slide" data-slide-id="S-bysu-443087-03" aria-label="WORKING CONCEPT"><header class="page-head"><span class="section">[ 01 ]</span><span class="name">WORKING CONCEPT</span><span class="num">5</span></header>
+<h1 class="concept-heading"><span>From Store Management</span><strong>To Site Supervision</strong></h1>
+<p class="concept-copy">IDS는 단순한 시공 관리자가 아닌,<br>설계부터 완공, 유지보수까지 프로젝트 전 과정을 통합 관리하며<br>비용 절감, 공사 기간 준수, 무재해, 시공 품질 향상을 목표로 합니다.</p>
+<div class="bracket">Consulting · Drawing · Bidding · Schedule · Safety · Quality · Contract · Maintenance</div><div class="work-grid"><article class="work-item panel "><span class="step">1</span><h3>Planning Site Survey</h3><p>Opening Plan Site Survey & Summary</p></article><article class="work-item panel wide"><span class="step">2</span><h3>Layout & Drawing</h3><p>Layout Design & Check Package Drawing</p></article><article class="work-item panel "><span class="step">3</span><h3>Bidding</h3><p>Base Estimate Bidding</p></article><article class="work-item panel "><span class="step">4</span><h3>Site Supervision</h3><p>Construction Planning Safety Inspection</p></article><article class="work-item panel "><span class="step">5</span><h3>Opening</h3><p>Check the Store Punch Check</p></article><article class="work-item panel wide"><span class="step">6</span><h3>Update Quotation</h3><p>Update Quotation Report</p></article><article class="work-item panel "><span class="step">7</span><h3>Evaluation</h3><p>VSC Report</p></article></div>
+</main></div>
+<script>
+(() => {
+  const slide = document.querySelector('.slide');
+  const fit = () => { slide.style.transform = `scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
+  const theme = new URLSearchParams(location.search).get('theme');
+  if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+  addEventListener('resize', fit); fit();
+  // file:// frames have isolated origins; relay navigation without reading parent DOM.
+  if (parent !== window) document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', 'Escape', 'f', 'F'].includes(event.key)) return;
+    if (event.target.closest('button,input,textarea,select,[contenteditable],.carousel-controls,.carousel-nav')) return;
+    queueMicrotask(() => {
+      if (!event.defaultPrevented) parent.postMessage({ type: 'gnar-slide-key', key: event.key, shiftKey: event.shiftKey }, '*');
+    });
+  });
+})();
+</script>
+</body>
+</html>

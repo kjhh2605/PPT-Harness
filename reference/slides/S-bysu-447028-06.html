@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="source" content="https://notefolio.net/bysu.ppt/447028">
+<meta name="reference-image" content="slide-06.webp">
+<title>검증된 보안 역량, 신뢰는 결과로 증명됩니다 · Gnar</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root {
+  /* Gnar 브랜드 토큰 — Deep Indigo Ink (H 283). 원천: design/palettes/brand.json */
+  --hue: 283;
+  --bg: #EDE9E6;  /* 배경 */
+  --surface: #F7F3EF;  /* 카드·패널 */
+  --text: #262321;  /* 본문 */
+  --muted: #666260;  /* 보조 글자·캡션 */
+  --border: #D1CDCA;  /* 선·격자·비포커스 막대 */
+  --ink: #37356A;  /* 제목·강조 문장 */
+  --hero: #5A54AF;  /* 강조 한 곳(핵심 숫자·포커스 막대·구분선) */
+  --support: #8183A4;  /* 보조 막대·아이콘 */
+  --tint: #DEDFF5;  /* 콜아웃·표 머리 배경 띠 */
+  --brown: #826144;  /* 따뜻한 중립 1 */
+  --taupe: #736756;  /* 따뜻한 중립 2 */
+  --chart-1: var(--hero);
+  --chart-2: var(--support);
+  --chart-3: var(--brown);
+  --chart-4: var(--taupe);
+  --chart-5: var(--border);
+}
+
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+} }
+
+:root[data-theme="dark"] {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+}
+
+/* 발표별 색상 교체 레시피 (oklch 지원 브라우저). hex 토큰은 PPTX 변환용 기준값이며,
+ * 다른 색상으로 바꿀 때는 design/scripts/ladder.py 에 hue 값을 넣어 hex를 다시 생성한다.
+ *   light: ink oklch(.36 .09 H) hero oklch(.50 .14 H) support oklch(.62 .05 H) tint oklch(.91 .03 H)
+ *   dark : ink oklch(.86 .07 H) hero oklch(.70 .14 H) support oklch(.56 .05 H) tint oklch(.29 .04 H) */
+
+
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+.viewport { width: 100%; height: 100%; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center; overflow: hidden; }
+.slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; flex-shrink: 0; fill: var(--text); background: var(--surface); transform-origin: center center; }
+h1, h2, h3, p, figure { margin: 0; }
+svg { display: block; }
+.eyebrow { font-size: 25px; font-weight: 650; color: var(--muted); letter-spacing: -.4px; }
+.slide-title { font-size: 64px; font-weight: 750; line-height: 1.25; letter-spacing: -2.3px; color: var(--ink); word-break: keep-all; }
+.slide-copy { font-size: 28px; line-height: 1.6; letter-spacing: -.6px; color: var(--muted); word-break: keep-all; }
+.slide-header { position: absolute; top: 112px; left: 132px; right: 132px; }
+.slide-header .eyebrow { margin-bottom: 20px; }
+.slide-header .slide-copy { margin-top: 25px; }
+.slide-footer { position: absolute; left: 132px; right: 132px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; font-size: 20px; line-height: 1; color: var(--muted); }
+.wordmark { color: var(--ink); font-size: 30px; font-weight: 800; letter-spacing: -1.4px; }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, .viewport { width: 1920px; height: 1080px; overflow: visible; }
+  .slide { transform: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+
+.slide{background:var(--bg)}
+.brand{position:absolute;top:86px;right:88px;width:100px;color:var(--ink)}
+.brand svg{width:100%;height:28px}.brand b{font-size:31px;letter-spacing:-1px;line-height:1}
+.heading{position:absolute;left:92px;top:88px;right:245px}
+.heading h1{font-size:52px;line-height:1.37;font-weight:760;letter-spacing:-1.8px;color:var(--ink)}
+.heading p{font-size:28px;line-height:1.7;color:var(--muted);margin-top:18px;letter-spacing:-.5px}
+.accent{color:var(--hero)}
+.small{font-size:22px;color:var(--muted);line-height:1.55}
+.svg-ink{stroke:var(--ink)}
+.awards{position:absolute;left:100px;right:95px;top:405px;bottom:98px;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(3,1fr);gap:22px 25px}.award{background:var(--surface);border-radius:29px;padding:34px 39px;position:relative}.award h2{font-size:26px;line-height:1.35;letter-spacing:-.8px;color:var(--ink);font-weight:700}.award p{font-size:25px;line-height:1.5;letter-spacing:-.7px;color:var(--muted);margin-top:11px}.award.patent{background:var(--tint);border-left:9px solid var(--hero);padding-left:30px}.award.illustration{background:none;padding:0}.planet{position:absolute;left:2px;bottom:-2px;width:100%;height:260px}.awards .award:first-child p{font-size:23px;letter-spacing:-.8px}
+</style>
+</head>
+<body>
+<div class="viewport"><main class="slide" data-slide-id="S-bysu-447028-06" aria-label="검증된 보안 역량, 신뢰는 결과로 증명됩니다"><header class="heading"><h1>검증된 보안 역량,<br>신뢰는 결과로 증명됩니다</h1><p>다양한 수상, 특허, 인증을 통해 기술력과 신뢰성을 인정받으며<br>제로 트러스트 보안의 기준을 만들어가고 있습니다.</p></header><div class="brand " aria-label="PRIBIT"><svg viewBox="0 0 105 28" aria-hidden="true"><g fill="var(--ink)"><rect x="2" y="4" width="4" height="13" rx="2"/><rect x="20" y="4" width="4" height="20" rx="2"/><rect x="38" y="4" width="4" height="13" rx="2"/><rect x="56" y="4" width="4" height="20" rx="2"/><rect x="74" y="4" width="4" height="13" rx="2"/></g><rect x="89" y="4" width="14" height="15" rx="3" fill="none" stroke="var(--ink)" stroke-width="4"/></svg><b>PRIBIT</b></div><section class="awards"><article class="award  "><h2>CIO Review</h2><p>Most Promising Enterprise<br>Security Solutions Providers</p></article><article class="award  "><h2>APAC CIO Outlook</h2><p>TOP Cyber Security Company</p></article><article class="award  "><h2>과학기술정보통신부</h2><p>정보보호 제품 혁신 대상 수상</p></article><article class="award  illustration"><svg class="planet" viewBox="0 0 380 280" role="img" aria-label="장식용 궤도 행성"><circle cx="186" cy="147" r="107" fill="var(--tint)"/><ellipse cx="186" cy="157" rx="168" ry="34" transform="rotate(-28 186 157)" fill="none" stroke="var(--surface)" stroke-width="18"/><circle cx="148" cy="183" r="27" fill="none" stroke="var(--support)" stroke-width="16"/><path d="m161 162 40-71m21 47q50-7 37 36" fill="none" stroke="var(--support)" stroke-width="16" stroke-linecap="round"/><path d="m309 16 8 18 19 3-16 13 3 19-17-10-17 8 4-19-14-14 20-2Z" fill="var(--border)"/></svg></article><article class="award  "><h2>과학기술정보통신부</h2><p>정보보호 발전<br>공로 인정 장관 표창</p></article><article class="award patent "><h2>특허 보유</h2><p>제로 트러스트 핵심 특허<br>포트폴리오 176건 보유</p></article><article class="award  "><h2>한국인터넷진흥원 KISA</h2><p>우수정보보호 기술 지정</p></article><article class="award  "><h2>대한변리사회</h2><p>제2회 벤처 · 스타트업<br>특허 대상 최우수상</p></article><article class="award  "><h2>LG U+</h2><p>신사업공모전<br>선도 기술 대상</p></article><article class="award  "><h2>과학기술정보통신부</h2><p>우수혁신제품 선정</p></article><article class="award  "><h2>조달청</h2><p>혁신 시제품 선정</p></article><article class="award  "><h2>한국인터넷진흥원 KISA</h2><p>제로 트러스트 실증 지원사업<br>주관기관 선정</p></article></section></main></div>
+<script>
+(() => {
+  const slide = document.querySelector('.slide');
+  const fit = () => { slide.style.transform = `scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
+  const theme = new URLSearchParams(location.search).get('theme');
+  if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+  addEventListener('resize', fit); fit();
+  // file:// frames have isolated origins; relay navigation without reading parent DOM.
+  if (parent !== window) document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', 'Escape', 'f', 'F'].includes(event.key)) return;
+    if (event.target.closest('button,input,textarea,select,[contenteditable],.carousel-controls,.carousel-nav')) return;
+    queueMicrotask(() => {
+      if (!event.defaultPrevented) parent.postMessage({ type: 'gnar-slide-key', key: event.key, shiftKey: event.shiftKey }, '*');
+    });
+  });
+})();
+</script>
+</body>
+</html>

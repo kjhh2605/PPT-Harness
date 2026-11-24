@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="source" content="https://notefolio.net/bysu.ppt/431729">
+<meta name="reference-image" content="slide-03.webp">
+<title>틱톡 문화의 속도 · Gnar</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root {
+  /* Gnar 브랜드 토큰 — Deep Indigo Ink (H 283). 원천: design/palettes/brand.json */
+  --hue: 283;
+  --bg: #EDE9E6;  /* 배경 */
+  --surface: #F7F3EF;  /* 카드·패널 */
+  --text: #262321;  /* 본문 */
+  --muted: #666260;  /* 보조 글자·캡션 */
+  --border: #D1CDCA;  /* 선·격자·비포커스 막대 */
+  --ink: #37356A;  /* 제목·강조 문장 */
+  --hero: #5A54AF;  /* 강조 한 곳(핵심 숫자·포커스 막대·구분선) */
+  --support: #8183A4;  /* 보조 막대·아이콘 */
+  --tint: #DEDFF5;  /* 콜아웃·표 머리 배경 띠 */
+  --brown: #826144;  /* 따뜻한 중립 1 */
+  --taupe: #736756;  /* 따뜻한 중립 2 */
+  --chart-1: var(--hero);
+  --chart-2: var(--support);
+  --chart-3: var(--brown);
+  --chart-4: var(--taupe);
+  --chart-5: var(--border);
+}
+
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+} }
+
+:root[data-theme="dark"] {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+}
+
+/* 발표별 색상 교체 레시피 (oklch 지원 브라우저). hex 토큰은 PPTX 변환용 기준값이며,
+ * 다른 색상으로 바꿀 때는 design/scripts/ladder.py 에 hue 값을 넣어 hex를 다시 생성한다.
+ *   light: ink oklch(.36 .09 H) hero oklch(.50 .14 H) support oklch(.62 .05 H) tint oklch(.91 .03 H)
+ *   dark : ink oklch(.86 .07 H) hero oklch(.70 .14 H) support oklch(.56 .05 H) tint oklch(.29 .04 H) */
+
+
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+.viewport { width: 100%; height: 100%; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center; overflow: hidden; }
+.slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; flex-shrink: 0; fill: var(--text); background: var(--surface); transform-origin: center center; }
+h1, h2, h3, p, figure { margin: 0; }
+svg { display: block; }
+.eyebrow { font-size: 25px; font-weight: 650; color: var(--muted); letter-spacing: -.4px; }
+.slide-title { font-size: 64px; font-weight: 750; line-height: 1.25; letter-spacing: -2.3px; color: var(--ink); word-break: keep-all; }
+.slide-copy { font-size: 28px; line-height: 1.6; letter-spacing: -.6px; color: var(--muted); word-break: keep-all; }
+.slide-header { position: absolute; top: 112px; left: 132px; right: 132px; }
+.slide-header .eyebrow { margin-bottom: 20px; }
+.slide-header .slide-copy { margin-top: 25px; }
+.slide-footer { position: absolute; left: 132px; right: 132px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; font-size: 20px; line-height: 1; color: var(--muted); }
+.wordmark { color: var(--ink); font-size: 30px; font-weight: 800; letter-spacing: -1.4px; }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, .viewport { width: 1920px; height: 1080px; overflow: visible; }
+  .slide { transform: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+
+.slide{background:var(--bg);color:var(--text)}
+.art{position:absolute;inset:0;width:1920px;height:1080px}
+.copy{font-size:28px;line-height:1.64;letter-spacing:-.7px;color:var(--text);word-break:keep-all}
+.logo{display:flex;align-items:center;gap:8px;color:var(--text);font-size:48px;font-weight:850;letter-spacing:-2px}
+.logo svg{width:52px;height:60px;overflow:visible}
+.muted{color:var(--muted)}.ink{color:var(--ink)}.hero{color:var(--hero)}
+.chip{display:inline-block;border-radius:40px;background:var(--tint);color:var(--ink);padding:10px 24px;font-weight:700;font-size:28px;line-height:1}
+.page-title{font-size:56px;line-height:1.25;font-weight:800;letter-spacing:-1.5px}
+.small-logo{font-size:30px;letter-spacing:-1px}.small-logo svg{width:32px;height:39px}
+.culture-title{position:absolute;left:90px;top:82px;font-size:48px;letter-spacing:-2px}.culture-copy{position:absolute;left:505px;top:80px;width:1320px;line-height:1.6}.culture-cols{position:absolute;left:70px;right:65px;top:405px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px;text-align:center}.culture-cols h3{font-size:28px;font-weight:700;color:var(--ink);margin:24px 0 16px;letter-spacing:-1px;white-space:nowrap}.culture-cols p{font-size:28px;line-height:1.6;letter-spacing:-1px}.culture-cols .duration{margin-top:10px}.culture-cols b{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="viewport"><main class="slide" data-slide-id="S-bysu-431729-03" aria-label="틱톡 문화의 속도"><svg class="art" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" ><g fill="none" stroke="var(--tint)" stroke-width="11"><circle cx="137" cy="948" r="24"/><circle cx="426" cy="656" r="23"/><circle cx="685" cy="813" r="37"/><circle cx="1260" cy="660" r="27"/><path d="M158 690q-35 32 6 51M1495 680l45 30M1024 715l-45 45m0-45 45 45"/></g><g fill="var(--border)"><circle cx="235" cy="1036" r="24"/><circle cx="285" cy="1030" r="35"/><circle cx="350" cy="980" r="28"/><circle cx="406" cy="1015" r="44"/><circle cx="436" cy="980" r="39"/><circle cx="525" cy="943" r="34"/><circle cx="522" cy="1030" r="43"/><circle cx="565" cy="1026" r="31"/><circle cx="630" cy="1032" r="59"/><circle cx="627" cy="932" r="24"/><circle cx="660" cy="942" r="35"/><circle cx="719" cy="986" r="15"/><circle cx="793" cy="1055" r="38"/><circle cx="795" cy="864" r="17"/><circle cx="426" cy="915" r="7"/><circle cx="585" cy="971" r="11"/></g><g fill="var(--support)"><circle cx="731" cy="893" r="60"/><circle cx="871" cy="850" r="46"/><circle cx="849" cy="982" r="63"/><circle cx="982" cy="932" r="63"/><circle cx="1014" cy="843" r="50"/><circle cx="1125" cy="814" r="30"/><circle cx="1175" cy="807" r="51"/><circle cx="1165" cy="990" r="109"/><circle cx="987" cy="1090" r="55"/><circle cx="1047" cy="1077" r="47"/></g><g fill="var(--hero)"><circle cx="1293" cy="866" r="120"/><circle cx="1572" cy="860" r="136"/><circle cx="1445" cy="1067" r="137"/><circle cx="1623" cy="1112" r="122"/></g><g stroke="var(--border)" stroke-width="2"><path d="M350 660v296M960 660v210M1560 660v60"/></g><g fill="var(--text)"><circle cx="350" cy="956" r="6"/><circle cx="960" cy="870" r="6"/><circle cx="1560" cy="720" r="6"/></g></svg><h1 class="culture-title">틱톡 문화의 <span class="ink">속도</span></h1><p class="culture-copy copy">‘트렌드’라고 하면 흔히 반짝 뜨는 음악이나 댄스 챌린지, 비디오 클립을 떠올립니다. 틱톡은 이러한 트렌드에도 지속 기간, 영향력에 따라 여러 종류가 있음을 인지하고, 플랫폼에서 일어나는 글로벌 문화와 창의성에 대해 포괄적으로 이해하기 위해 다양한 속도와 규모로 트렌드를 추적합니다. 틱톡에서 일어나는 “반짝” 모먼트, “반짝”에서 그치지 않고 콘텐츠의 확산과 변형이 하나의 놀이로 자리잡는 시그널, 마지막으로 국경을 초월하는 새로운 커뮤니티가 형성되고 오랫동안 큰 영향을 미치는 트렌드 포스, 세 종류의 트렌드를 이해하고 브랜드가 활용할 수 있는 방법에 대해 생각해봅시다.</p><div class="culture-cols"><section><h2 class="chip">모먼트 (Moment)</h2><h3>빠른 입소문과 흡입력을 갖게 하는 크리에이티브</h3><p>EX) 모두가 사용하는 인기 틱톡<br>사운드, 해시태그, 형식 등</p><p class="duration"><b>지속 기간 :</b> 며칠에서 몇 주</p></section><section><h2 class="chip">시그널 (Signal)</h2><h3>새로운 행동과 관심사를 드러내는 새로운 콘텐츠 패턴</h3><p>EX) 특정 카테고리 또는 업계 내 행동 변화<br>(겟레디위드미-뷰티)</p><p class="duration"><b>지속 기간 :</b> 수개월에서 몇 년</p></section><section><h2 class="chip">포스 (Force)</h2><h3>지속적인, 대규모의 행동 변화</h3><p>EX) 커뮤니티 형성 방식, 제품을 발견하는 방식,<br>크리에이터의 영향 행사 방식 등 주요한 문화적 변화</p><p class="duration"><b>지속 기간 :</b> 최대 여러 해</p></section></div></main></div>
+<script>
+(() => {
+  const slide = document.querySelector('.slide');
+  const fit = () => { slide.style.transform = `scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
+  const theme = new URLSearchParams(location.search).get('theme');
+  if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+  addEventListener('resize', fit); fit();
+  // file:// frames have isolated origins; relay navigation without reading parent DOM.
+  if (parent !== window) document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', 'Escape', 'f', 'F'].includes(event.key)) return;
+    if (event.target.closest('button,input,textarea,select,[contenteditable],.carousel-controls,.carousel-nav')) return;
+    queueMicrotask(() => {
+      if (!event.defaultPrevented) parent.postMessage({ type: 'gnar-slide-key', key: event.key, shiftKey: event.shiftKey }, '*');
+    });
+  });
+})();
+</script>
+</body>
+</html>

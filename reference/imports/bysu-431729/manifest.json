@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "id": "bysu-431729",
+  "title": "틱톡 코리아 트렌드 리포트",
+  "source_url": "https://notefolio.net/bysu.ppt/431729",
+  "pages": [
+    {
+      "id": "S-bysu-431729-01",
+      "title": "What’s Next · 2024 Trend Report",
+      "html": "reference/slides/S-bysu-431729-01.html",
+      "preview": "reference/previews/S-bysu-431729-01.png",
+      "layout": "좌측 타이틀 · 우측 입체 보고서",
+      "summary": "좌상단 3단 제목과 다운로드 캡슐, 우측 기울어진 보고서와 반응 아이콘을 배치한 표지."
+    },
+    {
+      "id": "S-bysu-431729-02",
+      "title": "What’s Next 2024 - KR",
+      "html": "reference/slides/S-bysu-431729-02.html",
+      "preview": "reference/previews/S-bysu-431729-02.png",
+      "layout": "하단 소개문 · 우측 인물 콜라주",
+      "summary": "좌측 하단의 보고서 소개와 우측 웃는 인물·아보카도·립스틱 콜라주를 재구성."
+    },
+    {
+      "id": "S-bysu-431729-03",
+      "title": "틱톡 문화의 속도",
+      "html": "reference/slides/S-bysu-431729-03.html",
+      "preview": "reference/previews/S-bysu-431729-03.png",
+      "layout": "3열 개념 비교 · 점진적 버블",
+      "summary": "상단 제목·설명, 중단 세 트렌드 분류, 하단 크기가 커지는 버블로 지속 기간을 시각화."
+    },
+    {
+      "id": "S-bysu-431729-04",
+      "title": "어떻게 활용하면 좋을까?",
+      "html": "reference/slides/S-bysu-431729-04.html",
+      "preview": "reference/previews/S-bysu-431729-04.png",
+      "layout": "패턴 배경 · 중앙 설명 패널",
+      "summary": "외곽 기하 패턴과 중앙 가로형 둥근 패널에 트렌드 포스 활용 방법을 설명."
+    },
+    {
+      "id": "S-bysu-431729-05",
+      "title": "어디 갈까? 아이디어가 필요할 때",
+      "html": "reference/slides/S-bysu-431729-05.html",
+      "preview": "reference/previews/S-bysu-431729-05.png",
+      "layout": "좌측 이야기 · 우측 데이터 및 팁",
+      "summary": "좌측 트렌드 포스 4 소개와 우측 7개 해시태그 성장률 표, 하단 Tips for Brands 박스."
+    },
+    {
+      "id": "S-bysu-431729-06",
+      "title": "What’s Next 2024 Trend Report · 마무리",
+      "html": "reference/slides/S-bysu-431729-06.html",
+      "preview": "reference/previews/S-bysu-431729-06.png",
+      "layout": "좌하단 QR 안내 · 우측 소품 콜라주",
+      "summary": "좌상단 로고, 우측 스티커·축구공·마네키네코, 좌하단 QR과 마무리 안내를 배치."
+    }
+  ]
+}

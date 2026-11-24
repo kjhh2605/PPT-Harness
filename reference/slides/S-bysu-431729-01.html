@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="source" content="https://notefolio.net/bysu.ppt/431729">
+<meta name="reference-image" content="slide-01.webp">
+<title>What’s Next · 2024 Trend Report · Gnar</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root {
+  /* Gnar 브랜드 토큰 — Deep Indigo Ink (H 283). 원천: design/palettes/brand.json */
+  --hue: 283;
+  --bg: #EDE9E6;  /* 배경 */
+  --surface: #F7F3EF;  /* 카드·패널 */
+  --text: #262321;  /* 본문 */
+  --muted: #666260;  /* 보조 글자·캡션 */
+  --border: #D1CDCA;  /* 선·격자·비포커스 막대 */
+  --ink: #37356A;  /* 제목·강조 문장 */
+  --hero: #5A54AF;  /* 강조 한 곳(핵심 숫자·포커스 막대·구분선) */
+  --support: #8183A4;  /* 보조 막대·아이콘 */
+  --tint: #DEDFF5;  /* 콜아웃·표 머리 배경 띠 */
+  --brown: #826144;  /* 따뜻한 중립 1 */
+  --taupe: #736756;  /* 따뜻한 중립 2 */
+  --chart-1: var(--hero);
+  --chart-2: var(--support);
+  --chart-3: var(--brown);
+  --chart-4: var(--taupe);
+  --chart-5: var(--border);
+}
+
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+} }
+
+:root[data-theme="dark"] {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+}
+
+/* 발표별 색상 교체 레시피 (oklch 지원 브라우저). hex 토큰은 PPTX 변환용 기준값이며,
+ * 다른 색상으로 바꿀 때는 design/scripts/ladder.py 에 hue 값을 넣어 hex를 다시 생성한다.
+ *   light: ink oklch(.36 .09 H) hero oklch(.50 .14 H) support oklch(.62 .05 H) tint oklch(.91 .03 H)
+ *   dark : ink oklch(.86 .07 H) hero oklch(.70 .14 H) support oklch(.56 .05 H) tint oklch(.29 .04 H) */
+
+
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+.viewport { width: 100%; height: 100%; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center; overflow: hidden; }
+.slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; flex-shrink: 0; fill: var(--text); background: var(--surface); transform-origin: center center; }
+h1, h2, h3, p, figure { margin: 0; }
+svg { display: block; }
+.eyebrow { font-size: 25px; font-weight: 650; color: var(--muted); letter-spacing: -.4px; }
+.slide-title { font-size: 64px; font-weight: 750; line-height: 1.25; letter-spacing: -2.3px; color: var(--ink); word-break: keep-all; }
+.slide-copy { font-size: 28px; line-height: 1.6; letter-spacing: -.6px; color: var(--muted); word-break: keep-all; }
+.slide-header { position: absolute; top: 112px; left: 132px; right: 132px; }
+.slide-header .eyebrow { margin-bottom: 20px; }
+.slide-header .slide-copy { margin-top: 25px; }
+.slide-footer { position: absolute; left: 132px; right: 132px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; font-size: 20px; line-height: 1; color: var(--muted); }
+.wordmark { color: var(--ink); font-size: 30px; font-weight: 800; letter-spacing: -1.4px; }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, .viewport { width: 1920px; height: 1080px; overflow: visible; }
+  .slide { transform: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+
+.slide{background:var(--bg);color:var(--text)}
+.art{position:absolute;inset:0;width:1920px;height:1080px}
+.copy{font-size:28px;line-height:1.64;letter-spacing:-.7px;color:var(--text);word-break:keep-all}
+.logo{display:flex;align-items:center;gap:8px;color:var(--text);font-size:48px;font-weight:850;letter-spacing:-2px}
+.logo svg{width:52px;height:60px;overflow:visible}
+.muted{color:var(--muted)}.ink{color:var(--ink)}.hero{color:var(--hero)}
+.chip{display:inline-block;border-radius:40px;background:var(--tint);color:var(--ink);padding:10px 24px;font-weight:700;font-size:28px;line-height:1}
+.page-title{font-size:56px;line-height:1.25;font-weight:800;letter-spacing:-1.5px}
+.small-logo{font-size:30px;letter-spacing:-1px}.small-logo svg{width:32px;height:39px}
+.cover-text{position:absolute;left:92px;top:82px}.cover-text p{font-size:56px;font-weight:800;color:var(--ink)}.cover-text h1{font-size:91px;letter-spacing:-3px;margin:10px 0 7px;line-height:1.15}.cover-text h2{font-size:38px;letter-spacing:-1px;color:var(--ink);font-weight:650;margin:0}.download{display:inline-block;margin-top:36px;padding:21px 42px;border-radius:60px;background:var(--tint);color:var(--ink);font-size:29px;font-weight:750}.cover-logo{position:absolute;left:92px;bottom:80px}
+</style>
+</head>
+<body>
+<div class="viewport"><main class="slide" data-slide-id="S-bysu-431729-01" aria-label="What’s Next · 2024 Trend Report"><svg class="art" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" ><g fill="none" stroke="var(--tint)" stroke-width="108">
+    <circle cx="1382" cy="9" r="155"/><circle cx="1925" cy="25" r="126"/>
+    <circle cx="1480" cy="1076" r="110"/><path d="M1918 948a135 135 0 0 1-170 118"/>
+    </g><g fill="var(--tint)"><path d="M1688 90h110l-151 213 130 118h-130l-118-109z"/>
+    <circle cx="1890" cy="300" r="64"/><path d="M1800 535h-80a170 170 0 0 0 200 165v-90a85 85 0 0 1-120-75z"/></g><g transform="matrix(.95 .12 -.36 1 1340 300)">
+    <path d="M18 18H420V548H18z" fill="var(--border)"/>
+    <path d="M10 7H410V537H10z" fill="var(--muted)"/>
+    <rect x="0" y="0" width="400" height="520" rx="8" fill="var(--hero)"/>
+    <rect x="9" y="0" width="12" height="520" fill="var(--support)"/>
+    <g fill="var(--bg)" font-family="Pretendard, sans-serif" font-weight="800">
+    <text x="270" y="40" font-size="27">♪ TikTok</text>
+    <text x="42" y="100" font-size="48">2024</text><text x="42" y="152" font-size="48">TREND</text>
+    <text x="42" y="204" font-size="48">REPORT</text><text x="42" y="252" font-size="24">2024 트렌드 리포트</text></g>
+    <rect x="145" y="345" width="214" height="112" rx="8" fill="var(--text)"/>
+    <rect x="153" y="353" width="125" height="88" rx="4" fill="var(--bg)"/>
+    <g stroke="var(--ink)" stroke-width="10" stroke-linecap="round"><path d="M167 420v-15m20 15v-30m20 30v-23m20 23v-44m20 44v-32m20 32v-48"/></g>
+    <circle cx="316" cy="388" r="22" fill="var(--border)"/><path d="M316 388v-22a22 22 0 0 1 21 16z" fill="var(--ink)"/>
+    <rect x="58" y="415" width="190" height="59" rx="5" fill="var(--text)"/>
+    <g stroke="var(--border)" stroke-width="4"><path d="M70 429h70m-70 13h70m-70 13h55"/></g>
+    <g fill="var(--ink)"><rect x="160" y="449" width="12" height="16"/><rect x="178" y="441" width="12" height="24"/><rect x="196" y="433" width="12" height="32"/><rect x="214" y="425" width="12" height="40"/></g></g><g transform="translate(1620 128) rotate(18) scale(1.35)"><path d="M8 8h92q12 0 12 14v79q0 14-14 14H78l-20 24-10-24H8q-14 0-14-14V22Q-6 8 8 8" fill="var(--text)" stroke="var(--border)" stroke-width="5"/><path d="M52 57C12 17 5 70 52 101c48-31 40-84 0-44" fill="var(--ink)"/></g><g transform="translate(835 552) rotate(-24) scale(1.2)"><path d="M8 8h92q12 0 12 14v79q0 14-14 14H78l-20 24-10-24H8q-14 0-14-14V22Q-6 8 8 8" fill="var(--text)" stroke="var(--border)" stroke-width="5"/><path d="M28 65h15l12-35c16 0 10 25 8 31h21q15 0 10 13l-9 28H47l-4-27H28z" fill="var(--support)"/></g><g transform="translate(1100 420) rotate(-17) scale(0.8)"><path d="M8 8h92q12 0 12 14v79q0 14-14 14H78l-20 24-10-24H8q-14 0-14-14V22Q-6 8 8 8" fill="var(--text)" stroke="var(--border)" stroke-width="5"/><path d="M52 57C12 17 5 70 52 101c48-31 40-84 0-44" fill="var(--ink)"/></g><g transform="translate(1700 800) rotate(36) scale(1.1)"><path d="M8 8h92q12 0 12 14v79q0 14-14 14H78l-20 24-10-24H8q-14 0-14-14V22Q-6 8 8 8" fill="var(--text)" stroke="var(--border)" stroke-width="5"/><path d="M40 35l-16 65m54-65-16 65M18 55h70M10 80h70" stroke="var(--ink)" stroke-width="12"/></g></svg><div class="cover-text"><p>What’s Next</p><h1>2024 Trend Report</h1><h2>틱톡의 2024년, 어떤 일이 벌어질까?</h2><div class="download">리포트 다운로드 ↓</div></div><div class="cover-logo"><div class="logo "><svg class="" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" ><path d="M28 6v36c0 11-21 14-21 1 0-9 12-12 18-8V7h10c1 11 8 17 19 18v10c-10-1-17-4-22-10" fill="var(--ink)"/></svg><span>TikTok</span></div></div></main></div>
+<script>
+(() => {
+  const slide = document.querySelector('.slide');
+  const fit = () => { slide.style.transform = `scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
+  const theme = new URLSearchParams(location.search).get('theme');
+  if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+  addEventListener('resize', fit); fit();
+  // file:// frames have isolated origins; relay navigation without reading parent DOM.
+  if (parent !== window) document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', 'Escape', 'f', 'F'].includes(event.key)) return;
+    if (event.target.closest('button,input,textarea,select,[contenteditable],.carousel-controls,.carousel-nav')) return;
+    queueMicrotask(() => {
+      if (!event.defaultPrevented) parent.postMessage({ type: 'gnar-slide-key', key: event.key, shiftKey: event.shiftKey }, '*');
+    });
+  });
+})();
+</script>
+</body>
+</html>

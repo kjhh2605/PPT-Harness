@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="source" content="https://notefolio.net/bysu.ppt/451665">
+<meta name="reference-image" content="slide-03.webp">
+<title>복잡한 시장에서의 완결형 솔루션 · Gnar</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root {
+  /* Gnar 브랜드 토큰 — Deep Indigo Ink (H 283). 원천: design/palettes/brand.json */
+  --hue: 283;
+  --bg: #EDE9E6;  /* 배경 */
+  --surface: #F7F3EF;  /* 카드·패널 */
+  --text: #262321;  /* 본문 */
+  --muted: #666260;  /* 보조 글자·캡션 */
+  --border: #D1CDCA;  /* 선·격자·비포커스 막대 */
+  --ink: #37356A;  /* 제목·강조 문장 */
+  --hero: #5A54AF;  /* 강조 한 곳(핵심 숫자·포커스 막대·구분선) */
+  --support: #8183A4;  /* 보조 막대·아이콘 */
+  --tint: #DEDFF5;  /* 콜아웃·표 머리 배경 띠 */
+  --brown: #826144;  /* 따뜻한 중립 1 */
+  --taupe: #736756;  /* 따뜻한 중립 2 */
+  --chart-1: var(--hero);
+  --chart-2: var(--support);
+  --chart-3: var(--brown);
+  --chart-4: var(--taupe);
+  --chart-5: var(--border);
+}
+
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+} }
+
+:root[data-theme="dark"] {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+}
+
+/* 발표별 색상 교체 레시피 (oklch 지원 브라우저). hex 토큰은 PPTX 변환용 기준값이며,
+ * 다른 색상으로 바꿀 때는 design/scripts/ladder.py 에 hue 값을 넣어 hex를 다시 생성한다.
+ *   light: ink oklch(.36 .09 H) hero oklch(.50 .14 H) support oklch(.62 .05 H) tint oklch(.91 .03 H)
+ *   dark : ink oklch(.86 .07 H) hero oklch(.70 .14 H) support oklch(.56 .05 H) tint oklch(.29 .04 H) */
+
+
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+.viewport { width: 100%; height: 100%; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center; overflow: hidden; }
+.slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; flex-shrink: 0; fill: var(--text); background: var(--surface); transform-origin: center center; }
+h1, h2, h3, p, figure { margin: 0; }
+svg { display: block; }
+.eyebrow { font-size: 25px; font-weight: 650; color: var(--muted); letter-spacing: -.4px; }
+.slide-title { font-size: 64px; font-weight: 750; line-height: 1.25; letter-spacing: -2.3px; color: var(--ink); word-break: keep-all; }
+.slide-copy { font-size: 28px; line-height: 1.6; letter-spacing: -.6px; color: var(--muted); word-break: keep-all; }
+.slide-header { position: absolute; top: 112px; left: 132px; right: 132px; }
+.slide-header .eyebrow { margin-bottom: 20px; }
+.slide-header .slide-copy { margin-top: 25px; }
+.slide-footer { position: absolute; left: 132px; right: 132px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; font-size: 20px; line-height: 1; color: var(--muted); }
+.wordmark { color: var(--ink); font-size: 30px; font-weight: 800; letter-spacing: -1.4px; }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, .viewport { width: 1920px; height: 1080px; overflow: visible; }
+  .slide { transform: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+
+.slide{background:var(--surface)}
+.backdrop{position:absolute;inset:0;background:var(--surface);overflow:hidden}
+.backdrop i{position:absolute;display:block;background:var(--bg);opacity:.36}
+.hdr{position:absolute;left:100px;top:102px;right:100px}
+.hdr h1{font-size:56px;line-height:1.25;letter-spacing:-2px;color:var(--ink);font-weight:760}
+.hero{color:var(--hero)}
+.hdr p{font-size:31px;line-height:1.6;color:var(--muted);margin-top:22px;letter-spacing:-.8px;word-break:keep-all}
+.pg{position:absolute;right:91px;top:110px;font-size:24px;color:var(--muted)}
+.icon{display:block}.icon svg{width:100%;height:100%}
+.card{position:absolute;background:var(--surface);border:2px solid var(--border);border-radius:38px}
+.card h2{font-size:34px;line-height:1.35;color:var(--ink);letter-spacing:-1px;margin:16px 0}
+.card p{font-size:28px;line-height:1.7;color:var(--muted);letter-spacing:-.9px}
+.point{font-size:28px;color:var(--ink);font-weight:650}
+.pill{position:absolute;border:2px solid var(--border);background:var(--surface);border-radius:100px;display:flex;align-items:center;justify-content:center;color:var(--ink);font-size:32px;font-weight:650}
+
+</style>
+</head>
+<body>
+<div class="viewport"><main class="slide" data-slide-id="S-bysu-451665-03" aria-label="복잡한 시장에서의 완결형 솔루션"><div class="backdrop" aria-hidden="true"><i style="left:0;top:755px;width:1920px;height:160px"></i><i style="left:480px;top:915px;width:240px;height:165px"></i><i style="left:1210px;top:915px;width:240px;height:165px"></i></div><header class="hdr"><h1>복잡한 시장에서의 <span class="hero">완결형 솔루션</span></h1><p>국내 소비자들은 세계 각지 쇼핑몰 및 마켓 플레이스 구매를 어려워하고 있습니다.<br>HJ글로벌로지스틱은 구조적 한계를 보완하기 위해 현지 전용 구매 계정,<br>법인 명의 결제, 통합 물류 시스템으로 실행 가능한 구매대행을 제공합니다.</p></header><span class="pg">3</span><div style="position:absolute;left:178px;top:470px;font-size:30px;color:var(--muted);font-weight:700">Problem</div><div style="position:absolute;left:1048px;top:470px;font-size:30px;color:var(--ink);font-weight:700">Solution</div><div class="pill" style="left:164px;top:527px;width:733px;height:123px;background:var(--bg);border-color:var(--bg);color:var(--muted);font-weight:500">언어 장벽</div><div class="pill" style="left:1034px;top:527px;width:733px;height:123px">현지 전용 구매 계정</div><div class="pill" style="left:164px;top:676px;width:733px;height:123px;background:var(--bg);border-color:var(--bg);color:var(--muted);font-weight:500">결제 수단 제한</div><div class="pill" style="left:1034px;top:676px;width:733px;height:123px">법인 명의로 결제</div><div class="pill" style="left:164px;top:825px;width:733px;height:123px;background:var(--bg);border-color:var(--bg);color:var(--muted);font-weight:500">현지 배송망 미비</div><div class="pill" style="left:1034px;top:825px;width:733px;height:123px">통합 물류 시스템 제공</div><div class="icon" style="position:absolute;left:695px;top:430px;width:210px;height:150px"><svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M48 52l56-22 58 24-57 28z" fill="var(--border)"/><path d="M48 52v66l56 27V81z" fill="var(--support)"/><path d="M104 82v63l58-29V54z" fill="var(--tint)"/><path d="M48 52L16 34l58-22 30 18M104 30l30-18 61 23-33 19M48 52l-27 31 54 27 29-28M104 82l29 27 59-30-30-25" fill="var(--border)" stroke="var(--surface)" stroke-width="2"/></svg></div><div class="icon" style="position:absolute;left:1565px;top:410px;width:200px;height:160px"><svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M24 33h144l-20 67H46z" fill="var(--tint)" stroke="var(--support)" stroke-width="7"/><path d="M39 53h122M43 76h112M61 36l11 62M97 36v62M135 36l-11 62M161 33l14-21h20M48 99l-9 21h114" fill="none" stroke="var(--support)" stroke-width="7" stroke-linecap="round"/><circle cx="55" cy="132" r="13" fill="var(--ink)"/><circle cx="142" cy="132" r="13" fill="var(--ink)"/></svg></div><svg style="position:absolute;left:950px;top:713px" width="32" height="52" viewBox="0 0 32 52" aria-hidden="true"><path d="M5 5l21 21L5 47" fill="none" stroke="var(--border)" stroke-width="7" stroke-linecap="round"/></svg></main></div>
+<script>
+(() => {
+  const slide = document.querySelector('.slide');
+  const fit = () => { slide.style.transform = `scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
+  const theme = new URLSearchParams(location.search).get('theme');
+  if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+  addEventListener('resize', fit); fit();
+  // file:// frames have isolated origins; relay navigation without reading parent DOM.
+  if (parent !== window) document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', 'Escape', 'f', 'F'].includes(event.key)) return;
+    if (event.target.closest('button,input,textarea,select,[contenteditable],.carousel-controls,.carousel-nav')) return;
+    queueMicrotask(() => {
+      if (!event.defaultPrevented) parent.postMessage({ type: 'gnar-slide-key', key: event.key, shiftKey: event.shiftKey }, '*');
+    });
+  });
+
+})();
+</script>
+</body>
+</html>

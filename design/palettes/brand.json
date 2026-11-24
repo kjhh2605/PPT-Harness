@@ -1,0 +1,47 @@
+{
+ "note": "확정 브랜드 팔레트 (2026-10-28). indigo-sets.json의 3번.",
+ "id": "indigo-deep",
+ "name": "Deep Indigo Ink",
+ "ko": "짙은 인디고 잉크",
+ "hue": 283,
+ "heroC": 0.14,
+ "mood": "hero를 조금 더 진하게. 강조가 가장 분명함.",
+ "light": {
+  "bg": "#EDE9E6",
+  "surface": "#F7F3EF",
+  "text": "#262321",
+  "muted": "#666260",
+  "border": "#D1CDCA",
+  "ink": "#37356A",
+  "hero": "#5A54AF",
+  "support": "#8183A4",
+  "tint": "#DEDFF5",
+  "brown": "#826144",
+  "taupe": "#736756",
+  "cr": {
+   "text": 12.94,
+   "ink": 9.26,
+   "hero": 5.24,
+   "support": 3.04
+  }
+ },
+ "dark": {
+  "bg": "#181513",
+  "surface": "#24211F",
+  "text": "#E8E4E1",
+  "muted": "#A19E9B",
+  "border": "#383532",
+  "ink": "#CACCFE",
+  "hero": "#9391F2",
+  "support": "#707191",
+  "tint": "#28293F",
+  "brown": "#B49072",
+  "taupe": "#A39684",
+  "cr": {
+   "text": 14.38,
+   "ink": 11.75,
+   "hero": 6.55,
+   "support": 3.86
+  }
+ }
+}

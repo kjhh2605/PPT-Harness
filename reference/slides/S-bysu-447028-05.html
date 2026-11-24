@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="source" content="https://notefolio.net/bysu.ppt/447028">
+<meta name="reference-image" content="slide-05.webp">
+<title>보안의 디테일을 바꾸는 핵심 기능 · Gnar</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root {
+  /* Gnar 브랜드 토큰 — Deep Indigo Ink (H 283). 원천: design/palettes/brand.json */
+  --hue: 283;
+  --bg: #EDE9E6;  /* 배경 */
+  --surface: #F7F3EF;  /* 카드·패널 */
+  --text: #262321;  /* 본문 */
+  --muted: #666260;  /* 보조 글자·캡션 */
+  --border: #D1CDCA;  /* 선·격자·비포커스 막대 */
+  --ink: #37356A;  /* 제목·강조 문장 */
+  --hero: #5A54AF;  /* 강조 한 곳(핵심 숫자·포커스 막대·구분선) */
+  --support: #8183A4;  /* 보조 막대·아이콘 */
+  --tint: #DEDFF5;  /* 콜아웃·표 머리 배경 띠 */
+  --brown: #826144;  /* 따뜻한 중립 1 */
+  --taupe: #736756;  /* 따뜻한 중립 2 */
+  --chart-1: var(--hero);
+  --chart-2: var(--support);
+  --chart-3: var(--brown);
+  --chart-4: var(--taupe);
+  --chart-5: var(--border);
+}
+
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+} }
+
+:root[data-theme="dark"] {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+}
+
+/* 발표별 색상 교체 레시피 (oklch 지원 브라우저). hex 토큰은 PPTX 변환용 기준값이며,
+ * 다른 색상으로 바꿀 때는 design/scripts/ladder.py 에 hue 값을 넣어 hex를 다시 생성한다.
+ *   light: ink oklch(.36 .09 H) hero oklch(.50 .14 H) support oklch(.62 .05 H) tint oklch(.91 .03 H)
+ *   dark : ink oklch(.86 .07 H) hero oklch(.70 .14 H) support oklch(.56 .05 H) tint oklch(.29 .04 H) */
+
+
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+.viewport { width: 100%; height: 100%; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center; overflow: hidden; }
+.slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; flex-shrink: 0; fill: var(--text); background: var(--surface); transform-origin: center center; }
+h1, h2, h3, p, figure { margin: 0; }
+svg { display: block; }
+.eyebrow { font-size: 25px; font-weight: 650; color: var(--muted); letter-spacing: -.4px; }
+.slide-title { font-size: 64px; font-weight: 750; line-height: 1.25; letter-spacing: -2.3px; color: var(--ink); word-break: keep-all; }
+.slide-copy { font-size: 28px; line-height: 1.6; letter-spacing: -.6px; color: var(--muted); word-break: keep-all; }
+.slide-header { position: absolute; top: 112px; left: 132px; right: 132px; }
+.slide-header .eyebrow { margin-bottom: 20px; }
+.slide-header .slide-copy { margin-top: 25px; }
+.slide-footer { position: absolute; left: 132px; right: 132px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; font-size: 20px; line-height: 1; color: var(--muted); }
+.wordmark { color: var(--ink); font-size: 30px; font-weight: 800; letter-spacing: -1.4px; }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, .viewport { width: 1920px; height: 1080px; overflow: visible; }
+  .slide { transform: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+
+.slide{background:var(--bg)}
+.brand{position:absolute;top:86px;right:88px;width:100px;color:var(--ink)}
+.brand svg{width:100%;height:28px}.brand b{font-size:31px;letter-spacing:-1px;line-height:1}
+.heading{position:absolute;left:92px;top:88px;right:245px}
+.heading h1{font-size:52px;line-height:1.37;font-weight:760;letter-spacing:-1.8px;color:var(--ink)}
+.heading p{font-size:28px;line-height:1.7;color:var(--muted);margin-top:18px;letter-spacing:-.5px}
+.accent{color:var(--hero)}
+.small{font-size:22px;color:var(--muted);line-height:1.55}
+.svg-ink{stroke:var(--ink)}
+.feature-intro{position:absolute;left:0;top:0;bottom:0;width:782px;background:var(--surface);border-radius:0 40px 40px 0;padding:98px 92px}.feature-intro>span{font-size:28px;color:var(--ink);font-weight:650}.feature-intro h1{font-size:51px;line-height:1.36;letter-spacing:-1.8px;color:var(--ink);margin-top:18px}.feature-intro>p{font-size:28px;line-height:1.7;margin-top:20px;color:var(--muted);letter-spacing:-.8px}.feature-intro ul{position:absolute;left:92px;top:572px;list-style:none;padding:0;margin:0;width:590px}.feature-intro li{height:91px;background:var(--bg);border-radius:50px;font-size:27px;letter-spacing:-.8px;color:var(--muted);display:flex;align-items:center;margin-bottom:19px;white-space:nowrap}.feature-intro li i{font-style:normal;width:28px;height:28px;border-radius:50%;background:var(--support);color:var(--text);text-align:center;line-height:28px;margin-left:42px;margin-right:18px;font-size:20px}.features{position:absolute;left:865px;right:76px;top:248px;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(3,195px);gap:20px}.feature{background:var(--surface);border-radius:27px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}.feature.empty{background:var(--border);opacity:.45}.feature.selected{background:var(--tint);outline:5px solid var(--hero);transform:translateY(-20px)}.feature-icon{width:62px;height:62px;margin-bottom:18px}.feature h2{font-size:24px;line-height:1.35;letter-spacing:-1.1px;text-align:center;font-weight:620;color:var(--ink)}.cursor{position:absolute;right:21px;bottom:7px;font-size:42px;transform:rotate(36deg);color:var(--text)}
+</style>
+</head>
+<body>
+<div class="viewport"><main class="slide" data-slide-id="S-bysu-447028-05" aria-label="보안의 디테일을 바꾸는 핵심 기능"><section class="feature-intro"><span>Solution 1</span><h1>보안의 디테일을<br>바꾸는 핵심 기능</h1><p>쉽게 시작하지만 상세한 설정으로<br>더욱 강력한 보안을 경험할 수 있습니다.</p><ul><li><i>✓</i>안전한 업무 환경 구현</li><li><i>✓</i>다양한 사용자 환경에서 일관된 보안 정책</li><li><i>✓</i>관리 비용 절감 및 운영 효율성 향상</li><li><i>✓</i>사이버 위협에 대한 선제적 대응</li></ul></section><section class="features"><article class="feature  "><svg class="feature-icon" viewBox="0 0 64 64" role="img" aria-label="보안 기능 아이콘"><g fill="none" stroke="var(--support)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="17" r="9"/><path d="M8 53v-6q0-17 22-17"/><rect x="33" y="33" width="23" height="20" rx="5"/><path d="M39 33v-7a6 6 0 0 1 12 0v7"/></g></svg><h2>사용자 인증</h2></article><article class="feature  selected"><svg class="feature-icon" viewBox="0 0 64 64" role="img" aria-label="보안 기능 아이콘"><g fill="none" stroke="var(--support)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="11" width="42" height="45" rx="8"/><path d="M24 11h14M23 47h14"/><circle cx="51" cy="10" r="6"/></g></svg><h2>애플리케이션 제어</h2><span class="cursor">➤</span></article><article class="feature empty "><h2></h2></article><article class="feature  "><svg class="feature-icon" viewBox="0 0 64 64" role="img" aria-label="보안 기능 아이콘"><g fill="none" stroke="var(--support)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="26" height="18" rx="5"/><path d="M18 23v8m-8 0h16m7-16h9v15M18 41v10h14"/><rect x="40" y="34" width="16" height="25" rx="5"/></g></svg><h2>네트워크 접속 통제</h2></article><article class="feature  "><svg class="feature-icon" viewBox="0 0 64 64" role="img" aria-label="보안 기능 아이콘"><g fill="none" stroke="var(--support)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M30 4 50 12v22Q46 49 30 59 14 49 10 34V12Z"/><circle cx="30" cy="27" r="4"/><path d="M30 31v10"/></g></svg><h2>접속 단말 보안</h2></article><article class="feature empty "><h2></h2></article><article class="feature  "><svg class="feature-icon" viewBox="0 0 64 64" role="img" aria-label="보안 기능 아이콘"><g fill="none" stroke="var(--support)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 48V31a16 16 0 0 1 32 0v17M9 49h44v7H9ZM30 2v7M9 9l5 6m37-6-5 6M22 31q0-9 9-9"/></g></svg><h2>유해 접속 시도 차단</h2></article><article class="feature  "><svg class="feature-icon" viewBox="0 0 64 64" role="img" aria-label="보안 기능 아이콘"><g fill="none" stroke="var(--support)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M27 5A23 23 0 1 0 27 53M30 7l5 8-5 7M13 24l8 2-2 8M43 19v5"/><rect x="35" y="35" width="22" height="21" rx="5"/><path d="M40 35v-6a6 6 0 0 1 12 0v6"/></g></svg><h2>랜섬웨어 확산 방지</h2></article><article class="feature  "><svg class="feature-icon" viewBox="0 0 64 64" role="img" aria-label="보안 기능 아이콘"><g fill="none" stroke="var(--support)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 15v24l13 18M53 15v24L40 57M16 26v14l12 9M44 26v14L32 49M23 10l7-5 8 5v12H23Z"/></g></svg><h2>컴플라이언스<br>이행 강제</h2></article><article class="feature  "><svg class="feature-icon" viewBox="0 0 64 64" role="img" aria-label="보안 기능 아이콘"><g fill="none" stroke="var(--support)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 56V19a14 14 0 0 1 28 0v37M10 56h44M12 29h9m21 0h8M31 1v5"/><circle cx="31" cy="25" r="4"/><path d="M31 29v10"/></g></svg><h2>마이크로세그멘테이션<br>모니터링</h2></article><article class="feature  "><svg class="feature-icon" viewBox="0 0 64 64" role="img" aria-label="보안 기능 아이콘"><g fill="none" stroke="var(--support)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 12v45m48-45v45M8 19h46v22H8M12 39l17-19m4 21 17-21"/></g></svg><h2>공격 표면 최소화</h2></article><article class="feature  "><svg class="feature-icon" viewBox="0 0 64 64" role="img" aria-label="보안 기능 아이콘"><g fill="none" stroke="var(--support)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20Q30-5 56 20M15 30q15-15 30 0"/><rect x="25" y="39" width="23" height="19" rx="5"/><path d="M31 39v-5a6 6 0 0 1 12 0v5"/></g></svg><h2>내부망 이동 차단</h2></article></section></main></div>
+<script>
+(() => {
+  const slide = document.querySelector('.slide');
+  const fit = () => { slide.style.transform = `scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
+  const theme = new URLSearchParams(location.search).get('theme');
+  if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+  addEventListener('resize', fit); fit();
+  // file:// frames have isolated origins; relay navigation without reading parent DOM.
+  if (parent !== window) document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', 'Escape', 'f', 'F'].includes(event.key)) return;
+    if (event.target.closest('button,input,textarea,select,[contenteditable],.carousel-controls,.carousel-nav')) return;
+    queueMicrotask(() => {
+      if (!event.defaultPrevented) parent.postMessage({ type: 'gnar-slide-key', key: event.key, shiftKey: event.shiftKey }, '*');
+    });
+  });
+})();
+</script>
+</body>
+</html>

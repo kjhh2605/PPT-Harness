@@ -1,0 +1,4 @@
+interface:
+  display_name: "링크 → Gnar 레퍼런스"
+  short_description: "링크 속 화면을 분석해 브랜드 팔레트의 HTML 레퍼런스로 추가"
+  default_prompt: "$gnar-reference-import로 이 링크의 화면을 우리 컬러 팔레트의 HTML 레퍼런스로 추가해줘."

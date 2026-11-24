@@ -1,0 +1,281 @@
+{
+ "note": "인디고 hero 후보. 단계: ink/hero/support/tint. 무채 베이스 + 따뜻한 중립(brown/taupe) 포함.",
+ "sets": [
+  {
+   "id": "indigo-paper",
+   "name": "Indigo on Paper",
+   "ko": "종이 위 인디고",
+   "hue": 278,
+   "heroC": 0.12,
+   "mood": "따뜻한 아이보리 종이에 정통 인디고. 가장 클래식.",
+   "light": {
+    "bg": "#EDE9E2",
+    "surface": "#F7F3EC",
+    "text": "#27241F",
+    "muted": "#66635D",
+    "border": "#D1CDC7",
+    "ink": "#33366B",
+    "hero": "#545AA6",
+    "support": "#7F84A5",
+    "tint": "#DCE0F6",
+    "brown": "#826144",
+    "taupe": "#736756",
+    "cr": {
+     "text": 12.78,
+     "ink": 9.23,
+     "hero": 5.12,
+     "support": 3.02
+    }
+   },
+   "dark": {
+    "bg": "#181611",
+    "surface": "#24211C",
+    "text": "#E8E4DD",
+    "muted": "#A29E98",
+    "border": "#383530",
+    "ink": "#C6CDFE",
+    "hero": "#8D96E8",
+    "support": "#6D7292",
+    "tint": "#27293F",
+    "brown": "#B49072",
+    "taupe": "#A39684",
+    "cr": {
+     "text": 14.27,
+     "ink": 11.68,
+     "hero": 6.59,
+     "support": 3.85
+    }
+   }
+  },
+  {
+   "id": "indigo-slate",
+   "name": "Indigo on Slate",
+   "ko": "석판 위 인디고",
+   "hue": 270,
+   "heroC": 0.11,
+   "mood": "푸른 기운 회색 베이스. 전체가 한 색조로 묶여 차분함.",
+   "light": {
+    "bg": "#E7E9EF",
+    "surface": "#F1F3F9",
+    "text": "#222428",
+    "muted": "#616368",
+    "border": "#CBCED3",
+    "ink": "#2B396C",
+    "hero": "#4B5EA2",
+    "support": "#7A85A5",
+    "tint": "#D9E1F6",
+    "brown": "#826144",
+    "taupe": "#736756",
+    "cr": {
+     "text": 12.81,
+     "ink": 9.08,
+     "hero": 5.06,
+     "support": 3.02
+    }
+   },
+   "dark": {
+    "bg": "#15161A",
+    "surface": "#202126",
+    "text": "#E2E4EA",
+    "muted": "#9C9EA4",
+    "border": "#34353A",
+    "ink": "#BFD0FF",
+    "hero": "#849BE3",
+    "support": "#697393",
+    "tint": "#232A3F",
+    "brown": "#B49072",
+    "taupe": "#A39684",
+    "cr": {
+     "text": 14.22,
+     "ink": 11.78,
+     "hero": 6.7,
+     "support": 3.85
+    }
+   }
+  },
+  {
+   "id": "indigo-deep",
+   "name": "Deep Indigo Ink",
+   "ko": "짙은 인디고 잉크",
+   "hue": 283,
+   "heroC": 0.14,
+   "mood": "hero를 조금 더 진하게. 강조가 가장 분명함.",
+   "light": {
+    "bg": "#EDE9E6",
+    "surface": "#F7F3EF",
+    "text": "#262321",
+    "muted": "#666260",
+    "border": "#D1CDCA",
+    "ink": "#37356A",
+    "hero": "#5A54AF",
+    "support": "#8183A4",
+    "tint": "#DEDFF5",
+    "brown": "#826144",
+    "taupe": "#736756",
+    "cr": {
+     "text": 12.94,
+     "ink": 9.26,
+     "hero": 5.24,
+     "support": 3.04
+    }
+   },
+   "dark": {
+    "bg": "#181513",
+    "surface": "#24211F",
+    "text": "#E8E4E1",
+    "muted": "#A19E9B",
+    "border": "#383532",
+    "ink": "#CACCFE",
+    "hero": "#9391F2",
+    "support": "#707191",
+    "tint": "#28293F",
+    "brown": "#B49072",
+    "taupe": "#A39684",
+    "cr": {
+     "text": 14.38,
+     "ink": 11.75,
+     "hero": 6.55,
+     "support": 3.86
+    }
+   }
+  },
+  {
+   "id": "indigo-dusty",
+   "name": "Dusty Indigo",
+   "ko": "먼지 앉은 인디고",
+   "hue": 285,
+   "heroC": 0.09,
+   "mood": "가장 바랜 톤. 강조는 명도 차이로만.",
+   "light": {
+    "bg": "#EEE9E1",
+    "surface": "#F8F2EB",
+    "text": "#27231E",
+    "muted": "#67625C",
+    "border": "#D2CDC5",
+    "ink": "#39346A",
+    "hero": "#5E5B94",
+    "support": "#8282A4",
+    "tint": "#DFDFF5",
+    "brown": "#826144",
+    "taupe": "#736756",
+    "cr": {
+     "text": 12.92,
+     "ink": 9.28,
+     "hero": 5.11,
+     "support": 3.06
+    }
+   },
+   "dark": {
+    "bg": "#191510",
+    "surface": "#25211B",
+    "text": "#E9E4DC",
+    "muted": "#A39D96",
+    "border": "#39352F",
+    "ink": "#CBCBFE",
+    "hero": "#9897D5",
+    "support": "#717191",
+    "tint": "#29283F",
+    "brown": "#B49072",
+    "taupe": "#A39684",
+    "cr": {
+     "text": 14.35,
+     "ink": 11.69,
+     "hero": 6.68,
+     "support": 3.87
+    }
+   }
+  },
+  {
+   "id": "indigo-violet",
+   "name": "Violet Indigo",
+   "ko": "보랏빛 인디고",
+   "hue": 296,
+   "heroC": 0.11,
+   "mood": "보라 쪽으로 기운 인디고. 장밋빛 회색 베이스와 어울림.",
+   "light": {
+    "bg": "#EFE8E5",
+    "surface": "#F9F2EF",
+    "text": "#282321",
+    "muted": "#686260",
+    "border": "#D3CCCA",
+    "ink": "#423166",
+    "hero": "#69549A",
+    "support": "#8880A1",
+    "tint": "#E3DEF4",
+    "brown": "#826144",
+    "taupe": "#736756",
+    "cr": {
+     "text": 12.82,
+     "ink": 9.31,
+     "hero": 5.2,
+     "support": 3.07
+    }
+   },
+   "dark": {
+    "bg": "#191513",
+    "surface": "#25201F",
+    "text": "#EAE3E1",
+    "muted": "#A39D9B",
+    "border": "#393432",
+    "ink": "#D4C8FA",
+    "hero": "#A490DB",
+    "support": "#776F8F",
+    "tint": "#2D273D",
+    "brown": "#B49072",
+    "taupe": "#A39684",
+    "cr": {
+     "text": 14.31,
+     "ink": 11.61,
+     "hero": 6.55,
+     "support": 3.85
+    }
+   }
+  },
+  {
+   "id": "indigo-ocean",
+   "name": "Ocean Indigo",
+   "ko": "바다 인디고",
+   "hue": 262,
+   "heroC": 0.12,
+   "mood": "파랑 쪽으로 기운 인디고. 서늘하고 기술적인 인상.",
+   "light": {
+    "bg": "#E5EAF0",
+    "surface": "#EFF4FA",
+    "text": "#202429",
+    "muted": "#5F6469",
+    "border": "#C9CED4",
+    "ink": "#223B6C",
+    "hero": "#3C61A7",
+    "support": "#7687A5",
+    "tint": "#D7E2F6",
+    "brown": "#826144",
+    "taupe": "#736756",
+    "cr": {
+     "text": 12.9,
+     "ink": 9.09,
+     "hero": 5.02,
+     "support": 3.0
+    }
+   },
+   "dark": {
+    "bg": "#13161A",
+    "surface": "#1E2226",
+    "text": "#E0E5EB",
+    "muted": "#9A9FA5",
+    "border": "#32363A",
+    "ink": "#B9D2FF",
+    "hero": "#759EE9",
+    "support": "#657592",
+    "tint": "#202B3F",
+    "brown": "#B49072",
+    "taupe": "#A39684",
+    "cr": {
+     "text": 14.32,
+     "ink": 11.86,
+     "hero": 6.76,
+     "support": 3.9
+    }
+   }
+  }
+ ]
+}

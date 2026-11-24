@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "id": "bysu-451665",
+  "title": "글로벌 물류회사 회사소개서",
+  "source_url": "https://notefolio.net/bysu.ppt/451665",
+  "pages": [
+    {
+      "id": "S-bysu-451665-01",
+      "title": "표지",
+      "html": "reference/slides/S-bysu-451665-01.html",
+      "preview": "reference/previews/S-bysu-451665-01.png",
+      "layout": "좌하단 기업명과 우상단 공중에 매달린 컨테이너",
+      "summary": "좌하단 기업명과 우상단 공중에 매달린 컨테이너"
+    },
+    {
+      "id": "S-bysu-451665-02",
+      "title": "검증된 경험과 확장된 서비스",
+      "html": "reference/slides/S-bysu-451665-02.html",
+      "preview": "reference/previews/S-bysu-451665-02.png",
+      "layout": "상단 세 줄 소개 아래 동일 크기 서비스 카드 3개",
+      "summary": "상단 세 줄 소개 아래 동일 크기 서비스 카드 3개"
+    },
+    {
+      "id": "S-bysu-451665-03",
+      "title": "복잡한 시장에서의 완결형 솔루션",
+      "html": "reference/slides/S-bysu-451665-03.html",
+      "preview": "reference/previews/S-bysu-451665-03.png",
+      "layout": "Problem과 Solution의 3행 알약형 항목을 좌우 대응",
+      "summary": "Problem과 Solution의 3행 알약형 항목을 좌우 대응"
+    },
+    {
+      "id": "S-bysu-451665-04",
+      "title": "특송 and 이커머스",
+      "html": "reference/slides/S-bysu-451665-04.html",
+      "preview": "reference/previews/S-bysu-451665-04.png",
+      "layout": "하단 점묘 세계지도 위 7개 국가 핀 라벨",
+      "summary": "하단 점묘 세계지도 위 7개 국가 핀 라벨"
+    },
+    {
+      "id": "S-bysu-451665-05",
+      "title": "고위험 국가 걱정마세요",
+      "html": "reference/slides/S-bysu-451665-05.html",
+      "preview": "reference/previews/S-bysu-451665-05.png",
+      "layout": "우측 미주 지도와 좌하단 중첩 원 3개에서 결과 원으로 연결",
+      "summary": "우측 미주 지도와 좌하단 중첩 원 3개에서 결과 원으로 연결"
+    },
+    {
+      "id": "S-bysu-451665-06",
+      "title": "자체 개발 LMS 시스템",
+      "html": "reference/slides/S-bysu-451665-06.html",
+      "preview": "reference/previews/S-bysu-451665-06.png",
+      "layout": "주문부터 배송까지 대각선으로 내려가는 5단계 프로세스",
+      "summary": "주문부터 배송까지 대각선으로 내려가는 5단계 프로세스"
+    }
+  ]
+}

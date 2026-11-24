@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="source" content="https://notefolio.net/bysu.ppt/452912">
+<meta name="reference-image" content="slide-02.webp">
+<title>좋은 제품을 어떻게 보여주느냐 · Gnar</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root {
+  /* Gnar 브랜드 토큰 — Deep Indigo Ink (H 283). 원천: design/palettes/brand.json */
+  --hue: 283;
+  --bg: #EDE9E6;  /* 배경 */
+  --surface: #F7F3EF;  /* 카드·패널 */
+  --text: #262321;  /* 본문 */
+  --muted: #666260;  /* 보조 글자·캡션 */
+  --border: #D1CDCA;  /* 선·격자·비포커스 막대 */
+  --ink: #37356A;  /* 제목·강조 문장 */
+  --hero: #5A54AF;  /* 강조 한 곳(핵심 숫자·포커스 막대·구분선) */
+  --support: #8183A4;  /* 보조 막대·아이콘 */
+  --tint: #DEDFF5;  /* 콜아웃·표 머리 배경 띠 */
+  --brown: #826144;  /* 따뜻한 중립 1 */
+  --taupe: #736756;  /* 따뜻한 중립 2 */
+  --chart-1: var(--hero);
+  --chart-2: var(--support);
+  --chart-3: var(--brown);
+  --chart-4: var(--taupe);
+  --chart-5: var(--border);
+}
+
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+} }
+
+:root[data-theme="dark"] {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+}
+
+/* 발표별 색상 교체 레시피 (oklch 지원 브라우저). hex 토큰은 PPTX 변환용 기준값이며,
+ * 다른 색상으로 바꿀 때는 design/scripts/ladder.py 에 hue 값을 넣어 hex를 다시 생성한다.
+ *   light: ink oklch(.36 .09 H) hero oklch(.50 .14 H) support oklch(.62 .05 H) tint oklch(.91 .03 H)
+ *   dark : ink oklch(.86 .07 H) hero oklch(.70 .14 H) support oklch(.56 .05 H) tint oklch(.29 .04 H) */
+
+
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+.viewport { width: 100%; height: 100%; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center; overflow: hidden; }
+.slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; flex-shrink: 0; fill: var(--text); background: var(--surface); transform-origin: center center; }
+h1, h2, h3, p, figure { margin: 0; }
+svg { display: block; }
+.eyebrow { font-size: 25px; font-weight: 650; color: var(--muted); letter-spacing: -.4px; }
+.slide-title { font-size: 64px; font-weight: 750; line-height: 1.25; letter-spacing: -2.3px; color: var(--ink); word-break: keep-all; }
+.slide-copy { font-size: 28px; line-height: 1.6; letter-spacing: -.6px; color: var(--muted); word-break: keep-all; }
+.slide-header { position: absolute; top: 112px; left: 132px; right: 132px; }
+.slide-header .eyebrow { margin-bottom: 20px; }
+.slide-header .slide-copy { margin-top: 25px; }
+.slide-footer { position: absolute; left: 132px; right: 132px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; font-size: 20px; line-height: 1; color: var(--muted); }
+.wordmark { color: var(--ink); font-size: 30px; font-weight: 800; letter-spacing: -1.4px; }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, .viewport { width: 1920px; height: 1080px; overflow: visible; }
+  .slide { transform: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+
+.slide{background:var(--bg)}
+.kicker{position:absolute;left:100px;top:88px;font-size:36px;font-weight:800;color:var(--ink);line-height:1.2}
+.title{position:absolute;left:100px;top:154px;font-size:49px;line-height:1.42;letter-spacing:-1.9px;font-weight:750;color:var(--text)}
+.card{position:absolute;background:var(--surface);border-radius:46px}
+.card h2{font-size:34px;line-height:1.45;letter-spacing:-1px;font-weight:720;color:var(--text)}
+.card p{font-size:28px;line-height:1.68;letter-spacing:-.9px;color:var(--muted);word-break:keep-all}
+svg text{font-family:'Pretendard Variable',Pretendard,sans-serif}
+.intro-label{position:absolute;left:100px;top:92px;font-size:36px;font-weight:800;color:var(--muted)}.intro-text{position:absolute;left:100px;top:540px;width:1000px}.intro-text h1{font-size:45px;line-height:1.48;letter-spacing:-2px;font-weight:750;margin-bottom:28px}.intro-text em{font-style:normal;color:var(--hero)}.intro-text p{font-size:28px;line-height:1.68;letter-spacing:-1px;color:var(--muted);margin-top:20px}.business-cards{position:absolute;right:0;top:0;width:762px;height:1080px}
+</style>
+</head>
+<body>
+<div class="viewport"><main class="slide" data-slide-id="S-bysu-452912-02" aria-label="좋은 제품을 어떻게 보여주느냐"><p class="intro-label">Lifestyle Select Vendor</p><div class="intro-text"><h1>좋은 제품을 <em>어떻게 보여주느냐</em>가<br>픽앤센스의 경쟁력입니다.</h1><p>픽앤센스는 SNS 벤더사로 브랜드와 신뢰를 파는 크리에이터와의<br>만남을 주선합니다. 핏이 맞는 셀러와의 매칭과 판매를 자신합니다.</p><p>SNS를 기반으로 트렌디하고 경쟁력 있는 제품을 큐레이션하며,<br>인스타그램, 틱톡, 유튜브 등에서 공동구매 마케팅을 진행합니다.</p><p>감도 높은 제품 큐레이션과 정제된 콘텐츠 기획으로<br>30–40대 여성 고객에게 신뢰받는 쇼핑 경험을 제공합니다.</p></div><div class="business-cards"><svg viewBox="0 0 762 1080" style="width:762px;height:1080px" aria-label="명함 사진을 대각선 명함 도형으로 재구성" role="img"><rect width="762" height="1080" fill="var(--tint)"/><path d="M0 65L762 758M0 85L762 778" stroke="var(--border)" stroke-width="20"/><path d="M0 65L762 758" stroke="var(--surface)" stroke-width="20"/><g transform="translate(506 310) rotate(43)"><rect x="-225" y="-155" width="450" height="310" fill="var(--border)"/><rect x="-237" y="-167" width="450" height="310" fill="var(--surface)"/><text x="-12" y="-1" fill="var(--ink)" font-weight="800" font-size="42" text-anchor="middle">Pick&amp;Sense</text></g><g transform="translate(225 750) rotate(-22)"><rect x="-180" y="-190" width="360" height="380" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/></g><g transform="translate(205 740) rotate(-9)"><rect x="-180" y="-190" width="360" height="380" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/><text x="0" y="100" fill="var(--ink)" font-size="30" font-weight="700" text-anchor="middle">Pick&amp;Sense</text></g><g transform="translate(365 686) rotate(43)"><rect x="-225" y="-151" width="450" height="302" fill="var(--support)"/><rect x="-233" y="-159" width="450" height="302" fill="var(--tint)" stroke="var(--border)" stroke-width="2"/><text x="-8" y="0" fill="var(--ink)" font-weight="800" font-size="42" text-anchor="middle">Pick&amp;Sense</text></g></svg></div></main></div>
+<script>
+(() => {
+  const slide = document.querySelector('.slide');
+  const fit = () => { slide.style.transform = `scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
+  const theme = new URLSearchParams(location.search).get('theme');
+  if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+  addEventListener('resize', fit); fit();
+  // file:// frames have isolated origins; relay navigation without reading parent DOM.
+  if (parent !== window) document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', 'Escape', 'f', 'F'].includes(event.key)) return;
+    if (event.target.closest('button,input,textarea,select,[contenteditable],.carousel-controls,.carousel-nav')) return;
+    queueMicrotask(() => {
+      if (!event.defaultPrevented) parent.postMessage({ type: 'gnar-slide-key', key: event.key, shiftKey: event.shiftKey }, '*');
+    });
+  });
+
+})();
+</script>
+</body>
+</html>

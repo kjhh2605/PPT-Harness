@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="source" content="https://notefolio.net/bysu.ppt/447028">
+<meta name="reference-image" content="slide-04.webp">
+<title>업무는 간편하게, 보안은 완전히 새롭게 · Gnar</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root {
+  /* Gnar 브랜드 토큰 — Deep Indigo Ink (H 283). 원천: design/palettes/brand.json */
+  --hue: 283;
+  --bg: #EDE9E6;  /* 배경 */
+  --surface: #F7F3EF;  /* 카드·패널 */
+  --text: #262321;  /* 본문 */
+  --muted: #666260;  /* 보조 글자·캡션 */
+  --border: #D1CDCA;  /* 선·격자·비포커스 막대 */
+  --ink: #37356A;  /* 제목·강조 문장 */
+  --hero: #5A54AF;  /* 강조 한 곳(핵심 숫자·포커스 막대·구분선) */
+  --support: #8183A4;  /* 보조 막대·아이콘 */
+  --tint: #DEDFF5;  /* 콜아웃·표 머리 배경 띠 */
+  --brown: #826144;  /* 따뜻한 중립 1 */
+  --taupe: #736756;  /* 따뜻한 중립 2 */
+  --chart-1: var(--hero);
+  --chart-2: var(--support);
+  --chart-3: var(--brown);
+  --chart-4: var(--taupe);
+  --chart-5: var(--border);
+}
+
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+} }
+
+:root[data-theme="dark"] {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+}
+
+/* 발표별 색상 교체 레시피 (oklch 지원 브라우저). hex 토큰은 PPTX 변환용 기준값이며,
+ * 다른 색상으로 바꿀 때는 design/scripts/ladder.py 에 hue 값을 넣어 hex를 다시 생성한다.
+ *   light: ink oklch(.36 .09 H) hero oklch(.50 .14 H) support oklch(.62 .05 H) tint oklch(.91 .03 H)
+ *   dark : ink oklch(.86 .07 H) hero oklch(.70 .14 H) support oklch(.56 .05 H) tint oklch(.29 .04 H) */
+
+
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+.viewport { width: 100%; height: 100%; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center; overflow: hidden; }
+.slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; flex-shrink: 0; fill: var(--text); background: var(--surface); transform-origin: center center; }
+h1, h2, h3, p, figure { margin: 0; }
+svg { display: block; }
+.eyebrow { font-size: 25px; font-weight: 650; color: var(--muted); letter-spacing: -.4px; }
+.slide-title { font-size: 64px; font-weight: 750; line-height: 1.25; letter-spacing: -2.3px; color: var(--ink); word-break: keep-all; }
+.slide-copy { font-size: 28px; line-height: 1.6; letter-spacing: -.6px; color: var(--muted); word-break: keep-all; }
+.slide-header { position: absolute; top: 112px; left: 132px; right: 132px; }
+.slide-header .eyebrow { margin-bottom: 20px; }
+.slide-header .slide-copy { margin-top: 25px; }
+.slide-footer { position: absolute; left: 132px; right: 132px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; font-size: 20px; line-height: 1; color: var(--muted); }
+.wordmark { color: var(--ink); font-size: 30px; font-weight: 800; letter-spacing: -1.4px; }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, .viewport { width: 1920px; height: 1080px; overflow: visible; }
+  .slide { transform: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+
+.slide{background:var(--bg)}
+.brand{position:absolute;top:86px;right:88px;width:100px;color:var(--ink)}
+.brand svg{width:100%;height:28px}.brand b{font-size:31px;letter-spacing:-1px;line-height:1}
+.heading{position:absolute;left:92px;top:88px;right:245px}
+.heading h1{font-size:52px;line-height:1.37;font-weight:760;letter-spacing:-1.8px;color:var(--ink)}
+.heading p{font-size:28px;line-height:1.7;color:var(--muted);margin-top:18px;letter-spacing:-.5px}
+.accent{color:var(--hero)}
+.small{font-size:22px;color:var(--muted);line-height:1.55}
+.svg-ink{stroke:var(--ink)}
+.solutions{position:absolute;left:129px;right:121px;top:416px;height:549px;display:grid;grid-template-columns:repeat(3,1fr);gap:54px}.solution{position:relative;background:var(--surface);border-radius:34px;padding:46px 54px;overflow:hidden}.solution-label{font-size:26px;color:var(--ink);font-weight:650}.solution h2{font-size:32px;line-height:1.45;margin-top:12px;letter-spacing:-1px}.solution p{font-size:28px;line-height:1.6;margin-top:12px;color:var(--muted);letter-spacing:-.7px}.solution-art{position:absolute;right:5px;bottom:15px;width:350px;height:258px}
+</style>
+</head>
+<body>
+<div class="viewport"><main class="slide" data-slide-id="S-bysu-447028-04" aria-label="업무는 간편하게, 보안은 완전히 새롭게"><header class="heading"><h1>업무는 간편하게<br>보안은 완전히 <span class="accent">새롭게</span></h1><p>환경은 달라도 보안은 흔들리지 않도록.<br>유연한 접근에 철저한 검증을 더한 프라이빗테크놀로지만의 제로 트러스트 솔루션입니다.</p></header><div class="brand " aria-label="PRIBIT"><svg viewBox="0 0 105 28" aria-hidden="true"><g fill="var(--ink)"><rect x="2" y="4" width="4" height="13" rx="2"/><rect x="20" y="4" width="4" height="20" rx="2"/><rect x="38" y="4" width="4" height="13" rx="2"/><rect x="56" y="4" width="4" height="20" rx="2"/><rect x="74" y="4" width="4" height="13" rx="2"/></g><rect x="89" y="4" width="14" height="15" rx="3" fill="none" stroke="var(--ink)" stroke-width="4"/></svg><b>PRIBIT</b></div><section class="solutions"><article class="solution"><span class="solution-label">Solution 1</span><h2>PacketGo ZTNA<br>PRIBIT Connect</h2><p>제로 트러스트 기반<br>원격 접속 솔루션</p><svg class="solution-art" viewBox="0 0 500 330" role="img" aria-label="제로 트러스트 원격 접속 구조"><path d="m90 130 126-76 157 89-126 78Z" fill="var(--tint)"/><path d="M90 130v144l157 75V221Z" fill="var(--border)"/><path d="m247 221 126-78v144l-126 62Z" fill="var(--support)"/><path d="m221 19 191 99v150L221 171Z" fill="var(--surface)" stroke="var(--support)" stroke-width="4"/><path d="m221 19 191 99v32L221 51Z" fill="var(--ink)"/><path d="m240 90 151 76v65l-151-76Z" fill="var(--tint)"/><path d="m81 86 160 82v149L81 235Z" fill="none" stroke="var(--support)" stroke-width="3"/><g stroke="var(--border)" stroke-width="2"><path d="m108 100v149M81 111l160 82"/><path d="m135 114v149M81 136l160 82"/><path d="m162 128v149M81 161l160 82"/><path d="m189 142v149M81 186l160 82"/><path d="m216 156v149M81 211l160 82"/></g><path d="m147 193 78-39m57 83 69-34m-133 65-78 39" stroke="var(--ink)" stroke-width="5"/></svg></article><article class="solution"><span class="solution-label">Solution 2</span><h2>PacketGo SASE</h2><p>네트워크와 보안을 통합하여<br>경계 없는 보호를 제공하는<br>클라우드 플랫폼</p><svg class="solution-art" viewBox="0 0 500 330" role="img" aria-label="5G와 클라우드를 연결하는 네트워크"><g fill="none" stroke="var(--support)" stroke-width="7" stroke-linecap="round"><path d="M71 65Q119 20 167 65M88 83Q119 53 150 83M106 100q13-13 26 0"/></g><text x="88" y="141" font-size="36" font-weight="750" fill="var(--ink)">5G</text><text x="172" y="174" font-size="30" fill="var(--muted)">4G</text><path d="M145 238q102-152 254 5M145 238q80 56 178 4M323 242V117" stroke="var(--support)" stroke-width="3" fill="none" stroke-dasharray="7 7"/><rect x="133" y="200" width="11" height="11" fill="var(--tint)"/><rect x="161" y="200" width="11" height="11" fill="var(--tint)"/><rect x="189" y="200" width="11" height="11" fill="var(--tint)"/><rect x="245" y="200" width="11" height="11" fill="var(--tint)"/><rect x="273" y="200" width="11" height="11" fill="var(--tint)"/><rect x="301" y="200" width="11" height="11" fill="var(--tint)"/><rect x="357" y="200" width="11" height="11" fill="var(--tint)"/><rect x="385" y="200" width="11" height="11" fill="var(--tint)"/><rect x="105" y="218" width="11" height="11" fill="var(--tint)"/><rect x="133" y="218" width="11" height="11" fill="var(--tint)"/><rect x="161" y="218" width="11" height="11" fill="var(--tint)"/><rect x="217" y="218" width="11" height="11" fill="var(--tint)"/><rect x="245" y="218" width="11" height="11" fill="var(--tint)"/><rect x="273" y="218" width="11" height="11" fill="var(--tint)"/><rect x="329" y="218" width="11" height="11" fill="var(--tint)"/><rect x="357" y="218" width="11" height="11" fill="var(--tint)"/><rect x="385" y="218" width="11" height="11" fill="var(--tint)"/><rect x="105" y="236" width="11" height="11" fill="var(--tint)"/><rect x="133" y="236" width="11" height="11" fill="var(--tint)"/><rect x="189" y="236" width="11" height="11" fill="var(--tint)"/><rect x="217" y="236" width="11" height="11" fill="var(--tint)"/><rect x="245" y="236" width="11" height="11" fill="var(--tint)"/><rect x="301" y="236" width="11" height="11" fill="var(--tint)"/><rect x="329" y="236" width="11" height="11" fill="var(--tint)"/><rect x="357" y="236" width="11" height="11" fill="var(--tint)"/><rect x="105" y="254" width="11" height="11" fill="var(--tint)"/><rect x="161" y="254" width="11" height="11" fill="var(--tint)"/><rect x="189" y="254" width="11" height="11" fill="var(--tint)"/><rect x="217" y="254" width="11" height="11" fill="var(--tint)"/><rect x="273" y="254" width="11" height="11" fill="var(--tint)"/><rect x="301" y="254" width="11" height="11" fill="var(--tint)"/><rect x="329" y="254" width="11" height="11" fill="var(--tint)"/><rect x="385" y="254" width="11" height="11" fill="var(--tint)"/><rect x="133" y="272" width="11" height="11" fill="var(--tint)"/><rect x="161" y="272" width="11" height="11" fill="var(--tint)"/><rect x="189" y="272" width="11" height="11" fill="var(--tint)"/><rect x="245" y="272" width="11" height="11" fill="var(--tint)"/><rect x="273" y="272" width="11" height="11" fill="var(--tint)"/><rect x="301" y="272" width="11" height="11" fill="var(--tint)"/><rect x="357" y="272" width="11" height="11" fill="var(--tint)"/><rect x="385" y="272" width="11" height="11" fill="var(--tint)"/><rect x="105" y="290" width="11" height="11" fill="var(--tint)"/><rect x="133" y="290" width="11" height="11" fill="var(--tint)"/><rect x="161" y="290" width="11" height="11" fill="var(--tint)"/><rect x="217" y="290" width="11" height="11" fill="var(--tint)"/><rect x="245" y="290" width="11" height="11" fill="var(--tint)"/><rect x="273" y="290" width="11" height="11" fill="var(--tint)"/><rect x="329" y="290" width="11" height="11" fill="var(--tint)"/><rect x="357" y="290" width="11" height="11" fill="var(--tint)"/><rect x="385" y="290" width="11" height="11" fill="var(--tint)"/><g transform="translate(286 77)"><path d="M0 0 35 -15.75 70 0 35 17.5Z" fill="var(--tint)"/><path d="M0 0 35 17.5 35 52.5 0 35Z" fill="var(--support)"/><path d="M35 17.5 70 0 70 35 35 52.5Z" fill="var(--ink)"/></g><circle cx="145" cy="238" r="14" fill="var(--support)"/><circle cx="323" cy="242" r="20" fill="var(--support)"/><circle cx="399" cy="243" r="11" fill="var(--support)"/><circle cx="230" cy="170" r="9" fill="var(--support)"/></svg></article><article class="solution"><span class="solution-label">Solution 3</span><h2>RISKi</h2><p>데이터 흐름 가시성을<br>극대화하여 위협 인사이트를<br>제공하는 지능형 플랫폼</p><svg class="solution-art" viewBox="0 0 500 360" role="img" aria-label="사용자 신원과 데이터 흐름을 시각화하는 플랫폼"><rect x="143" y="66" width="201" height="223" fill="var(--support)" stroke="var(--border)" stroke-width="8"/><circle cx="245" cy="143" r="33" fill="var(--tint)"/><path d="M190 253v-36q55-61 110 0v36Z" fill="var(--tint)"/><path d="M186 93 282 179 205 252" fill="none" stroke="var(--surface)" stroke-width="3" stroke-dasharray="5 5"/><g transform="translate(89 103)"><rect width="107" height="76" rx="3" fill="var(--surface)" stroke="var(--border)" stroke-width="4"/><rect x="8" y="9" width="30" height="45" fill="var(--tint)"/><path d="M49 16h46M49 29h46M49 42h36M8 65h87" stroke="var(--support)" stroke-width="5"/></g><g transform="translate(300 33)"><rect width="107" height="76" rx="3" fill="var(--surface)" stroke="var(--border)" stroke-width="4"/><rect x="8" y="9" width="30" height="45" fill="var(--tint)"/><path d="M49 16h46M49 29h46M49 42h36M8 65h87" stroke="var(--support)" stroke-width="5"/></g><g transform="translate(306 235)"><rect width="107" height="76" rx="3" fill="var(--surface)" stroke="var(--border)" stroke-width="4"/><rect x="8" y="9" width="30" height="45" fill="var(--tint)"/><path d="M49 16h46M49 29h46M49 42h36M8 65h87" stroke="var(--support)" stroke-width="5"/></g><circle cx="94" cy="55" r="34" fill="var(--tint)"/><text x="94" y="64" text-anchor="middle" font-size="30" fill="var(--ink)">QR</text><circle cx="67" cy="237" r="44" fill="var(--tint)"/><text x="67" y="246" text-anchor="middle" font-size="30" fill="var(--ink)">ID/PW</text><circle cx="137" cy="311" r="40" fill="var(--tint)"/><text x="137" y="320" text-anchor="middle" font-size="30" fill="var(--ink)">Email</text><circle cx="414" cy="174" r="55" fill="var(--tint)"/><text x="414" y="174" text-anchor="middle" font-size="30" fill="var(--ink)"><tspan x="414" dy="-5">Device</tspan><tspan x="414" dy="29">ID</tspan></text></svg></article></section></main></div>
+<script>
+(() => {
+  const slide = document.querySelector('.slide');
+  const fit = () => { slide.style.transform = `scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
+  const theme = new URLSearchParams(location.search).get('theme');
+  if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+  addEventListener('resize', fit); fit();
+  // file:// frames have isolated origins; relay navigation without reading parent DOM.
+  if (parent !== window) document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', 'Escape', 'f', 'F'].includes(event.key)) return;
+    if (event.target.closest('button,input,textarea,select,[contenteditable],.carousel-controls,.carousel-nav')) return;
+    queueMicrotask(() => {
+      if (!event.defaultPrevented) parent.postMessage({ type: 'gnar-slide-key', key: event.key, shiftKey: event.shiftKey }, '*');
+    });
+  });
+})();
+</script>
+</body>
+</html>

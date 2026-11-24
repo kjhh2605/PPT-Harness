@@ -1,0 +1,102 @@
+{
+  "id": "bysu-445433",
+  "title": "명품 토탈케어 회사소개서",
+  "sourceUrl": "https://notefolio.net/bysu.ppt/445433",
+  "author": "bysu",
+  "slides": [
+    {
+      "id": "S-bysu-445433-01",
+      "order": 1,
+      "title": "Leather & All · 프리미엄 명품 토탈케어",
+      "description": "상단 양끝의 작은 소개 문구와 화면 하단을 채우는 대형 영문 워드마크",
+      "type": "dark",
+      "file": "S-bysu-445433-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/445433",
+      "preview": "previews/S-bysu-445433-01.png",
+      "layout": "상단 양끝의 작은 소개 문구와 화면 하단을 채우는 대형 영문 워드마크",
+      "tags": [
+        "표지",
+        "대형 타이포"
+      ]
+    },
+    {
+      "id": "S-bysu-445433-02",
+      "order": 2,
+      "title": "레더앤올 회사 소개 · OUR VISION",
+      "description": "좌하단 유색 면 위에 제품 장면이 겹치고, 오른쪽 중하단에 제목과 두 문단 소개를 배치",
+      "type": "light",
+      "file": "S-bysu-445433-02.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/445433",
+      "preview": "previews/S-bysu-445433-02.png",
+      "layout": "좌하단 유색 면 위에 제품 장면이 겹치고, 오른쪽 중하단에 제목과 두 문단 소개를 배치",
+      "tags": [
+        "회사소개",
+        "비대칭 2단"
+      ]
+    },
+    {
+      "id": "S-bysu-445433-03",
+      "order": 3,
+      "title": "복원 서비스 안내 · OUR SERVICE",
+      "description": "상단 좌측 제목·우측 본문 아래, 제품 여덟 개를 높낮이가 교차하는 4열 2행으로 배치",
+      "type": "light",
+      "file": "S-bysu-445433-03.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/445433",
+      "preview": "previews/S-bysu-445433-03.png",
+      "layout": "상단 좌측 제목·우측 본문 아래, 제품 여덟 개를 높낮이가 교차하는 4열 2행으로 배치",
+      "tags": [
+        "서비스",
+        "제품 8개",
+        "교차 그리드"
+      ]
+    },
+    {
+      "id": "S-bysu-445433-04",
+      "order": 4,
+      "title": "기술력 및 전문성 · EXPERTISE",
+      "description": "오른쪽 약 31%에 세로 제품 장면, 왼쪽 상단 제목과 넓은 여백 아래 2×2 전문성 설명",
+      "type": "light",
+      "file": "S-bysu-445433-04.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/445433",
+      "preview": "previews/S-bysu-445433-04.png",
+      "layout": "오른쪽 약 31%에 세로 제품 장면, 왼쪽 상단 제목과 넓은 여백 아래 2×2 전문성 설명",
+      "tags": [
+        "전문성",
+        "2×2 본문",
+        "세로 이미지"
+      ]
+    },
+    {
+      "id": "S-bysu-445433-05",
+      "order": 5,
+      "title": "파트너십 혜택 · PARTNERSHIP",
+      "description": "높이와 폭이 서로 다른 제품 장면 여섯 개를 가로로 연결하고, 구분선 아래 네 가지 혜택을 4단으로 배치",
+      "type": "light",
+      "file": "S-bysu-445433-05.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/445433",
+      "preview": "previews/S-bysu-445433-05.png",
+      "layout": "높이와 폭이 서로 다른 제품 장면 여섯 개를 가로로 연결하고, 구분선 아래 네 가지 혜택을 4단으로 배치",
+      "tags": [
+        "파트너십",
+        "이미지 스트립",
+        "4단 본문"
+      ]
+    },
+    {
+      "id": "S-bysu-445433-06",
+      "order": 6,
+      "title": "문의 및 상담 예약 · CONTACT",
+      "description": "좌측 복원 도구 사진 영역과 배경 사각형이 겹치며, 우측 연락처 세 가지를 가로선으로 나눠 세로 배치",
+      "type": "light",
+      "file": "S-bysu-445433-06.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/445433",
+      "preview": "previews/S-bysu-445433-06.png",
+      "layout": "좌측 복원 도구 사진 영역과 배경 사각형이 겹치며, 우측 연락처 세 가지를 가로선으로 나눠 세로 배치",
+      "tags": [
+        "연락처",
+        "이미지와 본문",
+        "3개 항목"
+      ]
+    }
+  ]
+}

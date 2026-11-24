@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="source" content="https://notefolio.net/bysu.ppt/453416">
+<meta name="reference-image" content="slide-05.webp">
+<title>피벗 커리어 · 경쟁 서비스 비교 · Gnar</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root {
+  /* Gnar 브랜드 토큰 — Deep Indigo Ink (H 283). 원천: design/palettes/brand.json */
+  --hue: 283;
+  --bg: #EDE9E6;  /* 배경 */
+  --surface: #F7F3EF;  /* 카드·패널 */
+  --text: #262321;  /* 본문 */
+  --muted: #666260;  /* 보조 글자·캡션 */
+  --border: #D1CDCA;  /* 선·격자·비포커스 막대 */
+  --ink: #37356A;  /* 제목·강조 문장 */
+  --hero: #5A54AF;  /* 강조 한 곳(핵심 숫자·포커스 막대·구분선) */
+  --support: #8183A4;  /* 보조 막대·아이콘 */
+  --tint: #DEDFF5;  /* 콜아웃·표 머리 배경 띠 */
+  --brown: #826144;  /* 따뜻한 중립 1 */
+  --taupe: #736756;  /* 따뜻한 중립 2 */
+  --chart-1: var(--hero);
+  --chart-2: var(--support);
+  --chart-3: var(--brown);
+  --chart-4: var(--taupe);
+  --chart-5: var(--border);
+}
+
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+} }
+
+:root[data-theme="dark"] {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+}
+
+/* 발표별 색상 교체 레시피 (oklch 지원 브라우저). hex 토큰은 PPTX 변환용 기준값이며,
+ * 다른 색상으로 바꿀 때는 design/scripts/ladder.py 에 hue 값을 넣어 hex를 다시 생성한다.
+ *   light: ink oklch(.36 .09 H) hero oklch(.50 .14 H) support oklch(.62 .05 H) tint oklch(.91 .03 H)
+ *   dark : ink oklch(.86 .07 H) hero oklch(.70 .14 H) support oklch(.56 .05 H) tint oklch(.29 .04 H) */
+
+
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+.viewport { width: 100%; height: 100%; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center; overflow: hidden; }
+.slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; flex-shrink: 0; fill: var(--text); background: var(--surface); transform-origin: center center; }
+h1, h2, h3, p, figure { margin: 0; }
+svg { display: block; }
+.eyebrow { font-size: 25px; font-weight: 650; color: var(--muted); letter-spacing: -.4px; }
+.slide-title { font-size: 64px; font-weight: 750; line-height: 1.25; letter-spacing: -2.3px; color: var(--ink); word-break: keep-all; }
+.slide-copy { font-size: 28px; line-height: 1.6; letter-spacing: -.6px; color: var(--muted); word-break: keep-all; }
+.slide-header { position: absolute; top: 112px; left: 132px; right: 132px; }
+.slide-header .eyebrow { margin-bottom: 20px; }
+.slide-header .slide-copy { margin-top: 25px; }
+.slide-footer { position: absolute; left: 132px; right: 132px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; font-size: 20px; line-height: 1; color: var(--muted); }
+.wordmark { color: var(--ink); font-size: 30px; font-weight: 800; letter-spacing: -1.4px; }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, .viewport { width: 1920px; height: 1080px; overflow: visible; }
+  .slide { transform: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+
+.slide{background:var(--bg)}
+.heading{position:absolute;left:90px;top:85px;z-index:3}.heading>p{font-size:28px;font-weight:700;color:var(--ink);margin-bottom:20px}.heading h1{font-size:50px;line-height:1.25;letter-spacing:-1.8px;color:var(--text);font-weight:750}.page-number{position:absolute;right:85px;top:92px;color:var(--muted);font-size:25px}.number{display:inline-grid;place-items:center;border-radius:50%;background:var(--hero);color:var(--surface);font-size:30px;width:46px;height:46px;vertical-align:5px;margin-right:10px}
+.phone{position:absolute;border-radius:52px;background:var(--bg);border:5px solid var(--border);outline:2px solid var(--muted);overflow:hidden;color:var(--text);box-shadow:7px 2px 0 var(--border)}
+.phone-camera{position:absolute;top:16px;left:50%;transform:translateX(-50%);width:95px;height:23px;border-radius:20px;background:var(--surface);z-index:5}.phone-content{position:absolute;top:58px;left:17px;right:17px;bottom:17px;font-size:20px;line-height:1.45;overflow:hidden}.phone h4{font-size:22px;font-weight:600;margin:24px 0 16px}.phone small{font-size:20px;color:var(--muted)}.app-brand{font-weight:800;font-size:28px;display:flex;align-items:center;gap:8px}.app-brand span{margin-left:auto;font-size:23px}.app-brand small{font-size:20px}.landing-banner{background:var(--tint);text-align:center;padding:30px 8px 25px;margin:18px -17px 0}.landing-banner strong{font-size:28px}.landing-banner p{font-size:20px;margin:12px 0 20px}.landing-banner b{display:inline-block;padding:9px 12px;border-radius:30px;background:var(--surface);font-size:20px;color:var(--ink)}.app-intro{text-align:center;margin:30px 0 25px}.app-intro p{font-size:20px;margin-top:13px;line-height:1.7}.app-tools{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:0 20px}.app-tools>div{width:72px;border-radius:9px;padding:10px 3px;background:var(--tint);text-align:center}.app-tools svg{width:30px;height:30px;fill:var(--support);margin:0 auto 6px}.app-tools span{font-size:20px}.profile{display:flex;align-items:center;gap:15px;margin:22px 0}.profile svg{width:42px;height:42px;flex-shrink:0;fill:var(--support)}.profile p{font-size:20px}.profile.large{margin:32px 0}.profile.large svg{width:62px;height:62px}.profile.large b{font-size:28px}.app-button{border:1px solid var(--border);padding:10px;border-radius:7px;text-align:center;color:var(--muted);font-size:20px}.community-cards{display:flex;gap:12px;width:450px}.community-cards>div{background:var(--surface);padding:20px;width:190px;border-radius:10px}.community-cards p{font-size:20px;margin:12px 0 20px}.community-cards b{font-size:20px;font-weight:400;display:block;border:1px solid var(--border);padding:9px}.review-card{padding:18px;border-radius:10px;background:var(--surface)}.review-card b{font-size:22px;color:var(--ink)}.review-card p{font-size:20px;margin:12px 0}.copy-lines i{display:block;height:6px;background:var(--border);margin:9px 0}.copy-lines i:last-child{width:60%}.app-stats{display:flex;justify-content:space-around;text-align:center;color:var(--muted);font-size:20px;margin:30px 0}.app-stats strong{display:block;font-size:26px;color:var(--text);margin-top:8px}.app-pill{background:var(--surface);border-radius:25px;padding:13px;font-size:20px;margin:32px 0}.phone h4 small{float:right;font-size:20px}.app-tabs{display:flex;gap:7px;font-size:20px}.app-tabs span{border:1px solid var(--support);border-radius:23px;padding:7px 10px;color:var(--ink)}.app-tabs span:first-child{background:var(--tint)}.app-feed{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:10px}.app-top{display:flex;font-size:23px;font-weight:550;align-items:center;min-height:38px}.app-top>span{margin-left:auto}.app-top .center{position:absolute;left:50%;transform:translateX(-50%);font-size:24px}.education-tabs{margin:22px 0 28px;font-size:20px;color:var(--muted);white-space:nowrap}.course-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.course-tile{height:115px;border-radius:10px;overflow:hidden;background:var(--surface);position:relative}.photo-slot{height:82px;background:var(--tint);display:grid;place-items:center}.photo-slot svg{width:55px;height:55px;fill:var(--support)}.course-tile span{display:block;position:absolute;bottom:4px;left:9px;font-size:20px}.recommend-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.recommend-art{height:90px;background:var(--tint);color:var(--ink);padding:10px;font-size:20px;font-weight:750}.recommend-art.alt{background:var(--surface)}.recommend-grid p{font-size:20px;line-height:1.4;margin-top:10px}.recommend-grid small{font-size:20px}.app-bottom{border-top:1px solid var(--border);padding-top:15px;position:absolute;bottom:0;left:0;right:0;text-align:center;color:var(--muted);font-size:22px;background:var(--bg)}.rating{background:var(--surface);padding:20px;text-align:center;margin:25px 0;color:var(--muted);font-size:20px}.rating b{font-size:28px;color:var(--text)}.rating>div{color:var(--ink);font-size:26px;letter-spacing:3px}.rating small{font-size:20px}.review-sort{display:block;margin:20px 0}.review-entry{margin:20px 0 28px}.review-person{display:flex;align-items:center;gap:9px}.review-person svg{width:30px;height:30px;fill:var(--support)}.review-person b{font-size:20px}.review-person span{margin-left:auto;font-size:20px}.review-entry p{font-size:20px;color:var(--muted);line-height:1.6;margin:15px 0 0 39px}.map-panel{position:relative;height:590px;margin:18px -17px 0;background:var(--surface);overflow:hidden;--bg:#EDE9E6;--surface:#F7F3EF;--text:#262321;--muted:#666260;--border:#D1CDCA;--ink:#37356A;--support:#8183A4;--tint:#DEDFF5}.map-art{width:100%;height:100%}.map-pin{position:absolute;width:43px;height:43px;background:var(--tint);border:3px solid var(--surface);border-radius:50%;transform:translate(-50%,-50%);color:var(--ink)}.map-pin svg{width:29px;height:29px;fill:var(--support);margin:3px}.map-pin span{display:block;position:absolute;top:43px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:20px;background:var(--surface);padding:1px 4px;border-radius:3px;color:var(--text)}.map-location{position:absolute;top:15px;left:15px;right:15px;border-radius:30px;padding:10px;text-align:center;background:var(--surface);color:var(--ink);font-size:20px}.map-action{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--tint);color:var(--ink);font-size:22px;border-radius:30px;padding:13px 22px}.trainer-card{position:absolute;bottom:0;left:0;right:0;padding:18px 0;display:flex;gap:12px;background:var(--surface);border-radius:20px 20px 0 0}.trainer-card>svg{width:85px;height:120px;fill:var(--support);background:var(--tint);flex-shrink:0;padding:10px}.trainer-card b,.trainer-card span,.trainer-card small{display:block}.trainer-card b{font-size:23px;margin:5px 0}.trainer-card small{font-size:20px}.trainer-card span{font-size:20px;margin-top:5px}
+.phone{--bg:#181513;--surface:#24211F;--text:#E8E4E1;--muted:#A19E9B;--border:#383532;--ink:#CACCFE;--hero:#9391F2;--support:#707191;--tint:#28293F;--brown:#B49072;--taupe:#A39684;}.heading .number{background:var(--ink)}.comparison{position:absolute;left:90px;right:80px;top:240px;height:770px}.table-head,.table-row{display:grid;grid-template-columns:330px repeat(4,1fr);position:relative}.table-head{height:104px;align-items:center;text-align:center}.table-head b{font-size:38px;letter-spacing:-1px;position:relative;z-index:2}.table-head .bound{font-style:italic;font-size:45px}.table-head .iip{font-size:35px;font-weight:850;letter-spacing:2px}.table-head .fibud{font-size:46px;font-weight:850;letter-spacing:-3px}.table-row{height:95px;align-items:stretch}.cell{display:flex;align-items:center;justify-content:center;font-size:28px;color:var(--muted);position:relative;z-index:2;padding:0 10px;white-space:nowrap;letter-spacing:-.8px}.cell.label{justify-content:flex-start;font-weight:650;color:var(--text);padding-left:35px;letter-spacing:-1px}.table-row:nth-child(even) .cell{background:var(--surface)}.table-row .cell:first-child{border-radius:28px;margin-right:15px}.table-row .cell:nth-child(2){border-radius:28px 0 0 28px}.table-row .fibud-cell{background:var(--surface);color:var(--ink);font-weight:550;border-bottom:1px solid var(--border);margin:0 30px;padding:0;font-size:27px;letter-spacing:-1px}.table-row:last-of-type .fibud-cell{border-bottom:0}.mark{display:grid;place-items:center;width:33px;height:33px;border-radius:50%;background:var(--border);color:var(--text);font-size:25px}.fibud-cell .mark{background:var(--tint);color:var(--ink)}.fibud-outline{position:absolute;top:-14px;bottom:0;right:0;width:calc((100% - 330px)/4);background:var(--surface);border:2px solid var(--hero);border-radius:36px;z-index:1}.table-head,.table-row{z-index:2}.table-row .fibud-cell{background:transparent}.table-head .fibud{background:transparent}
+</style>
+</head>
+<body>
+<div class="viewport"><main class="slide" data-slide-id="S-bysu-453416-05" aria-label="피벗 커리어 · 경쟁 서비스 비교"><header class="heading"><p>해결 방안</p><h1><span class=number>1</span> 피벗 커리어</h1></header><span class="page-number">11</span><div class="comparison"><div class="table-head"><span></span><b class="dallem">♡ Dallem</b><b class="bound">bound.</b><b class="iip">IIPAMASTER</b><b class="fibud">Fibud</b></div><div class="table-row"><div class="cell label">서비스</div><div class="cell ">기업 운동 복지 서비스</div><div class="cell ">운동 강사 채용 서비스</div><div class="cell ">운동 강사 강의 서비스</div><div class="cell fibud-cell">운동 강사 커리어 솔루션</div></div><div class="table-row"><div class="cell label">교육 정보 유형</div><div class="cell "><span class=mark>×</span></div><div class="cell ">외부 교육</div><div class="cell ">내부 교육</div><div class="cell fibud-cell">내/외부 교육 및 자격증</div></div><div class="table-row"><div class="cell label">자격증 및 리뷰</div><div class="cell "><span class=mark>×</span></div><div class="cell "><span class=mark>×</span></div><div class="cell "><span class=mark>×</span></div><div class="cell fibud-cell"><span class=mark>✓</span></div></div><div class="table-row"><div class="cell label">교육 콘텐츠 유형</div><div class="cell "><span class=mark>×</span></div><div class="cell "><span class=mark>×</span></div><div class="cell ">온라인</div><div class="cell fibud-cell">온라인+오프라인</div></div><div class="table-row"><div class="cell label">AI 커리어 진단</div><div class="cell "><span class=mark>×</span></div><div class="cell "><span class=mark>×</span></div><div class="cell "><span class=mark>×</span></div><div class="cell fibud-cell"><span class=mark>✓</span></div></div><div class="table-row"><div class="cell label">MUV (월간 고유 방문자)</div><div class="cell ">1,171</div><div class="cell ">527</div><div class="cell ">14,000</div><div class="cell fibud-cell">17,918</div></div><div class="table-row"><div class="cell label">서비스 운영</div><div class="cell ">2년</div><div class="cell ">3년</div><div class="cell ">6년</div><div class="cell fibud-cell">3개월</div></div><div class="fibud-outline"></div></div></main></div>
+<script>
+(() => {
+  const slide = document.querySelector('.slide');
+  const fit = () => { slide.style.transform = `scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
+  const theme = new URLSearchParams(location.search).get('theme');
+  if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+  addEventListener('resize', fit); fit();
+  // file:// frames have isolated origins; relay navigation without reading parent DOM.
+  if (parent !== window) document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', 'Escape', 'f', 'F'].includes(event.key)) return;
+    if (event.target.closest('button,input,textarea,select,[contenteditable],.carousel-controls,.carousel-nav')) return;
+    queueMicrotask(() => {
+      if (!event.defaultPrevented) parent.postMessage({ type: 'gnar-slide-key', key: event.key, shiftKey: event.shiftKey }, '*');
+    });
+  });
+})();
+</script>
+</body>
+</html>

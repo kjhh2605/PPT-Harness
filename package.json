@@ -1,0 +1,16 @@
+{
+  "name": "gnar-ppt-reference",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Deep Indigo Ink HTML slide references",
+  "scripts": {
+    "preview": "python3 -m http.server 4173 --bind 127.0.0.1",
+    "build:library": "python3 scripts/build-library.py",
+    "check": "python3 scripts/build-library.py && node scripts/check-slides.mjs",
+    "check:original": "python3 scripts/build-library.py && node scripts/check-slides.mjs --original"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1",
+    "pptxgenjs": "^4.0.1"
+  }
+}

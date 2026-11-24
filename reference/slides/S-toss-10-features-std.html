@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="source" content="https://notefolio.net/bysu.ppt/325182">
+<meta name="reference-image" content="slide-10.webp">
+<title>네 가지 항목 설명 · Gnar</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root {
+  /* Gnar 브랜드 토큰 — Deep Indigo Ink (H 283). 원천: design/palettes/brand.json */
+  --hue: 283;
+  --bg: #EDE9E6;  /* 배경 */
+  --surface: #F7F3EF;  /* 카드·패널 */
+  --text: #262321;  /* 본문 */
+  --muted: #666260;  /* 보조 글자·캡션 */
+  --border: #D1CDCA;  /* 선·격자·비포커스 막대 */
+  --ink: #37356A;  /* 제목·강조 문장 */
+  --hero: #5A54AF;  /* 강조 한 곳(핵심 숫자·포커스 막대·구분선) */
+  --support: #8183A4;  /* 보조 막대·아이콘 */
+  --tint: #DEDFF5;  /* 콜아웃·표 머리 배경 띠 */
+  --brown: #826144;  /* 따뜻한 중립 1 */
+  --taupe: #736756;  /* 따뜻한 중립 2 */
+  --chart-1: var(--hero);
+  --chart-2: var(--support);
+  --chart-3: var(--brown);
+  --chart-4: var(--taupe);
+  --chart-5: var(--border);
+}
+
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+} }
+
+:root[data-theme="dark"] {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+}
+
+/* 발표별 색상 교체 레시피 (oklch 지원 브라우저). hex 토큰은 PPTX 변환용 기준값이며,
+ * 다른 색상으로 바꿀 때는 design/scripts/ladder.py 에 hue 값을 넣어 hex를 다시 생성한다.
+ *   light: ink oklch(.36 .09 H) hero oklch(.50 .14 H) support oklch(.62 .05 H) tint oklch(.91 .03 H)
+ *   dark : ink oklch(.86 .07 H) hero oklch(.70 .14 H) support oklch(.56 .05 H) tint oklch(.29 .04 H) */
+
+
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+.viewport { width: 100%; height: 100%; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center; overflow: hidden; }
+.slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; flex-shrink: 0; fill: var(--text); background: var(--surface); transform-origin: center center; }
+h1, h2, h3, p, figure { margin: 0; }
+svg { display: block; }
+.eyebrow { font-size: 25px; font-weight: 650; color: var(--muted); letter-spacing: -.4px; }
+.slide-title { font-size: 64px; font-weight: 750; line-height: 1.25; letter-spacing: -2.3px; color: var(--ink); word-break: keep-all; }
+.slide-copy { font-size: 28px; line-height: 1.6; letter-spacing: -.6px; color: var(--muted); word-break: keep-all; }
+.slide-header { position: absolute; top: 112px; left: 132px; right: 132px; }
+.slide-header .eyebrow { margin-bottom: 20px; }
+.slide-header .slide-copy { margin-top: 25px; }
+.slide-footer { position: absolute; left: 132px; right: 132px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; font-size: 20px; line-height: 1; color: var(--muted); }
+.wordmark { color: var(--ink); font-size: 30px; font-weight: 800; letter-spacing: -1.4px; }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, .viewport { width: 1920px; height: 1080px; overflow: visible; }
+  .slide { transform: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+
+.viewport { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); }
+.slide { background: var(--surface); }
+.title { position: absolute; left: 550px; right: 550px; top: 155px; color: var(--ink); font-size: 48px; font-weight: 760; line-height: 1.46; letter-spacing: -1.7px; text-align: center; }
+.features { position: absolute; left: 197px; top: 408px; width: 1526px; display: grid; grid-template-columns: 680px 680px; column-gap: 166px; row-gap: 99px; }
+.feature { min-width: 0; height: 204px; }
+.feature-heading { height: 57px; display: flex; align-items: center; gap: 29px; }
+.feature-icon { width: 60px; height: 57px; flex: none; }
+.feature-icon svg { width: 60px; height: 57px; }
+.feature h2 { color: var(--text); font-size: 32px; font-weight: 700; line-height: 1.2; letter-spacing: -1.15px; white-space: nowrap; }
+.feature-copy { margin-top: 20px; font-size: 28px; font-weight: 400; line-height: 46px; letter-spacing: -1.5px; color: var(--muted); white-space: nowrap; }
+
+</style>
+</head>
+<body>
+<div class="viewport"><main class="slide" data-slide-id="S-toss-10-features-std" aria-label="네 가지 항목 설명"><h1 class="title">슬라이드의 제목을<br>두 줄 정도로 작성해주세요</h1><section class="features" aria-label="네 가지 설명 항목"><article class="feature"><div class="feature-heading"><div class="feature-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M17 6h26a4 4 0 0 1 4 4v44a4 4 0 0 1-4 4H7a3 3 0 0 1-3-3V21Z" fill="var(--border)"/><path d="M17 6v12a3 3 0 0 1-3 3H4Z" fill="var(--support)"/><path d="m28 46 23-24a3 3 0 0 1 4 0l5 5a3 3 0 0 1 0 4L36 54Z" fill="var(--support)"/><path d="m28 46-4 12 12-4Z" fill="var(--surface)"/><path d="m25.7 52.7-1.7 5.3 5.4-1.8Z" fill="var(--ink)"/></svg></div><h2>첫 번째 항목을 작성해주세요</h2></div><p class="feature-copy">해당 항목의 본문을 작성해주세요 해당 항목의 본문을 작성해주세요<br>해당 항목의 본문을 작성해주세요 해당 항목의 본문을 작성해주세요<br>해당 항목의 본문을 작성해주세요 해당 항목의 본문을 작성해주세요</p></article><article class="feature"><div class="feature-heading"><div class="feature-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M27 5h10v8h8L32 26 19 13h8Z" fill="var(--hero)"/><path d="M13 30a7 7 0 0 1 6-4h26a7 7 0 0 1 6 4l7 16H6Z" fill="var(--hero)"/><path d="m18 31-5 12h38l-5-12Z" fill="var(--surface)"/><path d="M7 41h50v15a5 5 0 0 1-5 5H12a5 5 0 0 1-5-5Z" fill="var(--hero)"/><path d="M20 36h24v6H20Z" fill="var(--border)"/></svg></div><h2>두 번째 항목을 작성해주세요</h2></div><p class="feature-copy">해당 항목의 본문을 작성해주세요 해당 항목의 본문을 작성해주세요<br>해당 항목의 본문을 작성해주세요 해당 항목의 본문을 작성해주세요<br>해당 항목의 본문을 작성해주세요 해당 항목의 본문을 작성해주세요</p></article><article class="feature"><div class="feature-heading"><div class="feature-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="9" width="48" height="37" rx="2" fill="var(--support)"/><rect x="11" y="12" width="42" height="31" rx="1" fill="var(--ink)"/><path d="M8 46h48l6 8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2Z" fill="var(--border)"/><path d="M24 46h16l3 5H21Z" fill="var(--surface)"/></svg></div><h2>세 번째 항목을 작성해주세요</h2></div><p class="feature-copy">해당 항목의 본문을 작성해주세요 해당 항목의 본문을 작성해주세요<br>해당 항목의 본문을 작성해주세요 해당 항목의 본문을 작성해주세요<br>해당 항목의 본문을 작성해주세요 해당 항목의 본문을 작성해주세요</p></article><article class="feature"><div class="feature-heading"><div class="feature-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 5C15 5 4 18 4 34c0 10 5 18 12 23 4 3 7 2 9-3l2-5c2-4 7-4 10 0l2 5c2 5 6 6 10 2 7-6 11-14 11-24C60 17 48 5 32 5Z" fill="var(--support)"/><circle cx="18" cy="22" r="5" fill="var(--surface)"/><circle cx="31" cy="15" r="5" fill="var(--border)"/><circle cx="45" cy="22" r="5" fill="var(--ink)"/><circle cx="14" cy="35" r="5" fill="var(--ink)"/><circle cx="49" cy="35" r="5" fill="var(--surface)"/></svg></div><h2>네 번째 항목을 작성해주세요</h2></div><p class="feature-copy">해당 항목의 본문을 작성해주세요 해당 항목의 본문을 작성해주세요<br>해당 항목의 본문을 작성해주세요 해당 항목의 본문을 작성해주세요<br>해당 항목의 본문을 작성해주세요 해당 항목의 본문을 작성해주세요</p></article></section></main></div>
+<script>
+(() => {
+  const slide = document.querySelector('.slide');
+  const fit = () => { slide.style.transform = `scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
+  const theme = new URLSearchParams(location.search).get('theme');
+  if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+  addEventListener('resize', fit); fit();
+  // file:// frames have isolated origins; relay navigation without reading parent DOM.
+  if (parent !== window) document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', 'Escape', 'f', 'F'].includes(event.key)) return;
+    if (event.target.closest('button,input,textarea,select,[contenteditable],.carousel-controls,.carousel-nav')) return;
+    queueMicrotask(() => {
+      if (!event.defaultPrevented) parent.postMessage({ type: 'gnar-slide-key', key: event.key, shiftKey: event.shiftKey }, '*');
+    });
+  });
+
+})();
+</script>
+</body>
+</html>

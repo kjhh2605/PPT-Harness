@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="source" content="https://notefolio.net/bysu.ppt/431729">
+<meta name="reference-image" content="slide-05.webp">
+<title>어디 갈까? 아이디어가 필요할 때 · Gnar</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root {
+  /* Gnar 브랜드 토큰 — Deep Indigo Ink (H 283). 원천: design/palettes/brand.json */
+  --hue: 283;
+  --bg: #EDE9E6;  /* 배경 */
+  --surface: #F7F3EF;  /* 카드·패널 */
+  --text: #262321;  /* 본문 */
+  --muted: #666260;  /* 보조 글자·캡션 */
+  --border: #D1CDCA;  /* 선·격자·비포커스 막대 */
+  --ink: #37356A;  /* 제목·강조 문장 */
+  --hero: #5A54AF;  /* 강조 한 곳(핵심 숫자·포커스 막대·구분선) */
+  --support: #8183A4;  /* 보조 막대·아이콘 */
+  --tint: #DEDFF5;  /* 콜아웃·표 머리 배경 띠 */
+  --brown: #826144;  /* 따뜻한 중립 1 */
+  --taupe: #736756;  /* 따뜻한 중립 2 */
+  --chart-1: var(--hero);
+  --chart-2: var(--support);
+  --chart-3: var(--brown);
+  --chart-4: var(--taupe);
+  --chart-5: var(--border);
+}
+
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+} }
+
+:root[data-theme="dark"] {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+}
+
+/* 발표별 색상 교체 레시피 (oklch 지원 브라우저). hex 토큰은 PPTX 변환용 기준값이며,
+ * 다른 색상으로 바꿀 때는 design/scripts/ladder.py 에 hue 값을 넣어 hex를 다시 생성한다.
+ *   light: ink oklch(.36 .09 H) hero oklch(.50 .14 H) support oklch(.62 .05 H) tint oklch(.91 .03 H)
+ *   dark : ink oklch(.86 .07 H) hero oklch(.70 .14 H) support oklch(.56 .05 H) tint oklch(.29 .04 H) */
+
+
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+.viewport { width: 100%; height: 100%; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center; overflow: hidden; }
+.slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; flex-shrink: 0; fill: var(--text); background: var(--surface); transform-origin: center center; }
+h1, h2, h3, p, figure { margin: 0; }
+svg { display: block; }
+.eyebrow { font-size: 25px; font-weight: 650; color: var(--muted); letter-spacing: -.4px; }
+.slide-title { font-size: 64px; font-weight: 750; line-height: 1.25; letter-spacing: -2.3px; color: var(--ink); word-break: keep-all; }
+.slide-copy { font-size: 28px; line-height: 1.6; letter-spacing: -.6px; color: var(--muted); word-break: keep-all; }
+.slide-header { position: absolute; top: 112px; left: 132px; right: 132px; }
+.slide-header .eyebrow { margin-bottom: 20px; }
+.slide-header .slide-copy { margin-top: 25px; }
+.slide-footer { position: absolute; left: 132px; right: 132px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; font-size: 20px; line-height: 1; color: var(--muted); }
+.wordmark { color: var(--ink); font-size: 30px; font-weight: 800; letter-spacing: -1.4px; }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, .viewport { width: 1920px; height: 1080px; overflow: visible; }
+  .slide { transform: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+
+.slide{background:var(--bg);color:var(--text)}
+.art{position:absolute;inset:0;width:1920px;height:1080px}
+.copy{font-size:28px;line-height:1.64;letter-spacing:-.7px;color:var(--text);word-break:keep-all}
+.logo{display:flex;align-items:center;gap:8px;color:var(--text);font-size:48px;font-weight:850;letter-spacing:-2px}
+.logo svg{width:52px;height:60px;overflow:visible}
+.muted{color:var(--muted)}.ink{color:var(--ink)}.hero{color:var(--hero)}
+.chip{display:inline-block;border-radius:40px;background:var(--tint);color:var(--ink);padding:10px 24px;font-weight:700;font-size:28px;line-height:1}
+.page-title{font-size:56px;line-height:1.25;font-weight:800;letter-spacing:-1.5px}
+.small-logo{font-size:30px;letter-spacing:-1px}.small-logo svg{width:32px;height:39px}
+.idea-left{position:absolute;left:94px;top:88px;width:590px}.idea-left h1{font-size:52px;line-height:1.4;letter-spacing:-1.5px;margin:20px 0 0}.idea-left .chip{font-size:25px;padding:11px 21px;background:var(--surface);border:2px solid var(--support)}.idea-copy{position:absolute;top:523px;width:562px;line-height:1.5}.idea-copy p+p{margin-top:24px}.idea-data{position:absolute;left:800px;top:178px;width:1064px;height:443px;background:var(--surface);border-radius:33px;padding:50px 28px 25px}.idea-label{position:absolute;left:65px;top:-27px;border:2px solid var(--support);background:var(--tint);color:var(--ink);border-radius:45px;padding:12px 30px;font-size:28px;font-weight:500;margin:0}.table-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.table-grid table{border-collapse:collapse;width:100%;height:auto;align-self:start;font-size:28px;letter-spacing:-1px}.table-grid table+table{border-left:2px dashed var(--border)}.table-grid th{font-weight:500;white-space:nowrap}.table-grid thead th{font-size:23px;padding:8px 4px 20px;height:60px}.table-grid tbody tr{height:78px}.table-grid tbody th{padding:10px 6px}.table-grid tbody th span{display:inline-block;border-radius:50px;background:var(--tint);color:var(--ink);font-weight:650;padding:10px 18px}.table-grid td{text-align:center;padding:8px;color:var(--ink);white-space:nowrap}.table-grid tbody td+td{border-left:1px dashed var(--border)}.tips{position:absolute;left:800px;top:661px;width:1064px;border:2px solid var(--support);border-radius:37px;background:var(--surface);padding:34px 43px 40px}.tips h2{display:flex;align-items:center;gap:14px;margin:0 0 20px;font-size:32px;font-weight:400}.tips-note{height:42px;width:42px}.tips .copy{font-size:28px;line-height:1.57;letter-spacing:-1px}
+</style>
+</head>
+<body>
+<div class="viewport"><main class="slide" data-slide-id="S-bysu-431729-05" aria-label="어디 갈까? 아이디어가 필요할 때"><svg class="art" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" ><path d="M0 20h388l150 592-538 80z" fill="var(--tint)"/><path d="M0 0h740v68Q440 115 0 55z" fill="var(--surface)"/></svg><section class="idea-left"><div class="chip">Trend Force 4</div><h1>어디 갈까?<br><span class="hero">아이디어</span>가 필요할 때</h1><div class="idea-copy copy"><p>틱톡이 지난해 (2022) 말 앱 내 ‘장소태그’ 기능을 새로이 추가하면서 올해는 지역, 장소와 관련한 해시태그들의 큰 성장이 있었습니다. 영상을 올릴 때 장소를 태그하고, 가볼만한 곳, 맛집 등을 추천하는 콘텐츠가 폭발적으로 늘어났습니다.</p><p>또한, #해외여행, #부산여행 등 거의 완전한 포스트 코로나로 여행 이야기도 증가하면서, 이제 유저들은 어디 갈지 아이디어가 필요할 때 틱톡을 통해 영감을 얻는 모습을 보일 것입니다.</p></div></section><section class="idea-data"><h2 class="idea-label">Idea</h2><div class="table-grid"><table><thead><tr><th></th><th>전년대비 조회수</th><th>전년대비 생성수</th></tr></thead><tbody><tr><th><span>#서울핫플</span></th><td>+2,428%</td><td>+368%</td></tr><tr><th><span>#가볼만한곳</span></th><td>+648%</td><td>+69%</td></tr><tr><th><span>#핫플추천</span></th><td>+148,407%</td><td>+6,738%</td></tr><tr><th><span>#맛집추천</span></th><td>+10,534%</td><td>+1,503%</td></tr></tbody></table><table><thead><tr><th></th><th>전년대비 조회수</th><th>전년대비 생성수</th></tr></thead><tbody><tr><th><span>#해외여행</span></th><td>+146%</td><td>+72%</td></tr><tr><th><span>#부산여행</span></th><td>+111%</td><td>+33%</td></tr><tr><th><span>#데이트코스</span></th><td>+317%</td><td>+49%</td></tr></tbody></table></div></section><section class="tips"><h2><svg class="tips-note" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" ><path d="M28 6v36c0 11-21 14-21 1 0-9 12-12 18-8V7h10c1 11 8 17 19 18v10c-10-1-17-4-22-10" fill="var(--ink)"/></svg><span><b class="ink">Tips</b> for Brands</span></h2><p class="copy">여행, 관광과 관련되어 있는 브랜드는 물론, 팝업스토어나 매장이 있는 브랜드라면 2024년에<br>틱톡을 주목해보세요. 이미 많은 유료 광고, 대가성 광고로 뒤덮인 포털/플랫폼에 지친 유저들이<br>새로이 찾는 곳은 바로 틱톡이 될 것입니다.</p></section></main></div>
+<script>
+(() => {
+  const slide = document.querySelector('.slide');
+  const fit = () => { slide.style.transform = `scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
+  const theme = new URLSearchParams(location.search).get('theme');
+  if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+  addEventListener('resize', fit); fit();
+  // file:// frames have isolated origins; relay navigation without reading parent DOM.
+  if (parent !== window) document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', 'Escape', 'f', 'F'].includes(event.key)) return;
+    if (event.target.closest('button,input,textarea,select,[contenteditable],.carousel-controls,.carousel-nav')) return;
+    queueMicrotask(() => {
+      if (!event.defaultPrevented) parent.postMessage({ type: 'gnar-slide-key', key: event.key, shiftKey: event.shiftKey }, '*');
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+{
+  "id": "bysu-453416",
+  "title": "헬스케어 스타트업 IR자료",
+  "sourceUrl": "https://notefolio.net/bysu.ppt/453416",
+  "author": "bysu",
+  "slides": [
+    {
+      "id": "S-bysu-453416-01",
+      "order": 1,
+      "title": "Fibud · 운동 강사의 성장을 돕는 교육 솔루션",
+      "description": "좌하단 대형 Fibud 워드마크와 우측 높이가 다른 휴대폰 2대",
+      "type": "dark",
+      "file": "S-bysu-453416-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/453416",
+      "preview": "previews/S-bysu-453416-01.png",
+      "layout": "좌하단 대형 Fibud 워드마크와 우측 높이가 다른 휴대폰 2대",
+      "tags": [
+        "표지",
+        "앱 목업",
+        "비대칭"
+      ]
+    },
+    {
+      "id": "S-bysu-453416-02",
+      "order": 2,
+      "title": "자격증 및 교육의 비교 선택이 어려운 운동 강사",
+      "description": "상단 제목 아래 동등한 반원형 지표 2개와 하단 2열 핵심 설명",
+      "type": "light",
+      "file": "S-bysu-453416-02.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/453416",
+      "preview": "previews/S-bysu-453416-02.png",
+      "layout": "상단 제목 아래 동등한 반원형 지표 2개와 하단 2열 핵심 설명",
+      "tags": [
+        "문제 인식",
+        "반원 차트",
+        "2열"
+      ]
+    },
+    {
+      "id": "S-bysu-453416-03",
+      "order": 3,
+      "title": "운동 강사를 위한 교육 정보부터 매칭까지",
+      "description": "두 솔루션 설명과 하단 라운드 받침 위 앱 화면 2개",
+      "type": "light",
+      "file": "S-bysu-453416-03.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/453416",
+      "preview": "previews/S-bysu-453416-03.png",
+      "layout": "두 솔루션 설명과 하단 라운드 받침 위 앱 화면 2개",
+      "tags": [
+        "솔루션",
+        "2열",
+        "앱 화면"
+      ]
+    },
+    {
+      "id": "S-bysu-453416-04",
+      "order": 4,
+      "title": "피벗 커리어 · 교육 정보 솔루션",
+      "description": "좌측 42% 설명 패널과 우측 교육 목록·수강평 휴대폰 2개",
+      "type": "light",
+      "file": "S-bysu-453416-04.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/453416",
+      "preview": "previews/S-bysu-453416-04.png",
+      "layout": "좌측 42% 설명 패널과 우측 교육 목록·수강평 휴대폰 2개",
+      "tags": [
+        "기능 소개",
+        "좌우 분할",
+        "앱 화면"
+      ]
+    },
+    {
+      "id": "S-bysu-453416-05",
+      "order": 5,
+      "title": "피벗 커리어 · 경쟁 서비스 비교",
+      "description": "경쟁사 3개와 Fibud의 7개 항목 비교표 및 우측 세로 강조 열",
+      "type": "light",
+      "file": "S-bysu-453416-05.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/453416",
+      "preview": "previews/S-bysu-453416-05.png",
+      "layout": "경쟁사 3개와 Fibud의 7개 항목 비교표 및 우측 세로 강조 열",
+      "tags": [
+        "비교표",
+        "경쟁 분석",
+        "강조 열"
+      ]
+    },
+    {
+      "id": "S-bysu-453416-06",
+      "order": 6,
+      "title": "민간 협회 관리 솔루션 제공",
+      "description": "중앙 웹 관리 대시보드와 우측 겹친 지도 앱, 하단 곡선 띠의 2행 메시지",
+      "type": "light",
+      "file": "S-bysu-453416-06.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/453416",
+      "preview": "previews/S-bysu-453416-06.png",
+      "layout": "중앙 웹 관리 대시보드와 우측 겹친 지도 앱, 하단 곡선 띠의 2행 메시지",
+      "tags": [
+        "성장 전략",
+        "대시보드",
+        "앱 화면"
+      ]
+    }
+  ]
+}

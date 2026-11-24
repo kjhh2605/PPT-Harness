@@ -1,0 +1,136 @@
+{
+  "id": "bysu-430634",
+  "title": "무신사 브랜드 컨셉 무료 PPT",
+  "sourceUrl": "https://notefolio.net/bysu.ppt/430634",
+  "author": "bysu",
+  "slides": [
+    {
+      "id": "S-bysu-430634-01",
+      "order": 1,
+      "title": "무신사 브랜드 컨셉 표지",
+      "description": "다크 캔버스 중앙보다 오른쪽에 정렬한 날짜와 3행 영문 제목",
+      "type": "dark",
+      "file": "S-bysu-430634-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/430634",
+      "preview": "previews/S-bysu-430634-01.png",
+      "layout": "다크 캔버스 중앙보다 오른쪽에 정렬한 날짜와 3행 영문 제목",
+      "tags": [
+        "표지",
+        "다크",
+        "타이포그래피"
+      ]
+    },
+    {
+      "id": "S-bysu-430634-02",
+      "order": 2,
+      "title": "이미지 카드 3열",
+      "description": "상단 검은 목차 띠·두 줄 제목 아래 동일한 이미지 카드 3개와 우측 세로 탭",
+      "type": "light",
+      "file": "S-bysu-430634-02.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223059150706",
+      "preview": "previews/S-bysu-430634-02.png",
+      "layout": "상단 검은 목차 띠·두 줄 제목 아래 동일한 이미지 카드 3개와 우측 세로 탭",
+      "tags": [
+        "카드",
+        "3열",
+        "이미지"
+      ]
+    },
+    {
+      "id": "S-bysu-430634-03",
+      "order": 3,
+      "title": "이미지와 특징 설명",
+      "description": "하단 왼쪽의 넓은 이미지 영역과 오른쪽 특징·본문·해시태그 3개·결론 상자",
+      "type": "light",
+      "file": "S-bysu-430634-03.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223059150706",
+      "preview": "previews/S-bysu-430634-03.png",
+      "layout": "하단 왼쪽의 넓은 이미지 영역과 오른쪽 특징·본문·해시태그 3개·결론 상자",
+      "tags": [
+        "이미지",
+        "비대칭 2단",
+        "해시태그"
+      ]
+    },
+    {
+      "id": "S-bysu-430634-04",
+      "order": 4,
+      "title": "겹친 원형 도식",
+      "description": "다섯 원을 가로로 겹치고 중앙 원을 채운 도식; 본문이 있는 세 원과 양끝 빈 윤곽 원",
+      "type": "light",
+      "file": "S-bysu-430634-04.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223059150706",
+      "preview": "previews/S-bysu-430634-04.png",
+      "layout": "다섯 원을 가로로 겹치고 중앙 원을 채운 도식; 본문이 있는 세 원과 양끝 빈 윤곽 원",
+      "tags": [
+        "도식",
+        "원형",
+        "중앙 강조"
+      ]
+    },
+    {
+      "id": "S-bysu-430634-05",
+      "order": 5,
+      "title": "내용과 태그 표",
+      "description": "구분·내용·태그의 3열과 데이터 5행을 얇은 수평선으로 구분한 표",
+      "type": "light",
+      "file": "S-bysu-430634-05.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223059150706",
+      "preview": "previews/S-bysu-430634-05.png",
+      "layout": "구분·내용·태그의 3열과 데이터 5행을 얇은 수평선으로 구분한 표",
+      "tags": [
+        "표",
+        "5행",
+        "3열"
+      ]
+    },
+    {
+      "id": "S-bysu-430634-06",
+      "order": 6,
+      "title": "비대칭 아이콘 카드 6개",
+      "description": "카메라·옷걸이·다리미 / 쇼핑백·이미지·메모 아이콘을 1:2:1과 1:1:2 비율로 배치",
+      "type": "light",
+      "file": "S-bysu-430634-06.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223059150706",
+      "preview": "previews/S-bysu-430634-06.png",
+      "layout": "카메라·옷걸이·다리미 / 쇼핑백·이미지·메모 아이콘을 1:2:1과 1:1:2 비율로 배치",
+      "tags": [
+        "아이콘",
+        "6개",
+        "비대칭 그리드"
+      ]
+    },
+    {
+      "id": "S-bysu-430634-07",
+      "order": 7,
+      "title": "상승 선 그래프와 기준 막대",
+      "description": "다크 바탕 위 4개 표식의 상승 곡선과 높이가 다른 회색 기준 막대 2개",
+      "type": "dark",
+      "file": "S-bysu-430634-07.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223059150706",
+      "preview": "previews/S-bysu-430634-07.png",
+      "layout": "다크 바탕 위 4개 표식의 상승 곡선과 높이가 다른 회색 기준 막대 2개",
+      "tags": [
+        "선 그래프",
+        "다크",
+        "4개 항목"
+      ]
+    },
+    {
+      "id": "S-bysu-430634-08",
+      "order": 8,
+      "title": "네 가지 목차",
+      "description": "다크 바탕 중앙 위쪽에 01–04 목차를 2×2로 배치하고 하단 중앙에 다음 화살표",
+      "type": "dark",
+      "file": "S-bysu-430634-08.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223059150706",
+      "preview": "previews/S-bysu-430634-08.png",
+      "layout": "다크 바탕 중앙 위쪽에 01–04 목차를 2×2로 배치하고 하단 중앙에 다음 화살표",
+      "tags": [
+        "목차",
+        "다크",
+        "2×2"
+      ]
+    }
+  ]
+}

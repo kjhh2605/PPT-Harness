@@ -1,0 +1,205 @@
+{
+  "id": "bysu-325182",
+  "title": "토스 브랜드 컨셉 PPT 템플릿",
+  "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+  "author": "bysu",
+  "boardCount": 2,
+  "slides": [
+    {
+      "id": "S-toss-01-cover-std",
+      "order": 1,
+      "title": "중앙 표지",
+      "description": "넓은 여백 안에 두 줄 제목을 중앙 배치하고, 토스 단어만 강조한 도입 표지.",
+      "type": "light",
+      "file": "S-toss-01-cover-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/01.png",
+      "layout": "중앙 2행 제목, 오른쪽 다음 화살표",
+      "tags": [
+        "표지"
+      ]
+    },
+    {
+      "id": "S-toss-02-section-std",
+      "order": 2,
+      "title": "4단 목차",
+      "description": "중앙에 네 개의 둥근 가로 카드를 쌓고, 번호 배지와 각 목차 제목을 나란히 배치한 화면.",
+      "type": "light",
+      "file": "S-toss-02-section-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/02.png",
+      "layout": "숫자 아이콘을 포함한 긴 둥근 카드 4개, 세로 중앙",
+      "tags": [
+        "section"
+      ]
+    },
+    {
+      "id": "S-toss-03-layout-std",
+      "order": 3,
+      "title": "챕터 구분",
+      "description": "짙은 배경 중앙에 ‘첫 번째’와 ‘첫 번째 제목을 작성해주세요’를 두 줄로 배치한 구분 화면.",
+      "type": "dark",
+      "file": "S-toss-03-layout-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/03.png",
+      "layout": "색상 소제목과 흰색 1행 제목, 화면 중앙",
+      "tags": [
+        "섹션 구분"
+      ]
+    },
+    {
+      "id": "S-toss-04-kpi-std",
+      "order": 4,
+      "title": "KPI 2개 + 파이",
+      "description": "어두운 배경의 두 줄 메시지, 만족도·재구매율 100%와 우측 분리형 입체 파이차트.",
+      "type": "dark",
+      "file": "S-toss-04-kpi-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/04.png",
+      "layout": "왼쪽 메시지와 KPI 2개, 오른쪽 입체 파이, 하단 출처",
+      "tags": [
+        "KPI · 파이차트"
+      ]
+    },
+    {
+      "id": "S-toss-05-timeline-std",
+      "order": 5,
+      "title": "3개년 타임라인",
+      "description": "중앙의 두 줄 제목과 하나의 수평선에 연결된 2020·2021·2022 연혁. 원본과 같이 연도별로 4·3·5개의 월별 항목을 배치했다.",
+      "type": "dark",
+      "file": "S-toss-05-timeline-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/05.png",
+      "layout": "상단 중앙 제목, 하단 연도 3열과 가로 연결선",
+      "tags": [
+        "timeline"
+      ]
+    },
+    {
+      "id": "S-toss-06-showcase-std",
+      "order": 6,
+      "title": "이미지 2개 쇼케이스",
+      "description": "hero 전면 배경 위 왼쪽에 세 줄 핵심 문구와 네 줄 세부 내용을 배치하고, 오른쪽에 둥근 모서리의 세로 이미지 자리 두 개를 나란히 둔다.",
+      "type": "brand",
+      "file": "S-toss-06-showcase-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/06.png",
+      "layout": "좌측 메시지·설명, 우측 세로 이미지 슬롯 2개",
+      "tags": [
+        "컬러 전면 쇼케이스"
+      ]
+    },
+    {
+      "id": "S-toss-07-callout-std",
+      "order": 7,
+      "title": "알림 콜아웃",
+      "description": "넓은 여백의 중앙에 라운드 카드와 종 아이콘을 배치하고, 두 줄 메시지의 핵심 구절을 강조한 알림형 화면.",
+      "type": "light",
+      "file": "S-toss-07-callout-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/07.png",
+      "layout": "중앙 그림자 카드, 상단 종 아이콘, 하단 메시지",
+      "tags": [
+        "callout"
+      ]
+    },
+    {
+      "id": "S-toss-08-carousel-std",
+      "order": 8,
+      "title": "5장 캐러셀",
+      "description": "중앙 두 줄 제목과 세 줄 본문 아래에 크기가 다른 빈 카드 다섯 장을 겹친 캐러셀. 양쪽 화살표로 중심 카드를 이동한다.",
+      "type": "light",
+      "file": "S-toss-08-carousel-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/08.png",
+      "layout": "상단 제목·3행 설명, 하단 겹친 사각형 5개와 좌우 화살표",
+      "tags": [
+        "carousel"
+      ]
+    },
+    {
+      "id": "S-toss-09-cards-std",
+      "order": 9,
+      "title": "3열 상세 카드",
+      "description": "중앙의 두 줄 제목 아래, 본문 여섯 줄과 체크 표시 강조 문구를 담은 동일한 크기의 카드 세 개를 배치한 상세 비교형 슬라이드.",
+      "type": "light",
+      "file": "S-toss-09-cards-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/09.png",
+      "layout": "상단 제목, 하단 제목·본문·체크 강조를 가진 카드 3개",
+      "tags": [
+        "cards"
+      ]
+    },
+    {
+      "id": "S-toss-10-features-std",
+      "order": 10,
+      "title": "2×2 특징 설명",
+      "description": "중앙의 두 줄 제목 아래, 메모·수신함·노트북·팔레트 아이콘과 설명을 2×2로 배치한 화면.",
+      "type": "light",
+      "file": "S-toss-10-features-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/10.png",
+      "layout": "상단 제목, 하단 아이콘·소제목·본문의 2×2 그리드",
+      "tags": [
+        "features"
+      ]
+    },
+    {
+      "id": "S-toss-11-numbered-std",
+      "order": 11,
+      "title": "2행 장문 목록",
+      "description": "중앙의 두 줄 제목 아래에 번호 배지와 세 줄 본문을 두 행으로 배치하고 세 개의 가로선으로 구분한다.",
+      "type": "light",
+      "file": "S-toss-11-numbered-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/11.png",
+      "layout": "상단 제목, 구분선으로 나눈 번호 장문 2행",
+      "tags": [
+        "번호형 2행 장문"
+      ]
+    },
+    {
+      "id": "S-toss-12-checklist-std",
+      "order": 12,
+      "title": "3행 체크리스트",
+      "description": "중앙의 두 줄 제목 아래에 체크 아이콘·항목명·본문을 담은 넓은 가로 카드 세 개를 세로로 배치했다.",
+      "type": "light",
+      "file": "S-toss-12-checklist-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/12.png",
+      "layout": "상단 제목, 하단 체크 아이콘과 소제목·본문의 가로 카드 3개",
+      "tags": [
+        "checklist"
+      ]
+    },
+    {
+      "id": "S-toss-13-chart-std",
+      "order": 13,
+      "title": "설명 + 막대 차트",
+      "description": "중앙 두 줄 제목 아래 왼쪽 설명 카드 두 개와 오른쪽 연도별 상승 막대그래프를 배치한 화면. 원본 예시 2020–2023년의 100·200·300·400을 유지했다.",
+      "type": "light",
+      "file": "S-toss-13-chart-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/13.png",
+      "layout": "상단 제목, 좌측 설명 카드 2개, 우측 막대 4개 차트",
+      "tags": [
+        "chart"
+      ]
+    },
+    {
+      "id": "S-toss-14-table-std",
+      "order": 14,
+      "title": "비교표 + 결론",
+      "description": "중앙 두 줄 제목 아래에 2개 비교 열과 5개 항목 행을 배치하고, 하단 둥근 콜아웃에 특징 및 결론을 제시한 표형 슬라이드.",
+      "type": "light",
+      "file": "S-toss-14-table-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/14.png",
+      "layout": "상단 제목, 3열 6행 표, 하단 체크 결론 띠",
+      "tags": [
+        "table"
+      ]
+    }
+  ]
+}

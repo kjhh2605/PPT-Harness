@@ -1,0 +1,2754 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>bysu 레퍼런스 · Gnar 슬라이드 라이브러리</title>
+<link rel="stylesheet" href="../design/tokens.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif;-webkit-font-smoothing:antialiased}button,input,a{font:inherit}a{color:inherit;text-decoration:none}button{cursor:pointer}button:disabled{cursor:default;opacity:.35}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--hero);outline-offset:4px}button{border:0}header{max-width:1600px;margin:auto;padding:32px 48px 0}.topline{display:flex;align-items:center;justify-content:space-between;padding-bottom:28px;border-bottom:1px solid var(--border)}.brand{font-size:27px;font-weight:850;letter-spacing:-1.5px;color:var(--ink)}.brand span{font-size:13px;letter-spacing:0;font-weight:500;color:var(--muted);margin-left:18px}.source-link{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px}.intro{display:flex;justify-content:space-between;gap:32px;align-items:flex-end;padding:51px 0 41px}.eyebrow{font-size:12px;font-weight:650;color:var(--muted);letter-spacing:1.6px;margin:0 0 15px}h1{font-size:40px;line-height:1.2;letter-spacing:-1.6px;margin:0 0 14px;font-weight:750;color:var(--ink)}.intro p:last-child{font-size:15px;line-height:1.65;color:var(--muted);margin:0}.palette{display:flex;align-items:center;gap:14px}.swatches{display:flex;padding-right:7px}.swatches i{display:block;width:28px;height:28px;border-radius:50%;margin-right:-7px;border:3px solid var(--bg)}.palette-label{font-size:12px;line-height:1.6;color:var(--muted)}.palette-label strong{color:var(--ink);font-weight:600;display:block}.toolbar{display:flex;gap:18px;align-items:center;justify-content:space-between;margin-bottom:26px}.filters{display:flex;gap:5px;align-items:center}.filter{background:transparent;color:var(--muted);padding:9px 15px;border-radius:8px;font-size:13px}.filter[aria-pressed=true]{background:var(--ink);color:var(--surface)}.right-tools{display:flex;gap:12px;align-items:center}.search{display:flex;align-items:center;gap:8px;color:var(--muted);border-bottom:1px solid var(--border);padding:8px 1px}.search input{width:170px;border:0;outline:none;background:transparent;color:var(--text);font-size:13px}.present-button{display:flex;align-items:center;gap:8px;border-radius:8px;padding:11px 16px;background:var(--surface);color:var(--ink);font-size:13px;font-weight:600}.main{max-width:1600px;margin:auto;padding:0 48px 30px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:31px 24px}.card{min-width:0}.preview{display:block;position:relative;width:100%;aspect-ratio:16/9;padding:0;background:var(--surface);overflow:hidden;border-radius:4px;border:1px solid var(--border);transition:transform .2s,border-color .2s}.preview:hover{transform:translateY(-3px);border-color:var(--support)}.preview img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none}.preview::after{content:'화면 보기 ↗';position:absolute;bottom:12px;right:12px;opacity:0;background:var(--ink);color:var(--surface);padding:7px 10px;border-radius:5px;font-size:11px;transition:opacity .2s}.preview:hover::after,.preview:focus-visible::after{opacity:1}.card-line{display:flex;align-items:center;justify-content:space-between;margin-top:14px;gap:12px}.card-title{display:flex;align-items:baseline;gap:10px;min-width:0}.number{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}.card h2{font-size:15px;font-weight:650;margin:0;letter-spacing:-.3px}.open-link{font-size:12px;color:var(--muted);padding:4px;white-space:nowrap}.card-description{font-size:12px;line-height:1.6;color:var(--muted);margin:6px 0 0 26px}.empty{display:block;text-align:center;color:var(--muted);padding:80px 20px;grid-column:1/-1}.library-footer{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;border-top:1px solid var(--border);padding:25px 0 0;margin-top:50px;font-size:12px;color:var(--muted);line-height:1.7}.library-footer p{margin:0}.library-footer a{text-decoration:underline;text-underline-offset:3px}.count{font-variant-numeric:tabular-nums;white-space:nowrap}.modal{position:fixed;inset:0;background:var(--bg);z-index:10;padding:22px 32px;display:none;grid-template-rows:auto minmax(0,1fr) auto;gap:20px}.modal.is-open{display:grid}.modal-head,.modal-foot{display:flex;align-items:center;justify-content:space-between;gap:20px}.modal-title{font-size:14px;display:flex;align-items:center;gap:13px}.modal-number{color:var(--muted);font-size:12px}.modal-actions{display:flex;align-items:center;gap:8px}.icon-button,.text-button{background:var(--surface);color:var(--ink);display:inline-flex;justify-content:center;align-items:center;min-width:38px;height:38px;border-radius:7px;border:1px solid var(--border)}.text-button{padding:0 12px;gap:8px;font-size:12px}.text-button[aria-pressed=true]{background:var(--ink);color:var(--surface)}.stage{display:grid;place-items:center;min-height:0;position:relative}.slide-display{width:min(100%,calc((100dvh - 150px)*16/9));aspect-ratio:16/9;position:relative;border:1px solid var(--border);background:var(--surface);overflow:hidden}.slide-display iframe,.slide-display img{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:contain}.slide-display img[hidden]{display:none}.modal-foot{font-size:12px;color:var(--muted)}.nav-controls{display:flex;align-items:center;gap:18px}.nav-controls span{min-width:53px;text-align:center;font-variant-numeric:tabular-nums}.keyboard{font-size:11px}.modal:fullscreen{padding:16px;background:var(--bg)}.modal:fullscreen .slide-display{width:min(100%,calc((100dvh - 138px)*16/9))}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}body.modal-open{overflow:hidden}@media(prefers-reduced-motion:reduce){*{transition:none!important}}@media(max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.palette{display:none}header{padding:24px 28px 0}.main{padding:0 28px 25px}.intro{padding:35px 0}.intro h1{font-size:34px}}@media(max-width:640px){header{padding:22px 20px 0}.main{padding:0 20px 24px}.brand span{margin-left:10px}.source-link{font-size:11px}.grid{grid-template-columns:1fr;gap:25px}.intro{padding:30px 0}.intro h1{font-size:29px}.intro p:last-child{font-size:13px}.toolbar{flex-wrap:wrap;gap:17px}.right-tools{width:100%;justify-content:space-between}.search{flex:1}.search input{width:100%}.filter{padding:8px 13px}.library-footer{display:block}.count{margin-top:12px}.modal{padding:12px;gap:12px}.modal-head{align-items:flex-start}.modal-title{display:block;line-height:1.8}.modal-title .modal-number{display:block}.modal-actions{gap:5px}.text-button{padding:0 8px}.modal-actions .standalone,.keyboard{display:none}.modal-foot{justify-content:center;flex-wrap:wrap}.modal-foot .source-label{display:none}.slide-display{width:100%}}
+
+[hidden]{display:none!important}.collection-label{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);min-width:0}.collection-label select{max-width:350px;min-width:180px;padding:10px 28px 10px 12px;border:1px solid var(--border);border-radius:7px;color:var(--ink);background:var(--surface);font:inherit}.toolbar{flex-wrap:wrap}.right-tools{margin-left:auto}.selection-summary{margin:0;padding-bottom:16px;font-size:12px;color:var(--muted);line-height:1.6}.selection-summary a{text-decoration:underline;text-underline-offset:3px}.collection-name{font-size:11px;color:var(--muted);margin:12px 0 0;line-height:1.6}.card-line{align-items:flex-start}.card h2{line-height:1.5}.modal-title{display:block;min-width:0;line-height:1.6}.modal-number{display:block}.modal-actions{flex-shrink:0}.slide-display{width:min(100%,calc((100dvh - 170px)*16/9))}select:focus-visible{outline:3px solid var(--hero);outline-offset:4px}@media(max-width:1100px){.right-tools{margin-left:0}}@media(max-width:640px){.collection-label{width:100%}.collection-label select{flex:1;width:0;max-width:none}.modal-head{gap:10px}.modal-title{font-size:12px}.modal-number{font-size:10px}.search{min-width:0}.search input{min-width:0}.slide-display{width:100%}}
+.source-note{display:block;font-size:11px;color:var(--muted);font-weight:400;margin-top:3px;max-width:68ch}
+</style>
+</head>
+<body>
+<header>
+  <div class="topline"><a class="brand" href="index.html">gnar<span>슬라이드 라이브러리</span></a><a class="source-link" href="https://notefolio.net/bysu.ppt" target="_blank" rel="noopener noreferrer">bysu · 원본 작업 ↗</a></div>
+  <div class="intro"><div><p class="eyebrow">REFERENCE COLLECTION · DEEP INDIGO INK</p><h1>다양한 구성, 우리의 컬러로.</h1><p><span id="collection-count">0</span>개 작업의 공개 페이지를 템플릿별로 모았습니다.<br>텍스트와 도형을 편집할 수 있는 HTML을 열어보세요.</p></div></div>
+  <div class="toolbar">
+    <label class="collection-label">템플릿<select id="collection" aria-label="템플릿 선택"><option value="all">모든 템플릿</option></select></label>
+    <nav class="filters" aria-label="화면 배경 필터"><button class="filter" data-filter="all" aria-pressed="true">전체</button><button class="filter" data-filter="light" aria-pressed="false">라이트</button><button class="filter" data-filter="dark" aria-pressed="false">다크</button><button class="filter" data-filter="brand" aria-pressed="false">브랜드</button></nav>
+    <div class="right-tools"><label class="search"><span aria-hidden="true">⌕</span><span class="sr-only">화면 검색</span><input type="search" id="search" placeholder="제목·구성 검색"></label><button class="present-button" id="present">▷ 선택 화면 발표</button></div>
+  </div>
+  <p class="selection-summary" id="selection-summary" aria-live="polite"></p>
+</header>
+<main class="main"><div class="grid" id="grid"></div><p class="empty" id="empty" role="status" hidden>검색 조건에 맞는 화면이 없습니다.</p><footer class="library-footer"><p>레이아웃 출처: bysu · 노트폴리오와 작가 블로그. 색상은 Gnar의 Deep Indigo Ink로 적용했습니다.<br>공개 이미지에 보이는 페이지가 대상입니다. 사진·입체 그래픽의 단순화 등은 작업별 기록을 확인하세요.</p><div class="count"><span id="visible-count">0</span> / <span id="total-count">0</span> 화면 · 1920 × 1080<br><a href="bysu-catalog.md">화면별 구성·출처 ↗</a></div></footer><!-- gnar-reference-import:start -->
+<section aria-label="추가 레퍼런스" style="margin-top:40px;padding-top:24px;border-top:1px solid var(--border)"><h2 style="font-size:20px;color:var(--ink)">추가 레퍼런스</h2><ul style="line-height:2"><li><a href="imports/bysu-430634/index.html">무신사 브랜드 컨셉 무료 PPT</a> · 8개 화면</li><li><a href="imports/bysu-431729/index.html">틱톡 코리아 트렌드 리포트</a> · 6개 화면</li><li><a href="imports/bysu-432025/index.html">애플 브랜드 컨셉 무료 PPT</a> · 7개 화면</li><li><a href="imports/bysu-432405/index.html">PPT 기업 강의 제안서</a> · 7개 화면</li><li><a href="imports/bysu-433060/index.html">네이버 브랜드 컨셉 무료 PPT 템플릿</a> · 12개 화면</li><li><a href="imports/bysu-440794/index.html">촬영 스튜디오 회사소개서</a> · 6개 화면</li><li><a href="imports/bysu-441180/index.html">토스 브랜드 컨셉 무료 PPT 템플릿 · 신판</a> · 9개 화면</li><li><a href="imports/bysu-441794/index.html">커리어 플랫폼 광고 소개서</a> · 6개 화면</li><li><a href="imports/bysu-442731/index.html">당근 브랜드 컨셉 무료 PPT 템플릿</a> · 12개 화면</li><li><a href="imports/bysu-443087/index.html">인테리어 회사 제안서</a> · 6개 화면</li><li><a href="imports/bysu-443646/index.html">Notion 노션 브랜드 컨셉 무료 PPT 템플릿</a> · 8개 화면</li><li><a href="imports/bysu-444405/index.html">컨설팅 회사 회사소개서</a> · 6개 화면</li><li><a href="imports/bysu-445433/index.html">명품 토탈케어 회사소개서</a> · 6개 화면</li><li><a href="imports/bysu-447028/index.html">보안 솔루션 플랫폼 회사소개서</a> · 6개 화면</li><li><a href="imports/bysu-451665/index.html">글로벌 물류회사 회사소개서</a> · 6개 화면</li><li><a href="imports/bysu-452283/index.html">기업 홍보 대행사 서비스소개서</a> · 6개 화면</li><li><a href="imports/bysu-452912/index.html">인플루언서 마케팅 서비스 회사소개서</a> · 6개 화면</li><li><a href="imports/bysu-453416/index.html">헬스케어 스타트업 IR자료</a> · 6개 화면</li></ul></section>
+<!-- gnar-reference-import:end -->
+</main>
+<section class="modal" id="viewer" role="dialog" aria-modal="true" aria-label="슬라이드 미리보기" tabindex="-1">
+  <div class="modal-head"><div class="modal-title"><span class="modal-number" id="viewer-number"></span><strong id="viewer-title"></strong><span class="source-note" id="source-note" hidden></span></div><div class="modal-actions"><button class="text-button" id="compare" aria-pressed="false">원본 보기</button><a class="text-button standalone" id="standalone" target="_blank" rel="noopener">HTML 열기 ↗</a><button class="icon-button" id="fullscreen" aria-label="전체 화면" title="전체 화면 (F)">⛶</button><button class="icon-button" id="close" aria-label="미리보기 닫기" title="닫기 (Esc)">✕</button></div></div>
+  <div class="stage"><div class="slide-display"><iframe id="slide-frame" title="슬라이드 화면"></iframe><img id="original" alt="원본 슬라이드 레퍼런스" hidden></div></div>
+  <div class="modal-foot"><a class="source-label" id="source-label" target="_blank" rel="noopener">bysu · 원본 작업 ↗</a><div class="nav-controls"><button class="icon-button" id="prev" aria-label="이전 슬라이드">←</button><span id="position" aria-live="polite"></span><button class="icon-button" id="next" aria-label="다음 슬라이드">→</button></div><span class="keyboard">← → 이동 · F 전체 화면 · Esc 닫기</span></div>
+</section>
+<script id="library-data" type="application/json">
+{
+  "version": 1,
+  "generatedAt": "2026-10-28T12:53:35.246587+00:00",
+  "collectionCount": 19,
+  "slideCount": 143,
+  "collections": [
+    {
+      "id": "bysu-452912",
+      "title": "인플루언서 마케팅 서비스 회사소개서",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/452912",
+      "author": "bysu",
+      "slideCount": 6
+    },
+    {
+      "id": "bysu-453416",
+      "title": "헬스케어 스타트업 IR자료",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/453416",
+      "author": "bysu",
+      "slideCount": 6
+    },
+    {
+      "id": "bysu-452283",
+      "title": "기업 홍보 대행사 서비스소개서",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/452283",
+      "author": "bysu",
+      "slideCount": 6
+    },
+    {
+      "id": "bysu-451665",
+      "title": "글로벌 물류회사 회사소개서",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/451665",
+      "author": "bysu",
+      "slideCount": 6
+    },
+    {
+      "id": "bysu-447028",
+      "title": "보안 솔루션 플랫폼 회사소개서",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/447028",
+      "author": "bysu",
+      "slideCount": 6
+    },
+    {
+      "id": "bysu-445433",
+      "title": "명품 토탈케어 회사소개서",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/445433",
+      "author": "bysu",
+      "slideCount": 6
+    },
+    {
+      "id": "bysu-444405",
+      "title": "컨설팅 회사 회사소개서",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/444405",
+      "author": "bysu",
+      "slideCount": 6
+    },
+    {
+      "id": "bysu-443646",
+      "title": "Notion 노션 브랜드 컨셉 무료 PPT 템플릿",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/443646",
+      "author": "bysu",
+      "slideCount": 8
+    },
+    {
+      "id": "bysu-443087",
+      "title": "인테리어 회사 제안서",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/443087",
+      "author": "bysu",
+      "slideCount": 6
+    },
+    {
+      "id": "bysu-442731",
+      "title": "당근 브랜드 컨셉 무료 PPT 템플릿",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/442731",
+      "additionalSourceUrl": "https://blog.naver.com/bysu_ppt/222934428779",
+      "author": "bysu",
+      "slideCount": 12
+    },
+    {
+      "id": "bysu-441794",
+      "title": "커리어 플랫폼 광고 소개서",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/441794",
+      "author": "bysu",
+      "slideCount": 6
+    },
+    {
+      "id": "bysu-441180",
+      "title": "토스 브랜드 컨셉 무료 PPT 템플릿 · 신판",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/441180",
+      "author": "bysu",
+      "additionalSourceUrls": [
+        "https://blog.naver.com/bysu_ppt/223399403850"
+      ],
+      "slideCount": 9
+    },
+    {
+      "id": "bysu-440794",
+      "title": "촬영 스튜디오 회사소개서",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/440794",
+      "author": "bysu",
+      "slideCount": 6
+    },
+    {
+      "id": "bysu-433060",
+      "title": "네이버 브랜드 컨셉 무료 PPT 템플릿",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/433060",
+      "author": "bysu",
+      "slideCount": 12
+    },
+    {
+      "id": "bysu-432405",
+      "title": "PPT 기업 강의 제안서",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/432405",
+      "author": "bysu",
+      "slideCount": 7
+    },
+    {
+      "id": "bysu-432025",
+      "title": "애플 브랜드 컨셉 무료 PPT",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/432025",
+      "author": "bysu",
+      "additionalSourceUrls": [
+        "https://blog.naver.com/bysu_ppt/223226330641"
+      ],
+      "slideCount": 7
+    },
+    {
+      "id": "bysu-431729",
+      "title": "틱톡 코리아 트렌드 리포트",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/431729",
+      "author": "bysu",
+      "slideCount": 6
+    },
+    {
+      "id": "bysu-430634",
+      "title": "무신사 브랜드 컨셉 무료 PPT",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/430634",
+      "author": "bysu",
+      "slideCount": 8
+    },
+    {
+      "id": "bysu-325182",
+      "title": "토스 브랜드 컨셉 PPT 템플릿",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "author": "bysu",
+      "boardCount": 2,
+      "slideCount": 14
+    }
+  ],
+  "slides": [
+    {
+      "id": "S-bysu-452912-01",
+      "order": 1,
+      "title": "Pick\u0026Sense · 표지",
+      "description": "넓은 단색 배경, 상단 양끝 영문 문구, 하단 좌측 대형 워드마크와 우측 소셜 아이콘",
+      "type": "brand",
+      "file": "S-bysu-452912-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/452912",
+      "preview": "previews/S-bysu-452912-01.png",
+      "layout": "넓은 단색 배경, 상단 양끝 영문 문구, 하단 좌측 대형 워드마크와 우측 소셜 아이콘",
+      "tags": [
+        "표지",
+        "대형 타이포"
+      ],
+      "collectionId": "bysu-452912",
+      "collectionTitle": "인플루언서 마케팅 서비스 회사소개서"
+    },
+    {
+      "id": "S-bysu-452912-02",
+      "order": 2,
+      "title": "좋은 제품을 어떻게 보여주느냐",
+      "description": "좌측 60%의 넓은 여백과 하단 소개 문구, 우측 40%의 대각선 명함 콜라주",
+      "type": "light",
+      "file": "S-bysu-452912-02.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/452912",
+      "preview": "previews/S-bysu-452912-02.png",
+      "layout": "좌측 60%의 넓은 여백과 하단 소개 문구, 우측 40%의 대각선 명함 콜라주",
+      "tags": [
+        "회사소개",
+        "비대칭 2단",
+        "명함 콜라주"
+      ],
+      "collectionId": "bysu-452912",
+      "collectionTitle": "인플루언서 마케팅 서비스 회사소개서"
+    },
+    {
+      "id": "S-bysu-452912-03",
+      "order": 3,
+      "title": "우리 브랜드에도 공동구매가 필요할까요?",
+      "description": "상단 좌측 질문 아래 동일한 크기의 세로형 카드 3개, 카드별 제목·설명·우하단 아이콘",
+      "type": "light",
+      "file": "S-bysu-452912-03.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/452912",
+      "preview": "previews/S-bysu-452912-03.png",
+      "layout": "상단 좌측 질문 아래 동일한 크기의 세로형 카드 3개, 카드별 제목·설명·우하단 아이콘",
+      "tags": [
+        "공동구매",
+        "3단 카드",
+        "서비스 가치"
+      ],
+      "collectionId": "bysu-452912",
+      "collectionTitle": "인플루언서 마케팅 서비스 회사소개서"
+    },
+    {
+      "id": "S-bysu-452912-04",
+      "order": 4,
+      "title": "인스타그램을 통한 구매 전환",
+      "description": "좌측 시장 규모 숫자와 우측 크기가 다른 3개 버블 차트, 큰 흰 원호를 활용한 비대칭 정보 배치",
+      "type": "light",
+      "file": "S-bysu-452912-04.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/452912",
+      "preview": "previews/S-bysu-452912-04.png",
+      "layout": "좌측 시장 규모 숫자와 우측 크기가 다른 3개 버블 차트, 큰 흰 원호를 활용한 비대칭 정보 배치",
+      "tags": [
+        "시장 규모",
+        "버블 차트",
+        "통계"
+      ],
+      "collectionId": "bysu-452912",
+      "collectionTitle": "인플루언서 마케팅 서비스 회사소개서"
+    },
+    {
+      "id": "S-bysu-452912-05",
+      "order": 5,
+      "title": "픽앤센스만의 4가지 특징",
+      "description": "4개의 가로형 카드를 2×2로 배치, 각 카드의 원형 아이콘과 설명, 중앙에 겹쳐진 브랜드 원",
+      "type": "light",
+      "file": "S-bysu-452912-05.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/452912",
+      "preview": "previews/S-bysu-452912-05.png",
+      "layout": "4개의 가로형 카드를 2×2로 배치, 각 카드의 원형 아이콘과 설명, 중앙에 겹쳐진 브랜드 원",
+      "tags": [
+        "핵심 특징",
+        "2×2 카드",
+        "아이콘"
+      ],
+      "collectionId": "bysu-452912",
+      "collectionTitle": "인플루언서 마케팅 서비스 회사소개서"
+    },
+    {
+      "id": "S-bysu-452912-06",
+      "order": 6,
+      "title": "픽앤센스와 함께 시작하세요",
+      "description": "상단 좌측 제목, 중단 5개 아이콘과 가로 진행선, 하단 5개 단계 설명 카드",
+      "type": "light",
+      "file": "S-bysu-452912-06.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/452912",
+      "preview": "previews/S-bysu-452912-06.png",
+      "layout": "상단 좌측 제목, 중단 5개 아이콘과 가로 진행선, 하단 5개 단계 설명 카드",
+      "tags": [
+        "프로세스",
+        "5단계",
+        "타임라인"
+      ],
+      "collectionId": "bysu-452912",
+      "collectionTitle": "인플루언서 마케팅 서비스 회사소개서"
+    },
+    {
+      "id": "S-bysu-453416-01",
+      "order": 1,
+      "title": "Fibud · 운동 강사의 성장을 돕는 교육 솔루션",
+      "description": "좌하단 대형 Fibud 워드마크와 우측 높이가 다른 휴대폰 2대",
+      "type": "dark",
+      "file": "S-bysu-453416-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/453416",
+      "preview": "previews/S-bysu-453416-01.png",
+      "layout": "좌하단 대형 Fibud 워드마크와 우측 높이가 다른 휴대폰 2대",
+      "tags": [
+        "표지",
+        "앱 목업",
+        "비대칭"
+      ],
+      "collectionId": "bysu-453416",
+      "collectionTitle": "헬스케어 스타트업 IR자료"
+    },
+    {
+      "id": "S-bysu-453416-02",
+      "order": 2,
+      "title": "자격증 및 교육의 비교 선택이 어려운 운동 강사",
+      "description": "상단 제목 아래 동등한 반원형 지표 2개와 하단 2열 핵심 설명",
+      "type": "light",
+      "file": "S-bysu-453416-02.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/453416",
+      "preview": "previews/S-bysu-453416-02.png",
+      "layout": "상단 제목 아래 동등한 반원형 지표 2개와 하단 2열 핵심 설명",
+      "tags": [
+        "문제 인식",
+        "반원 차트",
+        "2열"
+      ],
+      "collectionId": "bysu-453416",
+      "collectionTitle": "헬스케어 스타트업 IR자료"
+    },
+    {
+      "id": "S-bysu-453416-03",
+      "order": 3,
+      "title": "운동 강사를 위한 교육 정보부터 매칭까지",
+      "description": "두 솔루션 설명과 하단 라운드 받침 위 앱 화면 2개",
+      "type": "light",
+      "file": "S-bysu-453416-03.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/453416",
+      "preview": "previews/S-bysu-453416-03.png",
+      "layout": "두 솔루션 설명과 하단 라운드 받침 위 앱 화면 2개",
+      "tags": [
+        "솔루션",
+        "2열",
+        "앱 화면"
+      ],
+      "collectionId": "bysu-453416",
+      "collectionTitle": "헬스케어 스타트업 IR자료"
+    },
+    {
+      "id": "S-bysu-453416-04",
+      "order": 4,
+      "title": "피벗 커리어 · 교육 정보 솔루션",
+      "description": "좌측 42% 설명 패널과 우측 교육 목록·수강평 휴대폰 2개",
+      "type": "light",
+      "file": "S-bysu-453416-04.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/453416",
+      "preview": "previews/S-bysu-453416-04.png",
+      "layout": "좌측 42% 설명 패널과 우측 교육 목록·수강평 휴대폰 2개",
+      "tags": [
+        "기능 소개",
+        "좌우 분할",
+        "앱 화면"
+      ],
+      "collectionId": "bysu-453416",
+      "collectionTitle": "헬스케어 스타트업 IR자료"
+    },
+    {
+      "id": "S-bysu-453416-05",
+      "order": 5,
+      "title": "피벗 커리어 · 경쟁 서비스 비교",
+      "description": "경쟁사 3개와 Fibud의 7개 항목 비교표 및 우측 세로 강조 열",
+      "type": "light",
+      "file": "S-bysu-453416-05.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/453416",
+      "preview": "previews/S-bysu-453416-05.png",
+      "layout": "경쟁사 3개와 Fibud의 7개 항목 비교표 및 우측 세로 강조 열",
+      "tags": [
+        "비교표",
+        "경쟁 분석",
+        "강조 열"
+      ],
+      "collectionId": "bysu-453416",
+      "collectionTitle": "헬스케어 스타트업 IR자료"
+    },
+    {
+      "id": "S-bysu-453416-06",
+      "order": 6,
+      "title": "민간 협회 관리 솔루션 제공",
+      "description": "중앙 웹 관리 대시보드와 우측 겹친 지도 앱, 하단 곡선 띠의 2행 메시지",
+      "type": "light",
+      "file": "S-bysu-453416-06.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/453416",
+      "preview": "previews/S-bysu-453416-06.png",
+      "layout": "중앙 웹 관리 대시보드와 우측 겹친 지도 앱, 하단 곡선 띠의 2행 메시지",
+      "tags": [
+        "성장 전략",
+        "대시보드",
+        "앱 화면"
+      ],
+      "collectionId": "bysu-453416",
+      "collectionTitle": "헬스케어 스타트업 IR자료"
+    },
+    {
+      "id": "S-bysu-452283-01",
+      "order": 1,
+      "title": "홍보팀장 서비스",
+      "description": "좌측 서비스 제목과 우측 명함 3장 중첩",
+      "type": "light",
+      "file": "S-bysu-452283-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/452283",
+      "preview": "previews/S-bysu-452283-01.png",
+      "layout": "좌측 서비스 제목과 우측 명함 3장 중첩",
+      "tags": [
+        "표지",
+        "비대칭 2단"
+      ],
+      "collectionId": "bysu-452283",
+      "collectionTitle": "기업 홍보 대행사 서비스소개서"
+    },
+    {
+      "id": "S-bysu-452283-02",
+      "order": 2,
+      "title": "홍보의 어려움",
+      "description": "상단 문제 제기와 엇갈린 3+2 카드",
+      "type": "light",
+      "file": "S-bysu-452283-02.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/452283",
+      "preview": "previews/S-bysu-452283-02.png",
+      "layout": "상단 문제 제기와 엇갈린 3+2 카드",
+      "tags": [
+        "문제 정의",
+        "3+2 카드"
+      ],
+      "collectionId": "bysu-452283",
+      "collectionTitle": "기업 홍보 대행사 서비스소개서"
+    },
+    {
+      "id": "S-bysu-452283-03",
+      "order": 3,
+      "title": "작은 브랜드의 홍보 필요성",
+      "description": "번호가 겹친 4열 리스크 카드와 하단 전체 폭 결론",
+      "type": "light",
+      "file": "S-bysu-452283-03.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/452283",
+      "preview": "previews/S-bysu-452283-03.png",
+      "layout": "번호가 겹친 4열 리스크 카드와 하단 전체 폭 결론",
+      "tags": [
+        "필요성",
+        "4열 리스크"
+      ],
+      "collectionId": "bysu-452283",
+      "collectionTitle": "기업 홍보 대행사 서비스소개서"
+    },
+    {
+      "id": "S-bysu-452283-04",
+      "order": 4,
+      "title": "일반 대행사와 과정 비교",
+      "description": "5행 비교표와 오른쪽 점선 연결 설명",
+      "type": "light",
+      "file": "S-bysu-452283-04.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/452283",
+      "preview": "previews/S-bysu-452283-04.png",
+      "layout": "5행 비교표와 오른쪽 점선 연결 설명",
+      "tags": [
+        "비교표",
+        "5행 매트릭스"
+      ],
+      "collectionId": "bysu-452283",
+      "collectionTitle": "기업 홍보 대행사 서비스소개서"
+    },
+    {
+      "id": "S-bysu-452283-05",
+      "order": 5,
+      "title": "체계적인 3단계 프로세스",
+      "description": "점선 타임라인 아래 3열 단계·작업·결과 카드",
+      "type": "light",
+      "file": "S-bysu-452283-05.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/452283",
+      "preview": "previews/S-bysu-452283-05.png",
+      "layout": "점선 타임라인 아래 3열 단계·작업·결과 카드",
+      "tags": [
+        "프로세스",
+        "3단계"
+      ],
+      "collectionId": "bysu-452283",
+      "collectionTitle": "기업 홍보 대행사 서비스소개서"
+    },
+    {
+      "id": "S-bysu-452283-06",
+      "order": 6,
+      "title": "상황별 맞춤 서비스",
+      "description": "1+3 서비스 분류 띠와 4열 질문·답변 카드",
+      "type": "light",
+      "file": "S-bysu-452283-06.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/452283",
+      "preview": "previews/S-bysu-452283-06.png",
+      "layout": "1+3 서비스 분류 띠와 4열 질문·답변 카드",
+      "tags": [
+        "서비스 구성",
+        "1+3 그룹"
+      ],
+      "collectionId": "bysu-452283",
+      "collectionTitle": "기업 홍보 대행사 서비스소개서"
+    },
+    {
+      "id": "S-bysu-451665-01",
+      "order": 1,
+      "title": "표지",
+      "description": "좌하단 기업명과 우상단 공중에 매달린 컨테이너",
+      "type": "light",
+      "file": "S-bysu-451665-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/451665",
+      "preview": "previews/S-bysu-451665-01.png",
+      "layout": "좌하단 기업명과 우상단 공중에 매달린 컨테이너",
+      "tags": [
+        "표지",
+        "비대칭",
+        "물류"
+      ],
+      "collectionId": "bysu-451665",
+      "collectionTitle": "글로벌 물류회사 회사소개서"
+    },
+    {
+      "id": "S-bysu-451665-02",
+      "order": 2,
+      "title": "검증된 경험과 확장된 서비스",
+      "description": "상단 세 줄 소개 아래 동일 크기 서비스 카드 3개",
+      "type": "light",
+      "file": "S-bysu-451665-02.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/451665",
+      "preview": "previews/S-bysu-451665-02.png",
+      "layout": "상단 세 줄 소개 아래 동일 크기 서비스 카드 3개",
+      "tags": [
+        "3열 카드",
+        "회사소개"
+      ],
+      "collectionId": "bysu-451665",
+      "collectionTitle": "글로벌 물류회사 회사소개서"
+    },
+    {
+      "id": "S-bysu-451665-03",
+      "order": 3,
+      "title": "복잡한 시장에서의 완결형 솔루션",
+      "description": "Problem과 Solution의 3행 알약형 항목을 좌우 대응",
+      "type": "light",
+      "file": "S-bysu-451665-03.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/451665",
+      "preview": "previews/S-bysu-451665-03.png",
+      "layout": "Problem과 Solution의 3행 알약형 항목을 좌우 대응",
+      "tags": [
+        "비교",
+        "문제 해결"
+      ],
+      "collectionId": "bysu-451665",
+      "collectionTitle": "글로벌 물류회사 회사소개서"
+    },
+    {
+      "id": "S-bysu-451665-04",
+      "order": 4,
+      "title": "특송 and 이커머스",
+      "description": "하단 점묘 세계지도 위 7개 국가 핀 라벨",
+      "type": "light",
+      "file": "S-bysu-451665-04.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/451665",
+      "preview": "previews/S-bysu-451665-04.png",
+      "layout": "하단 점묘 세계지도 위 7개 국가 핀 라벨",
+      "tags": [
+        "지도",
+        "글로벌 네트워크"
+      ],
+      "collectionId": "bysu-451665",
+      "collectionTitle": "글로벌 물류회사 회사소개서"
+    },
+    {
+      "id": "S-bysu-451665-05",
+      "order": 5,
+      "title": "고위험 국가 걱정마세요",
+      "description": "우측 미주 지도와 좌하단 중첩 원 3개에서 결과 원으로 연결",
+      "type": "light",
+      "file": "S-bysu-451665-05.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/451665",
+      "preview": "previews/S-bysu-451665-05.png",
+      "layout": "우측 미주 지도와 좌하단 중첩 원 3개에서 결과 원으로 연결",
+      "tags": [
+        "지도",
+        "프로세스"
+      ],
+      "collectionId": "bysu-451665",
+      "collectionTitle": "글로벌 물류회사 회사소개서"
+    },
+    {
+      "id": "S-bysu-451665-06",
+      "order": 6,
+      "title": "자체 개발 LMS 시스템",
+      "description": "주문부터 배송까지 대각선으로 내려가는 5단계 프로세스",
+      "type": "light",
+      "file": "S-bysu-451665-06.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/451665",
+      "preview": "previews/S-bysu-451665-06.png",
+      "layout": "주문부터 배송까지 대각선으로 내려가는 5단계 프로세스",
+      "tags": [
+        "프로세스",
+        "계단형"
+      ],
+      "collectionId": "bysu-451665",
+      "collectionTitle": "글로벌 물류회사 회사소개서"
+    },
+    {
+      "id": "S-bysu-447028-01",
+      "order": 1,
+      "title": "차세대 제로 트러스트 통신 보안 기업",
+      "description": "좌측 상단 3행 제목과 우측 하단 클라우드·대시보드 입체 장면",
+      "type": "light",
+      "file": "S-bysu-447028-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/447028",
+      "preview": "previews/S-bysu-447028-01.png",
+      "layout": "좌측 상단 3행 제목과 우측 하단 클라우드·대시보드 입체 장면",
+      "tags": [
+        "표지",
+        "비대칭",
+        "보안"
+      ],
+      "collectionId": "bysu-447028",
+      "collectionTitle": "보안 솔루션 플랫폼 회사소개서"
+    },
+    {
+      "id": "S-bysu-447028-02",
+      "order": 2,
+      "title": "제로 트러스트, 신뢰의 의미를 재정의하다",
+      "description": "왼쪽 사전 검색 카드와 오른쪽 로고·3행 선언문을 중앙 높이에 배치",
+      "type": "light",
+      "file": "S-bysu-447028-02.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/447028",
+      "preview": "previews/S-bysu-447028-02.png",
+      "layout": "왼쪽 사전 검색 카드와 오른쪽 로고·3행 선언문을 중앙 높이에 배치",
+      "tags": [
+        "개념",
+        "2단",
+        "사전 카드"
+      ],
+      "collectionId": "bysu-447028",
+      "collectionTitle": "보안 솔루션 플랫폼 회사소개서"
+    },
+    {
+      "id": "S-bysu-447028-03",
+      "order": 3,
+      "title": "신뢰는 검증에서 시작합니다",
+      "description": "4행 비교표: 좌측 두 칸 알약형 경계 보안 모델과 우측 단일 검증 모델",
+      "type": "light",
+      "file": "S-bysu-447028-03.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/447028",
+      "preview": "previews/S-bysu-447028-03.png",
+      "layout": "4행 비교표: 좌측 두 칸 알약형 경계 보안 모델과 우측 단일 검증 모델",
+      "tags": [
+        "비교",
+        "4행",
+        "제로 트러스트"
+      ],
+      "collectionId": "bysu-447028",
+      "collectionTitle": "보안 솔루션 플랫폼 회사소개서"
+    },
+    {
+      "id": "S-bysu-447028-04",
+      "order": 4,
+      "title": "업무는 간편하게, 보안은 완전히 새롭게",
+      "description": "동일 크기의 3열 솔루션 카드, 상단 설명과 하단 우측 개념 일러스트",
+      "type": "light",
+      "file": "S-bysu-447028-04.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/447028",
+      "preview": "previews/S-bysu-447028-04.png",
+      "layout": "동일 크기의 3열 솔루션 카드, 상단 설명과 하단 우측 개념 일러스트",
+      "tags": [
+        "솔루션",
+        "3열 카드",
+        "제품 소개"
+      ],
+      "collectionId": "bysu-447028",
+      "collectionTitle": "보안 솔루션 플랫폼 회사소개서"
+    },
+    {
+      "id": "S-bysu-447028-05",
+      "order": 5,
+      "title": "보안의 디테일을 바꾸는 핵심 기능",
+      "description": "좌측 41% 설명 패널과 4개 효과 목록, 우측 4×3 기능 타일 및 두 빈칸",
+      "type": "light",
+      "file": "S-bysu-447028-05.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/447028",
+      "preview": "previews/S-bysu-447028-05.png",
+      "layout": "좌측 41% 설명 패널과 4개 효과 목록, 우측 4×3 기능 타일 및 두 빈칸",
+      "tags": [
+        "기능",
+        "4×3 타일",
+        "분할 레이아웃"
+      ],
+      "collectionId": "bysu-447028",
+      "collectionTitle": "보안 솔루션 플랫폼 회사소개서"
+    },
+    {
+      "id": "S-bysu-447028-06",
+      "order": 6,
+      "title": "검증된 보안 역량, 신뢰는 결과로 증명됩니다",
+      "description": "4열 3행 성과 카드 11개와 우측 상단 행성 일러스트, 특허 카드를 단독 강조",
+      "type": "light",
+      "file": "S-bysu-447028-06.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/447028",
+      "preview": "previews/S-bysu-447028-06.png",
+      "layout": "4열 3행 성과 카드 11개와 우측 상단 행성 일러스트, 특허 카드를 단독 강조",
+      "tags": [
+        "성과",
+        "인증",
+        "수상",
+        "4열 그리드"
+      ],
+      "collectionId": "bysu-447028",
+      "collectionTitle": "보안 솔루션 플랫폼 회사소개서"
+    },
+    {
+      "id": "S-bysu-445433-01",
+      "order": 1,
+      "title": "Leather \u0026 All · 프리미엄 명품 토탈케어",
+      "description": "상단 양끝의 작은 소개 문구와 화면 하단을 채우는 대형 영문 워드마크",
+      "type": "dark",
+      "file": "S-bysu-445433-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/445433",
+      "preview": "previews/S-bysu-445433-01.png",
+      "layout": "상단 양끝의 작은 소개 문구와 화면 하단을 채우는 대형 영문 워드마크",
+      "tags": [
+        "표지",
+        "대형 타이포"
+      ],
+      "collectionId": "bysu-445433",
+      "collectionTitle": "명품 토탈케어 회사소개서"
+    },
+    {
+      "id": "S-bysu-445433-02",
+      "order": 2,
+      "title": "레더앤올 회사 소개 · OUR VISION",
+      "description": "좌하단 유색 면 위에 제품 장면이 겹치고, 오른쪽 중하단에 제목과 두 문단 소개를 배치",
+      "type": "light",
+      "file": "S-bysu-445433-02.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/445433",
+      "preview": "previews/S-bysu-445433-02.png",
+      "layout": "좌하단 유색 면 위에 제품 장면이 겹치고, 오른쪽 중하단에 제목과 두 문단 소개를 배치",
+      "tags": [
+        "회사소개",
+        "비대칭 2단"
+      ],
+      "collectionId": "bysu-445433",
+      "collectionTitle": "명품 토탈케어 회사소개서"
+    },
+    {
+      "id": "S-bysu-445433-03",
+      "order": 3,
+      "title": "복원 서비스 안내 · OUR SERVICE",
+      "description": "상단 좌측 제목·우측 본문 아래, 제품 여덟 개를 높낮이가 교차하는 4열 2행으로 배치",
+      "type": "light",
+      "file": "S-bysu-445433-03.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/445433",
+      "preview": "previews/S-bysu-445433-03.png",
+      "layout": "상단 좌측 제목·우측 본문 아래, 제품 여덟 개를 높낮이가 교차하는 4열 2행으로 배치",
+      "tags": [
+        "서비스",
+        "제품 8개",
+        "교차 그리드"
+      ],
+      "collectionId": "bysu-445433",
+      "collectionTitle": "명품 토탈케어 회사소개서"
+    },
+    {
+      "id": "S-bysu-445433-04",
+      "order": 4,
+      "title": "기술력 및 전문성 · EXPERTISE",
+      "description": "오른쪽 약 31%에 세로 제품 장면, 왼쪽 상단 제목과 넓은 여백 아래 2×2 전문성 설명",
+      "type": "light",
+      "file": "S-bysu-445433-04.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/445433",
+      "preview": "previews/S-bysu-445433-04.png",
+      "layout": "오른쪽 약 31%에 세로 제품 장면, 왼쪽 상단 제목과 넓은 여백 아래 2×2 전문성 설명",
+      "tags": [
+        "전문성",
+        "2×2 본문",
+        "세로 이미지"
+      ],
+      "collectionId": "bysu-445433",
+      "collectionTitle": "명품 토탈케어 회사소개서"
+    },
+    {
+      "id": "S-bysu-445433-05",
+      "order": 5,
+      "title": "파트너십 혜택 · PARTNERSHIP",
+      "description": "높이와 폭이 서로 다른 제품 장면 여섯 개를 가로로 연결하고, 구분선 아래 네 가지 혜택을 4단으로 배치",
+      "type": "light",
+      "file": "S-bysu-445433-05.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/445433",
+      "preview": "previews/S-bysu-445433-05.png",
+      "layout": "높이와 폭이 서로 다른 제품 장면 여섯 개를 가로로 연결하고, 구분선 아래 네 가지 혜택을 4단으로 배치",
+      "tags": [
+        "파트너십",
+        "이미지 스트립",
+        "4단 본문"
+      ],
+      "collectionId": "bysu-445433",
+      "collectionTitle": "명품 토탈케어 회사소개서"
+    },
+    {
+      "id": "S-bysu-445433-06",
+      "order": 6,
+      "title": "문의 및 상담 예약 · CONTACT",
+      "description": "좌측 복원 도구 사진 영역과 배경 사각형이 겹치며, 우측 연락처 세 가지를 가로선으로 나눠 세로 배치",
+      "type": "light",
+      "file": "S-bysu-445433-06.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/445433",
+      "preview": "previews/S-bysu-445433-06.png",
+      "layout": "좌측 복원 도구 사진 영역과 배경 사각형이 겹치며, 우측 연락처 세 가지를 가로선으로 나눠 세로 배치",
+      "tags": [
+        "연락처",
+        "이미지와 본문",
+        "3개 항목"
+      ],
+      "collectionId": "bysu-445433",
+      "collectionTitle": "명품 토탈케어 회사소개서"
+    },
+    {
+      "id": "S-bysu-444405-01",
+      "order": 1,
+      "title": "Headless · 표지",
+      "description": "좌상단 두 줄 설명과 좌하단 Headless 워드마크, 우하단의 큰 아이소메트릭 퍼즐 윤곽을 유지했다.",
+      "type": "dark",
+      "file": "S-bysu-444405-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/444405",
+      "preview": "previews/S-bysu-444405-01.png",
+      "layout": "좌상단 설명 · 좌하단 대형 워드마크 · 우하단 퍼즐 윤곽",
+      "tags": [
+        "표지",
+        "워드마크",
+        "비대칭"
+      ],
+      "collectionId": "bysu-444405",
+      "collectionTitle": "컨설팅 회사 회사소개서"
+    },
+    {
+      "id": "S-bysu-444405-02",
+      "order": 2,
+      "title": "실행 없는 전략은 무의미합니다",
+      "description": "중앙 제목 아래 8개의 원을 가로로 겹쳐 전 주기를 표시하고, 하단 28%를 메시지 띠로 구성했다.",
+      "type": "light",
+      "file": "S-bysu-444405-02.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/444405",
+      "preview": "previews/S-bysu-444405-02.png",
+      "layout": "8개 원형 단계 · 하단 전폭 메시지",
+      "tags": [
+        "프로세스",
+        "8단계",
+        "원형"
+      ],
+      "collectionId": "bysu-444405",
+      "collectionTitle": "컨설팅 회사 회사소개서"
+    },
+    {
+      "id": "S-bysu-444405-03",
+      "order": 3,
+      "title": "헤드리스의 철학",
+      "description": "왼쪽 카드에 2×2 순환도, 오른쪽 카드에 118억을 중심으로 15+·20+의 원을 겹쳤다. 원본 수치를 유지했다.",
+      "type": "light",
+      "file": "S-bysu-444405-03.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/444405",
+      "preview": "previews/S-bysu-444405-03.png",
+      "layout": "상단 2행 제목 · 하단 2카드 · 순환도와 3개 실적 원",
+      "tags": [
+        "철학",
+        "순환도",
+        "KPI"
+      ],
+      "collectionId": "bysu-444405",
+      "collectionTitle": "컨설팅 회사 회사소개서"
+    },
+    {
+      "id": "S-bysu-444405-04",
+      "order": 4,
+      "title": "헤드리스의 차별성",
+      "description": "동일 높이의 가로 알약 4행을 쌓고 오른쪽 절반을 겹쳐 차별점을 표시했다. 상단 Headless 옆 체크를 단일 hero로 두었다.",
+      "type": "light",
+      "file": "S-bysu-444405-04.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/444405",
+      "preview": "previews/S-bysu-444405-04.png",
+      "layout": "좌측 기존 방식 · 우측 대안의 4행 알약형 비교",
+      "tags": [
+        "비교",
+        "4행",
+        "알약형"
+      ],
+      "collectionId": "bysu-444405",
+      "collectionTitle": "컨설팅 회사 회사소개서"
+    },
+    {
+      "id": "S-bysu-444405-05",
+      "order": 5,
+      "title": "초기사업검증 컨설팅",
+      "description": "STEP 1~4 점선과 4개의 세로 카드를 정렬하고 내부 항목을 3·3·2·2개로 유지했다.",
+      "type": "light",
+      "file": "S-bysu-444405-05.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/444405",
+      "preview": "previews/S-bysu-444405-05.png",
+      "layout": "수평 점선 타임라인 · 4단계 카드",
+      "tags": [
+        "프로세스",
+        "4단계",
+        "MVP"
+      ],
+      "collectionId": "bysu-444405",
+      "collectionTitle": "컨설팅 회사 회사소개서"
+    },
+    {
+      "id": "S-bysu-444405-06",
+      "order": 6,
+      "title": "분야를 넘나드는 기획 · 브랜딩 · 운영 경험",
+      "description": "9개 산업을 영문/국문 쌍으로 3×3 배치하고 원본의 F\u0026B·Local Business·IT Solution 세 면을 tint로 구별했다.",
+      "type": "light",
+      "file": "S-bysu-444405-06.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/444405",
+      "preview": "previews/S-bysu-444405-06.png",
+      "layout": "상단 설명 · 중앙 소개문 · 하단 3×3 산업 그리드",
+      "tags": [
+        "산업",
+        "3×3 그리드",
+        "이중 언어"
+      ],
+      "collectionId": "bysu-444405",
+      "collectionTitle": "컨설팅 회사 회사소개서"
+    },
+    {
+      "id": "S-bysu-443646-01",
+      "order": 1,
+      "title": "Notion 브랜드 컨셉 템플릿",
+      "description": "상단 책상 비주얼과 헤드폰, 좌측 제목·소제목·소유자",
+      "type": "light",
+      "file": "S-bysu-443646-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/443646",
+      "preview": "previews/S-bysu-443646-01.png",
+      "layout": "상단 책상 비주얼과 헤드폰, 좌측 제목·소제목·소유자",
+      "tags": [
+        "표지",
+        "사진 밴드"
+      ],
+      "sourceStatus": "complete",
+      "collectionId": "bysu-443646",
+      "collectionTitle": "Notion 노션 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-443646-02",
+      "order": 2,
+      "title": "Contents",
+      "description": "중앙 브라우저 창 안의 제목과 4개 세로 목차",
+      "type": "light",
+      "file": "S-bysu-443646-02.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223019258047",
+      "preview": "previews/S-bysu-443646-02.png",
+      "layout": "중앙 브라우저 창 안의 제목과 4개 세로 목차",
+      "tags": [
+        "목차",
+        "브라우저 창"
+      ],
+      "sourceStatus": "complete",
+      "collectionId": "bysu-443646",
+      "collectionTitle": "Notion 노션 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-443646-03",
+      "order": 3,
+      "title": "Next Slide",
+      "description": "어두워진 목차 창 위의 중앙 전환 모달과 토글",
+      "type": "light",
+      "file": "S-bysu-443646-03.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223019258047",
+      "preview": "previews/S-bysu-443646-03.png",
+      "layout": "어두워진 목차 창 위의 중앙 전환 모달과 토글",
+      "tags": [
+        "전환",
+        "모달"
+      ],
+      "sourceStatus": "complete",
+      "collectionId": "bysu-443646",
+      "collectionTitle": "Notion 노션 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-443646-04",
+      "order": 4,
+      "title": "특징 4개",
+      "description": "좌측 노션 탐색 사이드바와 우측 2×2 특징 그리드",
+      "type": "light",
+      "file": "S-bysu-443646-04.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223019258047",
+      "preview": "previews/S-bysu-443646-04.png",
+      "layout": "좌측 노션 탐색 사이드바와 우측 2×2 특징 그리드",
+      "tags": [
+        "특징",
+        "2×2 그리드"
+      ],
+      "sourceStatus": "complete",
+      "collectionId": "bysu-443646",
+      "collectionTitle": "Notion 노션 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-443646-05",
+      "order": 5,
+      "title": "갤러리 카드 2개",
+      "description": "좌측 탐색 사이드바와 우측 빈 이미지·설명을 가진 갤러리 카드 2개",
+      "type": "light",
+      "file": "S-bysu-443646-05.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223019258047",
+      "preview": "previews/S-bysu-443646-05.png",
+      "layout": "좌측 탐색 사이드바와 우측 빈 이미지·설명을 가진 갤러리 카드 2개",
+      "tags": [
+        "갤러리",
+        "2단"
+      ],
+      "sourceStatus": "complete",
+      "collectionId": "bysu-443646",
+      "collectionTitle": "Notion 노션 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-443646-06",
+      "order": 6,
+      "title": "Date · Name · Status",
+      "description": "좌측 탐색 사이드바와 우측 3열·6행 상태 데이터 표",
+      "type": "light",
+      "file": "S-bysu-443646-06.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223019258047",
+      "preview": "previews/S-bysu-443646-06.png",
+      "layout": "좌측 탐색 사이드바와 우측 3열·6행 상태 데이터 표",
+      "tags": [
+        "데이터",
+        "표"
+      ],
+      "sourceStatus": "complete",
+      "collectionId": "bysu-443646",
+      "collectionTitle": "Notion 노션 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-443646-07",
+      "order": 7,
+      "title": "체크리스트 2개",
+      "description": "좌측 사이드바와 우측 2열 체크리스트: 각 3개 글머리 항목과 3개 순서 항목",
+      "type": "light",
+      "file": "S-bysu-443646-07.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223019258047",
+      "preview": "previews/S-bysu-443646-07.png",
+      "layout": "좌측 사이드바와 우측 2열 체크리스트: 각 3개 글머리 항목과 3개 순서 항목",
+      "tags": [
+        "목록",
+        "2단 체크리스트"
+      ],
+      "sourceStatus": "complete",
+      "collectionId": "bysu-443646",
+      "collectionTitle": "Notion 노션 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-443646-08",
+      "order": 8,
+      "title": "Planning · Complete",
+      "description": "좌측 사이드바와 Planning 2개·Complete 3개의 칸반 카드",
+      "type": "light",
+      "file": "S-bysu-443646-08.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223019258047",
+      "preview": "previews/S-bysu-443646-08.png",
+      "layout": "좌측 사이드바와 Planning 2개·Complete 3개의 칸반 카드",
+      "tags": [
+        "프로세스",
+        "칸반"
+      ],
+      "sourceStatus": "complete",
+      "collectionId": "bysu-443646",
+      "collectionTitle": "Notion 노션 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-443087-01",
+      "order": 1,
+      "title": "Store Management Proposal",
+      "description": "좌상단 3행 영문 표제와 우측에 겹친 3개의 반원, 하단 연락처",
+      "type": "dark",
+      "file": "S-bysu-443087-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/443087",
+      "preview": "previews/S-bysu-443087-01.png",
+      "layout": "좌상단 3행 영문 표제와 우측에 겹친 3개의 반원, 하단 연락처",
+      "tags": [
+        "표지",
+        "반원",
+        "다크"
+      ],
+      "collectionId": "bysu-443087",
+      "collectionTitle": "인테리어 회사 제안서"
+    },
+    {
+      "id": "S-bysu-443087-02",
+      "order": 2,
+      "title": "HISTORY OF IDS",
+      "description": "네 시기의 가로 연혁과 1·2·3·5개 이력 카드, 왼쪽 아래 3행 슬로건",
+      "type": "light",
+      "file": "S-bysu-443087-02.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/443087",
+      "preview": "previews/S-bysu-443087-02.png",
+      "layout": "네 시기의 가로 연혁과 1·2·3·5개 이력 카드, 왼쪽 아래 3행 슬로건",
+      "tags": [
+        "연혁",
+        "4열"
+      ],
+      "collectionId": "bysu-443087",
+      "collectionTitle": "인테리어 회사 제안서"
+    },
+    {
+      "id": "S-bysu-443087-03",
+      "order": 3,
+      "title": "WORKING CONCEPT",
+      "description": "상단 좌우 제목·설명과 브래킷 아래 7개 업무, 3열에서 2·6번 항목이 두 칸 병합",
+      "type": "light",
+      "file": "S-bysu-443087-03.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/443087",
+      "preview": "previews/S-bysu-443087-03.png",
+      "layout": "상단 좌우 제목·설명과 브래킷 아래 7개 업무, 3열에서 2·6번 항목이 두 칸 병합",
+      "tags": [
+        "업무",
+        "7개 항목",
+        "병합 그리드"
+      ],
+      "collectionId": "bysu-443087",
+      "collectionTitle": "인테리어 회사 제안서"
+    },
+    {
+      "id": "S-bysu-443087-04",
+      "order": 4,
+      "title": "SI 매뉴얼 공사 SM 도입 개요 — 현행 업무 프로세스",
+      "description": "위쪽 2열 개요·현안, 아래쪽 5단계에서 두 경로로 분기되는 현행 프로세스",
+      "type": "light",
+      "file": "S-bysu-443087-04.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/443087",
+      "preview": "previews/S-bysu-443087-04.png",
+      "layout": "위쪽 2열 개요·현안, 아래쪽 5단계에서 두 경로로 분기되는 현행 프로세스",
+      "tags": [
+        "프로세스",
+        "분기",
+        "2열"
+      ],
+      "collectionId": "bysu-443087",
+      "collectionTitle": "인테리어 회사 제안서"
+    },
+    {
+      "id": "S-bysu-443087-05",
+      "order": 5,
+      "title": "SI 매뉴얼 공사 SM 도입 개요 — SM 제도 도입 필요",
+      "description": "왼쪽 3행 현안·검토 기준 매트릭스와 오른쪽 SM 제도 결론 패널, 상단 체크 메시지",
+      "type": "light",
+      "file": "S-bysu-443087-05.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/443087",
+      "preview": "previews/S-bysu-443087-05.png",
+      "layout": "왼쪽 3행 현안·검토 기준 매트릭스와 오른쪽 SM 제도 결론 패널, 상단 체크 메시지",
+      "tags": [
+        "비교 표",
+        "3행",
+        "결론"
+      ],
+      "collectionId": "bysu-443087",
+      "collectionTitle": "인테리어 회사 제안서"
+    },
+    {
+      "id": "S-bysu-443087-06",
+      "order": 6,
+      "title": "WORKING PROCESS — Objective",
+      "description": "L자 배경의 왼쪽 Objective·Role·Result 내비게이션과 오른쪽 아래 3행 아이콘·제목·본문",
+      "type": "light",
+      "file": "S-bysu-443087-06.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/443087",
+      "preview": "previews/S-bysu-443087-06.png",
+      "layout": "L자 배경의 왼쪽 Objective·Role·Result 내비게이션과 오른쪽 아래 3행 아이콘·제목·본문",
+      "tags": [
+        "업무 목표",
+        "3행",
+        "L자 구성"
+      ],
+      "collectionId": "bysu-443087",
+      "collectionTitle": "인테리어 회사 제안서"
+    },
+    {
+      "id": "S-bysu-442731-01",
+      "order": 1,
+      "title": "당근 브랜드 컨셉 표지",
+      "description": "넓은 밝은 여백 중앙에 작은 당근 배지. 두 줄 제목에서 브랜드 단어를 둥근 면으로 강조.",
+      "type": "light",
+      "file": "S-bysu-442731-01.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222934428779",
+      "preview": "previews/S-bysu-442731-01.png",
+      "layout": "중앙 당근 배지와 두 줄 타이틀",
+      "tags": [
+        "표지",
+        "중앙 정렬"
+      ],
+      "collectionId": "bysu-442731",
+      "collectionTitle": "당근 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-442731-02",
+      "order": 2,
+      "title": "목차",
+      "description": "중앙의 작은 당근 배지 아래 네 개의 같은 크기 둥근 목차 패널.",
+      "type": "light",
+      "file": "S-bysu-442731-02.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222934428779",
+      "preview": "previews/S-bysu-442731-02.png",
+      "layout": "중앙 배지와 세로로 쌓인 네 목차 캡슐",
+      "tags": [
+        "목차",
+        "4단계"
+      ],
+      "collectionId": "bysu-442731",
+      "collectionTitle": "당근 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-442731-03",
+      "order": 3,
+      "title": "목차 · 첫 주제 강조",
+      "description": "중앙의 작은 당근 배지 아래 네 개의 같은 크기 둥근 목차 패널. 첫 번째 패널을 강조한 실제 공개 변형.",
+      "type": "light",
+      "file": "S-bysu-442731-03.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222934428779",
+      "preview": "previews/S-bysu-442731-03.png",
+      "layout": "중앙 배지와 세로로 쌓인 네 목차 캡슐",
+      "tags": [
+        "목차",
+        "4단계"
+      ],
+      "collectionId": "bysu-442731",
+      "collectionTitle": "당근 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-442731-04",
+      "order": 4,
+      "title": "스마트폰 채팅",
+      "description": "하단에서 잘린 큰 휴대폰 안에 다섯 채팅 말풍선. 오른쪽은 당근 배지·두 줄 제목·설명.",
+      "type": "brand",
+      "file": "S-bysu-442731-04.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222934428779",
+      "preview": "previews/S-bysu-442731-04.png",
+      "layout": "전면 브랜드 배경과 좌측 하단으로 이어지는 스마트폰",
+      "tags": [
+        "스마트폰",
+        "채팅"
+      ],
+      "collectionId": "bysu-442731",
+      "collectionTitle": "당근 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-442731-05",
+      "order": 5,
+      "title": "메시지 강조",
+      "description": "강조 문구 주위에 타원·별·밑줄·곡선 화살표 네 가지 편집 가능한 SVG 장식.",
+      "type": "brand",
+      "file": "S-bysu-442731-05.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222934428779",
+      "preview": "previews/S-bysu-442731-05.png",
+      "layout": "전면 브랜드 배경 위 중앙 세 줄 문구와 손그림",
+      "tags": [
+        "메시지",
+        "손그림"
+      ],
+      "collectionId": "bysu-442731",
+      "collectionTitle": "당근 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-442731-06",
+      "order": 6,
+      "title": "게시글 카드",
+      "description": "태그·제목·본문과 하단 좋아요/싫어요 숫자를 가진 네 개의 라운드 카드.",
+      "type": "light",
+      "file": "S-bysu-442731-06.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222934428779",
+      "preview": "previews/S-bysu-442731-06.png",
+      "layout": "좌측 소개와 우측 2×2 게시글 카드",
+      "tags": [
+        "게시글",
+        "2×2 카드"
+      ],
+      "collectionId": "bysu-442731",
+      "collectionTitle": "당근 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-442731-07",
+      "order": 7,
+      "title": "아이콘 목록",
+      "description": "사람·위치·확성기·선물 아이콘을 세로로 배열한 목록. 각 행 오른쪽에 제목·두 줄 설명·메시지 아이콘.",
+      "type": "light",
+      "file": "S-bysu-442731-07.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222934428779",
+      "preview": "previews/S-bysu-442731-07.png",
+      "layout": "좌측 소개와 우측 라운드 패널의 네 행",
+      "tags": [
+        "아이콘",
+        "목록"
+      ],
+      "collectionId": "bysu-442731",
+      "collectionTitle": "당근 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-442731-08",
+      "order": 8,
+      "title": "성과 지표",
+      "description": "상단 150% 재구매율 배너와 겹친 차트 일러스트. 하단 이용자·조회·신규 회원 세 카드.",
+      "type": "light",
+      "file": "S-bysu-442731-08.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222934428779",
+      "preview": "previews/S-bysu-442731-08.png",
+      "layout": "좌측 소개와 우측 1개 대형 KPI·3개 소형 KPI",
+      "tags": [
+        "KPI",
+        "숫자"
+      ],
+      "collectionId": "bysu-442731",
+      "collectionTitle": "당근 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-442731-09",
+      "order": 9,
+      "title": "이미지와 만족도 카드",
+      "description": "좌측 제목과 세 줄 설명, 우측 네 개 이미지 슬롯과 웃는 얼굴·짧은 만족도 막대.",
+      "type": "light",
+      "file": "S-bysu-442731-09.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222934428779",
+      "preview": "previews/S-bysu-442731-09.png",
+      "layout": "좌측 소개와 우측 2×2 이미지·평가 카드",
+      "tags": [
+        "이미지",
+        "2×2 카드"
+      ],
+      "collectionId": "bysu-442731",
+      "collectionTitle": "당근 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-442731-10",
+      "order": 10,
+      "title": "AS IS · TO BE 비교",
+      "description": "세 개의 긴 둥근 비교 행, 우측 전환 상태를 별도 캡슐로 구분하고 아래 화살표와 결론.",
+      "type": "light",
+      "file": "S-bysu-442731-10.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222934428779",
+      "preview": "previews/S-bysu-442731-10.png",
+      "layout": "좌측 소개와 우측 세 줄 캡슐 비교",
+      "tags": [
+        "비교",
+        "AS IS / TO BE"
+      ],
+      "collectionId": "bysu-442731",
+      "collectionTitle": "당근 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-442731-11",
+      "order": 11,
+      "title": "성장 연혁",
+      "description": "2018–2023 여섯 시점, 사업 시작·확장·이용자 기록 말풍선, 마지막 연도 배경 띠.",
+      "type": "light",
+      "file": "S-bysu-442731-11.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222934428779",
+      "preview": "previews/S-bysu-442731-11.png",
+      "layout": "좌측 소개와 우측 상승 선형 차트",
+      "tags": [
+        "연혁",
+        "선형 차트"
+      ],
+      "collectionId": "bysu-442731",
+      "collectionTitle": "당근 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-442731-12",
+      "order": 12,
+      "title": "비교 표",
+      "description": "두 데이터 열과 다섯 행 제목. 상단 띠와 가는 가로 구분선으로 표 정보를 정리.",
+      "type": "light",
+      "file": "S-bysu-442731-12.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222934428779",
+      "preview": "previews/S-bysu-442731-12.png",
+      "layout": "좌측 소개와 우측 3열·5행 표",
+      "tags": [
+        "표",
+        "비교"
+      ],
+      "collectionId": "bysu-442731",
+      "collectionTitle": "당근 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-441794-01",
+      "order": 1,
+      "title": "잇지제주 상품 소개서",
+      "description": "좌측 표지 문구, 중앙 하단 마스코트와 우측 기울어진 휴대폰 2대",
+      "type": "light",
+      "file": "S-bysu-441794-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/441794",
+      "preview": "previews/S-bysu-441794-01.png",
+      "layout": "좌측 표지 문구, 중앙 하단 마스코트와 우측 기울어진 휴대폰 2대",
+      "tags": [
+        "표지",
+        "디바이스 목업"
+      ],
+      "collectionId": "bysu-441794",
+      "collectionTitle": "커리어 플랫폼 광고 소개서"
+    },
+    {
+      "id": "S-bysu-441794-02",
+      "order": 2,
+      "title": "매년 10만 명 이상의 방문자",
+      "description": "좌상단 설명과 화면 하단·오른쪽을 채운 상승 면적 곡선",
+      "type": "light",
+      "file": "S-bysu-441794-02.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/441794",
+      "preview": "previews/S-bysu-441794-02.png",
+      "layout": "좌상단 설명과 화면 하단·오른쪽을 채운 상승 면적 곡선",
+      "tags": [
+        "성장",
+        "면적 그래프"
+      ],
+      "collectionId": "bysu-441794",
+      "collectionTitle": "커리어 플랫폼 광고 소개서"
+    },
+    {
+      "id": "S-bysu-441794-03",
+      "order": 3,
+      "title": "단 한번에 2030 타깃 광고",
+      "description": "좌상단 메시지와 하단 노트북, 우측 SNS·오픈채팅 스마트폰",
+      "type": "light",
+      "file": "S-bysu-441794-03.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/441794",
+      "preview": "previews/S-bysu-441794-03.png",
+      "layout": "좌상단 메시지와 하단 노트북, 우측 SNS·오픈채팅 스마트폰",
+      "tags": [
+        "채널 소개",
+        "디바이스 목업"
+      ],
+      "collectionId": "bysu-441794",
+      "collectionTitle": "커리어 플랫폼 광고 소개서"
+    },
+    {
+      "id": "S-bysu-441794-04",
+      "order": 4,
+      "title": "기업과 기관이 청년들과 연결됩니다",
+      "description": "왼쪽 후기 카드와 오른쪽 4행 엇갈린 로고 타일",
+      "type": "light",
+      "file": "S-bysu-441794-04.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/441794",
+      "preview": "previews/S-bysu-441794-04.png",
+      "layout": "왼쪽 후기 카드와 오른쪽 4행 엇갈린 로고 타일",
+      "tags": [
+        "후기",
+        "고객사 로고"
+      ],
+      "collectionId": "bysu-441794",
+      "collectionTitle": "커리어 플랫폼 광고 소개서"
+    },
+    {
+      "id": "S-bysu-441794-05",
+      "order": 5,
+      "title": "효율적인 예산을 활용하세요",
+      "description": "회색 문제 카드 뒤에 흰색 해결 카드가 겹치고 우상단 마스코트",
+      "type": "light",
+      "file": "S-bysu-441794-05.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/441794",
+      "preview": "previews/S-bysu-441794-05.png",
+      "layout": "회색 문제 카드 뒤에 흰색 해결 카드가 겹치고 우상단 마스코트",
+      "tags": [
+        "문제 해결",
+        "예산 타깃"
+      ],
+      "collectionId": "bysu-441794",
+      "collectionTitle": "커리어 플랫폼 광고 소개서"
+    },
+    {
+      "id": "S-bysu-441794-06",
+      "order": 6,
+      "title": "한 번에 쉽고 간단하게",
+      "description": "왼쪽 4단계 2×2 프로세스와 오른쪽 7개 채널 선택 패널",
+      "type": "light",
+      "file": "S-bysu-441794-06.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/441794",
+      "preview": "previews/S-bysu-441794-06.png",
+      "layout": "왼쪽 4단계 2×2 프로세스와 오른쪽 7개 채널 선택 패널",
+      "tags": [
+        "광고 절차",
+        "프로세스"
+      ],
+      "collectionId": "bysu-441794",
+      "collectionTitle": "커리어 플랫폼 광고 소개서"
+    },
+    {
+      "id": "S-bysu-441180-01",
+      "order": 1,
+      "title": "토스 브랜드 컨셉 · 표지",
+      "description": "짙은 배경 중앙의 영문 캡션과 두 줄 제목, 한 줄 부제",
+      "type": "dark",
+      "file": "S-bysu-441180-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/441180",
+      "preview": "previews/S-bysu-441180-01.png",
+      "layout": "짙은 배경 중앙의 영문 캡션과 두 줄 제목, 한 줄 부제",
+      "tags": [
+        "토스 브랜드 컨셉 · 표지",
+        "토스 신판"
+      ],
+      "collectionId": "bysu-441180",
+      "collectionTitle": "토스 브랜드 컨셉 무료 PPT 템플릿 · 신판"
+    },
+    {
+      "id": "S-bysu-441180-02",
+      "order": 2,
+      "title": "마이크와 소개 문장",
+      "description": "좌측 둥근 마이크 패널과 우측 제목·네 줄 소개 문장",
+      "type": "light",
+      "file": "S-bysu-441180-02.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223399403850",
+      "preview": "previews/S-bysu-441180-02.png",
+      "layout": "좌측 둥근 마이크 패널과 우측 제목·네 줄 소개 문장",
+      "tags": [
+        "마이크와 소개 문장",
+        "토스 신판"
+      ],
+      "collectionId": "bysu-441180",
+      "collectionTitle": "토스 브랜드 컨셉 무료 PPT 템플릿 · 신판"
+    },
+    {
+      "id": "S-bysu-441180-03",
+      "order": 3,
+      "title": "세 가지 핵심 숫자",
+      "description": "같은 크기의 가로 카드 세 개에 설명과 1,000명·99%·1억 원",
+      "type": "light",
+      "file": "S-bysu-441180-03.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223399403850",
+      "preview": "previews/S-bysu-441180-03.png",
+      "layout": "같은 크기의 가로 카드 세 개에 설명과 1,000명·99%·1억 원",
+      "tags": [
+        "세 가지 핵심 숫자",
+        "토스 신판"
+      ],
+      "collectionId": "bysu-441180",
+      "collectionTitle": "토스 브랜드 컨셉 무료 PPT 템플릿 · 신판"
+    },
+    {
+      "id": "S-bysu-441180-04",
+      "order": 4,
+      "title": "가로 카드 캐러셀",
+      "description": "네 개의 가로 카드 중 양 끝 카드가 화면 경계에서 잘리는 연속형 구성",
+      "type": "light",
+      "file": "S-bysu-441180-04.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223399403850",
+      "preview": "previews/S-bysu-441180-04.png",
+      "layout": "네 개의 가로 카드 중 양 끝 카드가 화면 경계에서 잘리는 연속형 구성",
+      "tags": [
+        "가로 카드 캐러셀",
+        "토스 신판"
+      ],
+      "collectionId": "bysu-441180",
+      "collectionTitle": "토스 브랜드 컨셉 무료 PPT 템플릿 · 신판"
+    },
+    {
+      "id": "S-bysu-441180-05",
+      "order": 5,
+      "title": "토스는 멋져 · 브랜드 메시지",
+      "description": "짙은 배경 중앙에서 왼쪽 정렬한 세 줄 메시지와 하단 세 줄 본문",
+      "type": "dark",
+      "file": "S-bysu-441180-05.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223399403850",
+      "preview": "previews/S-bysu-441180-05.png",
+      "layout": "짙은 배경 중앙에서 왼쪽 정렬한 세 줄 메시지와 하단 세 줄 본문",
+      "tags": [
+        "토스는 멋져 · 브랜드 메시지",
+        "토스 신판"
+      ],
+      "collectionId": "bysu-441180",
+      "collectionTitle": "토스 브랜드 컨셉 무료 PPT 템플릿 · 신판"
+    },
+    {
+      "id": "S-bysu-441180-06",
+      "order": 6,
+      "title": "넓고 좁은 네 개의 설명 카드",
+      "description": "2×2 격자에서 넓은 카드와 좁은 카드를 교차 배치하고 지구·비행기 도형을 추가",
+      "type": "light",
+      "file": "S-bysu-441180-06.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223399403850",
+      "preview": "previews/S-bysu-441180-06.png",
+      "layout": "2×2 격자에서 넓은 카드와 좁은 카드를 교차 배치하고 지구·비행기 도형을 추가",
+      "tags": [
+        "넓고 좁은 네 개의 설명 카드",
+        "토스 신판"
+      ],
+      "collectionId": "bysu-441180",
+      "collectionTitle": "토스 브랜드 컨셉 무료 PPT 템플릿 · 신판"
+    },
+    {
+      "id": "S-bysu-441180-07",
+      "order": 7,
+      "title": "아이콘 설명 네 개",
+      "description": "하단까지 이어지는 넓은 단일 패널 안의 2×2 아이콘·제목·설명 구성",
+      "type": "light",
+      "file": "S-bysu-441180-07.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223399403850",
+      "preview": "previews/S-bysu-441180-07.png",
+      "layout": "하단까지 이어지는 넓은 단일 패널 안의 2×2 아이콘·제목·설명 구성",
+      "tags": [
+        "아이콘 설명 네 개",
+        "토스 신판"
+      ],
+      "collectionId": "bysu-441180",
+      "collectionTitle": "토스 브랜드 컨셉 무료 PPT 템플릿 · 신판"
+    },
+    {
+      "id": "S-bysu-441180-08",
+      "order": 8,
+      "title": "체크 표시와 핵심 문장",
+      "description": "중앙 둥근 카드의 체크 아이콘, 두 줄 핵심 문장과 하단 강조 문장",
+      "type": "light",
+      "file": "S-bysu-441180-08.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223399403850",
+      "preview": "previews/S-bysu-441180-08.png",
+      "layout": "중앙 둥근 카드의 체크 아이콘, 두 줄 핵심 문장과 하단 강조 문장",
+      "tags": [
+        "체크 표시와 핵심 문장",
+        "토스 신판"
+      ],
+      "collectionId": "bysu-441180",
+      "collectionTitle": "토스 브랜드 컨셉 무료 PPT 템플릿 · 신판"
+    },
+    {
+      "id": "S-bysu-441180-09",
+      "order": 9,
+      "title": "인물 후기와 양쪽 화살표",
+      "description": "넓은 중앙 카드의 상단에 돌출된 원형 인물 아이콘, 중앙 제목·본문과 양쪽 화살표",
+      "type": "light",
+      "file": "S-bysu-441180-09.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223399403850",
+      "preview": "previews/S-bysu-441180-09.png",
+      "layout": "넓은 중앙 카드의 상단에 돌출된 원형 인물 아이콘, 중앙 제목·본문과 양쪽 화살표",
+      "tags": [
+        "인물 후기와 양쪽 화살표",
+        "토스 신판"
+      ],
+      "collectionId": "bysu-441180",
+      "collectionTitle": "토스 브랜드 컨셉 무료 PPT 템플릿 · 신판"
+    },
+    {
+      "id": "S-bysu-440794-01",
+      "order": 1,
+      "title": "ALL STUDIO · 표지",
+      "description": "좌측 초대형 워드마크와 넓은 여백, 하단 우측 정렬 소개 문구, 우측 38% 세로 스튜디오 이미지",
+      "type": "light",
+      "file": "S-bysu-440794-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/440794",
+      "preview": "previews/S-bysu-440794-01.png",
+      "layout": "좌측 초대형 워드마크와 넓은 여백, 하단 우측 정렬 소개 문구, 우측 38% 세로 스튜디오 이미지",
+      "tags": [
+        "표지",
+        "비대칭 2단",
+        "건축 이미지"
+      ],
+      "collectionId": "bysu-440794",
+      "collectionTitle": "촬영 스튜디오 회사소개서"
+    },
+    {
+      "id": "S-bysu-440794-02",
+      "order": 2,
+      "title": "1/ INTRODUCE · 촬영 서비스",
+      "description": "47%와 53%로 나눈 2단; 왼쪽 소개와 로고, 오른쪽 두 개 번호 서비스 설명",
+      "type": "light",
+      "file": "S-bysu-440794-02.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/440794",
+      "preview": "previews/S-bysu-440794-02.png",
+      "layout": "47%와 53%로 나눈 2단; 왼쪽 소개와 로고, 오른쪽 두 개 번호 서비스 설명",
+      "tags": [
+        "소개",
+        "2단",
+        "번호형 설명"
+      ],
+      "collectionId": "bysu-440794",
+      "collectionTitle": "촬영 스튜디오 회사소개서"
+    },
+    {
+      "id": "S-bysu-440794-03",
+      "order": 3,
+      "title": "2/ PRODUCT PROCESS · 제품 촬영 과정",
+      "description": "상단 제목·3행 설명, 중앙 다섯 개 연결 원, 하단 네 개 혜택 열",
+      "type": "light",
+      "file": "S-bysu-440794-03.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/440794",
+      "preview": "previews/S-bysu-440794-03.png",
+      "layout": "상단 제목·3행 설명, 중앙 다섯 개 연결 원, 하단 네 개 혜택 열",
+      "tags": [
+        "프로세스",
+        "5단계",
+        "4열 혜택"
+      ],
+      "collectionId": "bysu-440794",
+      "collectionTitle": "촬영 스튜디오 회사소개서"
+    },
+    {
+      "id": "S-bysu-440794-04",
+      "order": 4,
+      "title": "4/ STUDIO · 공간 소개",
+      "description": "4열 2행 모자이크: 2열 설명 패널, 건축 사진 4개, 로고 타일, 촬영 장비 사진",
+      "type": "light",
+      "file": "S-bysu-440794-04.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/440794",
+      "preview": "previews/S-bysu-440794-04.png",
+      "layout": "4열 2행 모자이크: 2열 설명 패널, 건축 사진 4개, 로고 타일, 촬영 장비 사진",
+      "tags": [
+        "공간 소개",
+        "모자이크",
+        "사진 그리드"
+      ],
+      "collectionId": "bysu-440794",
+      "collectionTitle": "촬영 스튜디오 회사소개서"
+    },
+    {
+      "id": "S-bysu-440794-05",
+      "order": 5,
+      "title": "ALL STUDIO · 올인원 콘텐츠 파트너",
+      "description": "스튜디오 공간 배경과 왼쪽 중앙의 겹친 사각 소개 카드",
+      "type": "light",
+      "file": "S-bysu-440794-05.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/440794",
+      "preview": "previews/S-bysu-440794-05.png",
+      "layout": "스튜디오 공간 배경과 왼쪽 중앙의 겹친 사각 소개 카드",
+      "tags": [
+        "소개",
+        "겹친 카드",
+        "배경 공간"
+      ],
+      "collectionId": "bysu-440794",
+      "collectionTitle": "촬영 스튜디오 회사소개서"
+    },
+    {
+      "id": "S-bysu-440794-06",
+      "order": 6,
+      "title": "ALL STUDIO · 연락처와 위치",
+      "description": "좌측 상단 워드마크와 대형 여백, 하단 두 열 연락처 및 우측 약도",
+      "type": "light",
+      "file": "S-bysu-440794-06.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/440794",
+      "preview": "previews/S-bysu-440794-06.png",
+      "layout": "좌측 상단 워드마크와 대형 여백, 하단 두 열 연락처 및 우측 약도",
+      "tags": [
+        "마무리",
+        "연락처",
+        "약도"
+      ],
+      "collectionId": "bysu-440794",
+      "collectionTitle": "촬영 스튜디오 회사소개서"
+    },
+    {
+      "id": "S-bysu-433060-01",
+      "order": 1,
+      "title": "브랜드 컨셉 표지",
+      "description": "왼쪽 4행 영문 제목과 상단 양끝 메타데이터",
+      "type": "dark",
+      "file": "S-bysu-433060-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/433060",
+      "preview": "previews/S-bysu-433060-01.png",
+      "layout": "왼쪽 4행 영문 제목과 상단 양끝 메타데이터",
+      "tags": [
+        "표지",
+        "4행 제목"
+      ],
+      "collectionId": "bysu-433060",
+      "collectionTitle": "네이버 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-433060-02",
+      "order": 2,
+      "title": "3열 목차",
+      "description": "상단 프로젝트명과 발표자, 중앙의 3개 목차 열",
+      "type": "light",
+      "file": "S-bysu-433060-02.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222928374668",
+      "preview": "previews/S-bysu-433060-02.png",
+      "layout": "상단 프로젝트명과 발표자, 중앙의 3개 목차 열",
+      "tags": [
+        "목차",
+        "3열"
+      ],
+      "collectionId": "bysu-433060",
+      "collectionTitle": "네이버 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-433060-03",
+      "order": 3,
+      "title": "4열 기술 소개",
+      "description": "제목 아래 넓은 여백과 칩·화면·친환경·드론 아이콘 4열",
+      "type": "light",
+      "file": "S-bysu-433060-03.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222928374668",
+      "preview": "previews/S-bysu-433060-03.png",
+      "layout": "제목 아래 넓은 여백과 칩·화면·친환경·드론 아이콘 4열",
+      "tags": [
+        "기능 소개",
+        "아이콘 4열"
+      ],
+      "collectionId": "bysu-433060",
+      "collectionTitle": "네이버 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-433060-04",
+      "order": 4,
+      "title": "3열 기능 카드",
+      "description": "상단 아이콘 면과 하단 설명으로 나뉜 동일 크기 카드 3개",
+      "type": "light",
+      "file": "S-bysu-433060-04.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222928374668",
+      "preview": "previews/S-bysu-433060-04.png",
+      "layout": "상단 아이콘 면과 하단 설명으로 나뉜 동일 크기 카드 3개",
+      "tags": [
+        "카드",
+        "3열"
+      ],
+      "collectionId": "bysu-433060",
+      "collectionTitle": "네이버 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-433060-05",
+      "order": 5,
+      "title": "키워드 비교표",
+      "description": "전폭 키워드 띠 아래 3열 제목과 각 3행 내용",
+      "type": "light",
+      "file": "S-bysu-433060-05.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222928374668",
+      "preview": "previews/S-bysu-433060-05.png",
+      "layout": "전폭 키워드 띠 아래 3열 제목과 각 3행 내용",
+      "tags": [
+        "표",
+        "3열 3행"
+      ],
+      "collectionId": "bysu-433060",
+      "collectionTitle": "네이버 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-433060-06",
+      "order": 6,
+      "title": "만족도 KPI 카드",
+      "description": "본문과 원형 100% 배지를 묶은 가로 카드 2×2",
+      "type": "light",
+      "file": "S-bysu-433060-06.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222928374668",
+      "preview": "previews/S-bysu-433060-06.png",
+      "layout": "본문과 원형 100% 배지를 묶은 가로 카드 2×2",
+      "tags": [
+        "KPI",
+        "2×2 카드"
+      ],
+      "collectionId": "bysu-433060",
+      "collectionTitle": "네이버 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-433060-07",
+      "order": 7,
+      "title": "중앙 메시지 카드",
+      "description": "넓은 중립 배경 중앙의 체크 배지·메시지·Discover 버튼",
+      "type": "light",
+      "file": "S-bysu-433060-07.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222928374668",
+      "preview": "previews/S-bysu-433060-07.png",
+      "layout": "넓은 중립 배경 중앙의 체크 배지·메시지·Discover 버튼",
+      "tags": [
+        "콜아웃",
+        "중앙 카드"
+      ],
+      "collectionId": "bysu-433060",
+      "collectionTitle": "네이버 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-433060-08",
+      "order": 8,
+      "title": "화살표 섹션 구분",
+      "description": "왼쪽 두 줄 섹션 제목과 오른쪽의 가는 진행 화살표",
+      "type": "light",
+      "file": "S-bysu-433060-08.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222928374668",
+      "preview": "previews/S-bysu-433060-08.png",
+      "layout": "왼쪽 두 줄 섹션 제목과 오른쪽의 가는 진행 화살표",
+      "tags": [
+        "섹션",
+        "화살표"
+      ],
+      "collectionId": "bysu-433060",
+      "collectionTitle": "네이버 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-433060-09",
+      "order": 9,
+      "title": "3열 이미지 설명",
+      "description": "가로로 나란한 이미지 자리 3개와 아래의 제목·설명",
+      "type": "light",
+      "file": "S-bysu-433060-09.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222928374668",
+      "preview": "previews/S-bysu-433060-09.png",
+      "layout": "가로로 나란한 이미지 자리 3개와 아래의 제목·설명",
+      "tags": [
+        "이미지",
+        "3열"
+      ],
+      "collectionId": "bysu-433060",
+      "collectionTitle": "네이버 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-433060-10",
+      "order": 10,
+      "title": "상단 메시지와 전폭 이미지",
+      "description": "상단 왼쪽 2행 강조 제목·오른쪽 설명과 하단 전폭 이미지 자리",
+      "type": "light",
+      "file": "S-bysu-433060-10.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222928374668",
+      "preview": "previews/S-bysu-433060-10.png",
+      "layout": "상단 왼쪽 2행 강조 제목·오른쪽 설명과 하단 전폭 이미지 자리",
+      "tags": [
+        "이미지",
+        "상하 분할"
+      ],
+      "collectionId": "bysu-433060",
+      "collectionTitle": "네이버 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-433060-11",
+      "order": 11,
+      "title": "6행 설명 표",
+      "description": "제목 아래 넓은 여백과 2열·6행의 가는 선 설명 표",
+      "type": "light",
+      "file": "S-bysu-433060-11.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222928374668",
+      "preview": "previews/S-bysu-433060-11.png",
+      "layout": "제목 아래 넓은 여백과 2열·6행의 가는 선 설명 표",
+      "tags": [
+        "표",
+        "6행"
+      ],
+      "collectionId": "bysu-433060",
+      "collectionTitle": "네이버 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-433060-12",
+      "order": 12,
+      "title": "상승 차트와 특징 카드",
+      "description": "좌측 4개 연도 상승 막대와 우측 2×2 특징 카드",
+      "type": "light",
+      "file": "S-bysu-433060-12.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/222928374668",
+      "preview": "previews/S-bysu-433060-12.png",
+      "layout": "좌측 4개 연도 상승 막대와 우측 2×2 특징 카드",
+      "tags": [
+        "차트",
+        "2×2 특징"
+      ],
+      "collectionId": "bysu-433060",
+      "collectionTitle": "네이버 브랜드 컨셉 무료 PPT 템플릿"
+    },
+    {
+      "id": "S-bysu-432405-01",
+      "order": 1,
+      "title": "트렌디한 PPT를 위한 디자인 스킬 클래스",
+      "description": "좌측 상단 두 줄 제목과 설명, 좌측 하단 bysu, 우측 하단 각도가 다른 5개 영문 캡슐 및 펜·폴더 아이콘.",
+      "type": "light",
+      "file": "S-bysu-432405-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/432405",
+      "preview": "previews/S-bysu-432405-01.png",
+      "layout": "좌측 상단 타이틀과 우측 하단 기울어진 캡슐 타이포 5개",
+      "tags": [
+        "표지",
+        "캡슐 타이포",
+        "비대칭"
+      ],
+      "partialSource": false,
+      "collectionId": "bysu-432405",
+      "collectionTitle": "PPT 기업 강의 제안서"
+    },
+    {
+      "id": "S-bysu-432405-02",
+      "order": 2,
+      "title": "PPT 강의, 많이 들었는데 왜 실력은 그대로일까?",
+      "description": "중앙 두 줄 질문과 4개의 긴 캡슐 문장. 1·3번째 밝은 띠와 2·4번째 중립 띠를 교차하고 표정 아이콘 2개를 겹친다.",
+      "type": "light",
+      "file": "S-bysu-432405-02.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/432405",
+      "preview": "previews/S-bysu-432405-02.png",
+      "layout": "중앙 제목 아래 둥근 의견 띠 4개와 양옆 표정 아이콘",
+      "tags": [
+        "문제 제기",
+        "의견",
+        "중앙 정렬"
+      ],
+      "partialSource": false,
+      "collectionId": "bysu-432405",
+      "collectionTitle": "PPT 기업 강의 제안서"
+    },
+    {
+      "id": "S-bysu-432405-03",
+      "order": 3,
+      "title": "기초 PPT 강의는 그만, 이제 디자인 스킬이 필요한 때",
+      "description": "상단 좌측 제목·설명, 하단 두 개의 큰 레벨 카드, 양 끝의 잘린 빈 카드 실루엣. 두 번째 카드 우측 위에 붓 SVG.",
+      "type": "light",
+      "file": "S-bysu-432405-03.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/432405",
+      "preview": "previews/S-bysu-432405-03.png",
+      "layout": "좌측 상단 제목과 하단 두 레벨 카드·양끝 잘린 카드",
+      "tags": [
+        "강의 소개",
+        "2단 비교",
+        "캐러셀"
+      ],
+      "partialSource": false,
+      "collectionId": "bysu-432405",
+      "collectionTitle": "PPT 기업 강의 제안서"
+    },
+    {
+      "id": "S-bysu-432405-04",
+      "order": 4,
+      "title": "트렌디한 PPT를 만들 수 있도록 디자인 스킬을 알려드려요",
+      "description": "좌측 질문 3개와 우측 실행 문장 3개를 나란히 정렬. 상단 ×·체크 상태 및 중앙의 오른쪽 화살표.",
+      "type": "light",
+      "file": "S-bysu-432405-04.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/432405",
+      "preview": "previews/S-bysu-432405-04.png",
+      "layout": "좌측 상단 제목과 하단 3행 전후 비교",
+      "tags": [
+        "강의 목표",
+        "전후 비교",
+        "3행 비교"
+      ],
+      "partialSource": false,
+      "collectionId": "bysu-432405",
+      "collectionTitle": "PPT 기업 강의 제안서"
+    },
+    {
+      "id": "S-bysu-432405-05",
+      "order": 5,
+      "title": "유명 기업들과 협업하는 PPT 디자이너 bysu",
+      "description": "좌측 상단 소개, 아래 12개 기업명 타일, 우측에 타일 일부를 덮는 대형 bysu 명찰. 원본 사진과 로고는 편집 가능한 단색 SVG·텍스트로 재구성.",
+      "type": "light",
+      "file": "S-bysu-432405-05.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/432405",
+      "preview": "previews/S-bysu-432405-05.png",
+      "layout": "좌측 제목·3×4 기업명 격자와 우측 대형 스트랩 명찰",
+      "tags": [
+        "강사 소개",
+        "로고 그리드",
+        "명찰 오브젝트"
+      ],
+      "partialSource": false,
+      "collectionId": "bysu-432405",
+      "collectionTitle": "PPT 기업 강의 제안서"
+    },
+    {
+      "id": "S-bysu-432405-06",
+      "order": 6,
+      "title": "단 하루 원데이 클래스로 회사의 PPT를 바꿔드립니다",
+      "description": "상단 좌측 두 줄 제목·설명, 하단 KB국민은행과 Seoul Software Academy의 후기 카드 2개. 원본 기업명·후기·100점 수치를 보존.",
+      "type": "light",
+      "file": "S-bysu-432405-06.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/432405",
+      "preview": "previews/S-bysu-432405-06.png",
+      "layout": "좌측 상단 제목·설명과 하단 큰 후기 카드 2개",
+      "tags": [
+        "강의 후기",
+        "추천사",
+        "2단 카드"
+      ],
+      "partialSource": false,
+      "collectionId": "bysu-432405",
+      "collectionTitle": "PPT 기업 강의 제안서"
+    },
+    {
+      "id": "S-bysu-432405-07",
+      "order": 7,
+      "title": "편리한 3 STEP 기업 강의 프로세스",
+      "description": "공개 보드 우측이 잘린 유일한 프로세스 화면. 확인 가능한 제목·3개 단계·하단 문의 띠를 유지하며 보이지 않는 우측 여백을 대칭 복원하고 3단계 문구는 보이는 내용을 짧게 재작성.",
+      "type": "light",
+      "file": "S-bysu-432405-07.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/432405",
+      "preview": "previews/S-bysu-432405-07.png",
+      "layout": "좌측 상단 제목·하단 가로 3단계 카드와 전체 폭 문의 띠",
+      "tags": [
+        "프로세스",
+        "3단계",
+        "문의"
+      ],
+      "partialSource": true,
+      "sourceStatus": "partial",
+      "sourceNote": "원본 우측 약 13%가 공개 보드 밖에서 잘려 있습니다. 공개된 영역만 비교 이미지로 보존했으며, HTML의 우측 카드 폭·여백과 STEP 3 문구 일부는 확인 가능한 내용을 바탕으로 재구성했습니다. 누락 부분의 원문을 복원한 것은 아닙니다.",
+      "collectionId": "bysu-432405",
+      "collectionTitle": "PPT 기업 강의 제안서"
+    },
+    {
+      "id": "S-bysu-432025-01",
+      "order": 1,
+      "title": "Apple Concept",
+      "description": "중앙 정렬 제목·설명·시작 버튼과 하단을 가로지르는 카메라 확대 이미지",
+      "type": "light",
+      "file": "S-bysu-432025-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/432025",
+      "preview": "previews/S-bysu-432025-01.png",
+      "layout": "중앙 정렬 제목·설명·시작 버튼과 하단을 가로지르는 카메라 확대 이미지",
+      "tags": [
+        "표지",
+        "중앙 정렬",
+        "제품 확대"
+      ],
+      "collectionId": "bysu-432025",
+      "collectionTitle": "애플 브랜드 컨셉 무료 PPT"
+    },
+    {
+      "id": "S-bysu-432025-02",
+      "order": 2,
+      "title": "돌아온 무료 템플릿.",
+      "description": "상단 좌측 제목과 탐색 표시, 아래 넓은 둥근 배너의 좌측 설명·우측 스마트폰 3대 콜라주",
+      "type": "light",
+      "file": "S-bysu-432025-02.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223226330641",
+      "preview": "previews/S-bysu-432025-02.png",
+      "layout": "상단 좌측 제목과 탐색 표시, 아래 넓은 둥근 배너의 좌측 설명·우측 스마트폰 3대 콜라주",
+      "tags": [
+        "제품 소개",
+        "배너",
+        "비대칭"
+      ],
+      "collectionId": "bysu-432025",
+      "collectionTitle": "애플 브랜드 컨셉 무료 PPT"
+    },
+    {
+      "id": "S-bysu-432025-03",
+      "order": 3,
+      "title": "아이폰 15 구매 예정자의 진심이 담긴 템플릿 제작.",
+      "description": "좌측 두 줄 제목 아래 3개 제품 갤러리; 첫 카드가 크고 뒤의 두 카드는 옅고 마지막 카드가 화면 가장자리에서 잘림",
+      "type": "light",
+      "file": "S-bysu-432025-03.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223226330641",
+      "preview": "previews/S-bysu-432025-03.png",
+      "layout": "좌측 두 줄 제목 아래 3개 제품 갤러리; 첫 카드가 크고 뒤의 두 카드는 옅고 마지막 카드가 화면 가장자리에서 잘림",
+      "tags": [
+        "제품 비교",
+        "가로 갤러리",
+        "캐러셀"
+      ],
+      "collectionId": "bysu-432025",
+      "collectionTitle": "애플 브랜드 컨셉 무료 PPT"
+    },
+    {
+      "id": "S-bysu-432025-04",
+      "order": 4,
+      "title": "현재 iPhone 12 사용 중 여전히 괜찮은 상태.",
+      "description": "왼쪽에 제목과 설명 및 3년·2.5년 지표, 오른쪽 큰 라운드 패널에 대각선 제품 두 대",
+      "type": "light",
+      "file": "S-bysu-432025-04.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223226330641",
+      "preview": "previews/S-bysu-432025-04.png",
+      "layout": "왼쪽에 제목과 설명 및 3년·2.5년 지표, 오른쪽 큰 라운드 패널에 대각선 제품 두 대",
+      "tags": [
+        "지표",
+        "2단",
+        "제품 이미지"
+      ],
+      "collectionId": "bysu-432025",
+      "collectionTitle": "애플 브랜드 컨셉 무료 PPT"
+    },
+    {
+      "id": "S-bysu-432025-05",
+      "order": 5,
+      "title": "그레이 배경의 슬라이드도 템플릿에 살포시 추가.",
+      "description": "밝은 중립 배경 위 제목과 탐색 표시, 노트북·폰·시계 아이콘을 가진 가로 3개 흰 카드",
+      "type": "light",
+      "file": "S-bysu-432025-05.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223226330641",
+      "preview": "previews/S-bysu-432025-05.png",
+      "layout": "밝은 중립 배경 위 제목과 탐색 표시, 노트북·폰·시계 아이콘을 가진 가로 3개 흰 카드",
+      "tags": [
+        "카드",
+        "아이콘",
+        "캐러셀"
+      ],
+      "collectionId": "bysu-432025",
+      "collectionTitle": "애플 브랜드 컨셉 무료 PPT"
+    },
+    {
+      "id": "S-bysu-432025-06",
+      "order": 6,
+      "title": "애플하면 빼놓을 수 없는 블랙 배경 슬라이드까지.",
+      "description": "다크 배경에 좌측 두 줄 제목과 우측 정렬 설명, 하단의 둥근 제품 패널에서 솟아오르는 폰 2대",
+      "type": "dark",
+      "file": "S-bysu-432025-06.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223226330641",
+      "preview": "previews/S-bysu-432025-06.png",
+      "layout": "다크 배경에 좌측 두 줄 제목과 우측 정렬 설명, 하단의 둥근 제품 패널에서 솟아오르는 폰 2대",
+      "tags": [
+        "다크",
+        "제품 소개",
+        "2단 헤더"
+      ],
+      "collectionId": "bysu-432025",
+      "collectionTitle": "애플 브랜드 컨셉 무료 PPT"
+    },
+    {
+      "id": "S-bysu-432025-07",
+      "order": 7,
+      "title": "이런 레이아웃도 없으면 허전하니까.",
+      "description": "다크 배경의 왼쪽에 아래로 잘리는 큰 정면 스마트폰, 오른쪽에 Wait 라벨·제목·이미지 교체 안내",
+      "type": "dark",
+      "file": "S-bysu-432025-07.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223226330641",
+      "preview": "previews/S-bysu-432025-07.png",
+      "layout": "다크 배경의 왼쪽에 아래로 잘리는 큰 정면 스마트폰, 오른쪽에 Wait 라벨·제목·이미지 교체 안내",
+      "tags": [
+        "다크",
+        "폰 목업",
+        "사용 안내"
+      ],
+      "collectionId": "bysu-432025",
+      "collectionTitle": "애플 브랜드 컨셉 무료 PPT"
+    },
+    {
+      "id": "S-bysu-431729-01",
+      "order": 1,
+      "title": "What’s Next · 2024 Trend Report",
+      "description": "좌상단 3단 제목과 다운로드 캡슐, 우측 기울어진 보고서와 반응 아이콘을 배치한 표지.",
+      "type": "dark",
+      "file": "S-bysu-431729-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/431729",
+      "preview": "previews/S-bysu-431729-01.png",
+      "layout": "좌측 타이틀 · 우측 입체 보고서",
+      "tags": [
+        "표지",
+        "보고서 목업",
+        "비대칭"
+      ],
+      "collectionId": "bysu-431729",
+      "collectionTitle": "틱톡 코리아 트렌드 리포트"
+    },
+    {
+      "id": "S-bysu-431729-02",
+      "order": 2,
+      "title": "What’s Next 2024 - KR",
+      "description": "좌측 하단의 보고서 소개와 우측 웃는 인물·아보카도·립스틱 콜라주를 재구성.",
+      "type": "dark",
+      "file": "S-bysu-431729-02.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/431729",
+      "preview": "previews/S-bysu-431729-02.png",
+      "layout": "하단 소개문 · 우측 인물 콜라주",
+      "tags": [
+        "소개",
+        "인물 콜라주",
+        "하단 정렬"
+      ],
+      "collectionId": "bysu-431729",
+      "collectionTitle": "틱톡 코리아 트렌드 리포트"
+    },
+    {
+      "id": "S-bysu-431729-03",
+      "order": 3,
+      "title": "틱톡 문화의 속도",
+      "description": "상단 제목·설명, 중단 세 트렌드 분류, 하단 크기가 커지는 버블로 지속 기간을 시각화.",
+      "type": "dark",
+      "file": "S-bysu-431729-03.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/431729",
+      "preview": "previews/S-bysu-431729-03.png",
+      "layout": "3열 개념 비교 · 점진적 버블",
+      "tags": [
+        "개념 비교",
+        "3열",
+        "버블"
+      ],
+      "collectionId": "bysu-431729",
+      "collectionTitle": "틱톡 코리아 트렌드 리포트"
+    },
+    {
+      "id": "S-bysu-431729-04",
+      "order": 4,
+      "title": "어떻게 활용하면 좋을까?",
+      "description": "외곽 기하 패턴과 중앙 가로형 둥근 패널에 트렌드 포스 활용 방법을 설명.",
+      "type": "dark",
+      "file": "S-bysu-431729-04.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/431729",
+      "preview": "previews/S-bysu-431729-04.png",
+      "layout": "패턴 배경 · 중앙 설명 패널",
+      "tags": [
+        "설명",
+        "패턴",
+        "중앙 패널"
+      ],
+      "collectionId": "bysu-431729",
+      "collectionTitle": "틱톡 코리아 트렌드 리포트"
+    },
+    {
+      "id": "S-bysu-431729-05",
+      "order": 5,
+      "title": "어디 갈까? 아이디어가 필요할 때",
+      "description": "좌측 트렌드 포스 4 소개와 우측 7개 해시태그 성장률 표, 하단 Tips for Brands 박스.",
+      "type": "dark",
+      "file": "S-bysu-431729-05.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/431729",
+      "preview": "previews/S-bysu-431729-05.png",
+      "layout": "좌측 이야기 · 우측 데이터 및 팁",
+      "tags": [
+        "트렌드",
+        "데이터 표",
+        "팁"
+      ],
+      "collectionId": "bysu-431729",
+      "collectionTitle": "틱톡 코리아 트렌드 리포트"
+    },
+    {
+      "id": "S-bysu-431729-06",
+      "order": 6,
+      "title": "What’s Next 2024 Trend Report · 마무리",
+      "description": "좌상단 로고, 우측 스티커·축구공·마네키네코, 좌하단 QR과 마무리 안내를 배치.",
+      "type": "dark",
+      "file": "S-bysu-431729-06.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/431729",
+      "preview": "previews/S-bysu-431729-06.png",
+      "layout": "좌하단 QR 안내 · 우측 소품 콜라주",
+      "tags": [
+        "마무리",
+        "QR",
+        "소품 콜라주"
+      ],
+      "collectionId": "bysu-431729",
+      "collectionTitle": "틱톡 코리아 트렌드 리포트"
+    },
+    {
+      "id": "S-bysu-430634-01",
+      "order": 1,
+      "title": "무신사 브랜드 컨셉 표지",
+      "description": "다크 캔버스 중앙보다 오른쪽에 정렬한 날짜와 3행 영문 제목",
+      "type": "dark",
+      "file": "S-bysu-430634-01.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/430634",
+      "preview": "previews/S-bysu-430634-01.png",
+      "layout": "다크 캔버스 중앙보다 오른쪽에 정렬한 날짜와 3행 영문 제목",
+      "tags": [
+        "표지",
+        "다크",
+        "타이포그래피"
+      ],
+      "collectionId": "bysu-430634",
+      "collectionTitle": "무신사 브랜드 컨셉 무료 PPT"
+    },
+    {
+      "id": "S-bysu-430634-02",
+      "order": 2,
+      "title": "이미지 카드 3열",
+      "description": "상단 검은 목차 띠·두 줄 제목 아래 동일한 이미지 카드 3개와 우측 세로 탭",
+      "type": "light",
+      "file": "S-bysu-430634-02.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223059150706",
+      "preview": "previews/S-bysu-430634-02.png",
+      "layout": "상단 검은 목차 띠·두 줄 제목 아래 동일한 이미지 카드 3개와 우측 세로 탭",
+      "tags": [
+        "카드",
+        "3열",
+        "이미지"
+      ],
+      "collectionId": "bysu-430634",
+      "collectionTitle": "무신사 브랜드 컨셉 무료 PPT"
+    },
+    {
+      "id": "S-bysu-430634-03",
+      "order": 3,
+      "title": "이미지와 특징 설명",
+      "description": "하단 왼쪽의 넓은 이미지 영역과 오른쪽 특징·본문·해시태그 3개·결론 상자",
+      "type": "light",
+      "file": "S-bysu-430634-03.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223059150706",
+      "preview": "previews/S-bysu-430634-03.png",
+      "layout": "하단 왼쪽의 넓은 이미지 영역과 오른쪽 특징·본문·해시태그 3개·결론 상자",
+      "tags": [
+        "이미지",
+        "비대칭 2단",
+        "해시태그"
+      ],
+      "collectionId": "bysu-430634",
+      "collectionTitle": "무신사 브랜드 컨셉 무료 PPT"
+    },
+    {
+      "id": "S-bysu-430634-04",
+      "order": 4,
+      "title": "겹친 원형 도식",
+      "description": "다섯 원을 가로로 겹치고 중앙 원을 채운 도식; 본문이 있는 세 원과 양끝 빈 윤곽 원",
+      "type": "light",
+      "file": "S-bysu-430634-04.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223059150706",
+      "preview": "previews/S-bysu-430634-04.png",
+      "layout": "다섯 원을 가로로 겹치고 중앙 원을 채운 도식; 본문이 있는 세 원과 양끝 빈 윤곽 원",
+      "tags": [
+        "도식",
+        "원형",
+        "중앙 강조"
+      ],
+      "collectionId": "bysu-430634",
+      "collectionTitle": "무신사 브랜드 컨셉 무료 PPT"
+    },
+    {
+      "id": "S-bysu-430634-05",
+      "order": 5,
+      "title": "내용과 태그 표",
+      "description": "구분·내용·태그의 3열과 데이터 5행을 얇은 수평선으로 구분한 표",
+      "type": "light",
+      "file": "S-bysu-430634-05.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223059150706",
+      "preview": "previews/S-bysu-430634-05.png",
+      "layout": "구분·내용·태그의 3열과 데이터 5행을 얇은 수평선으로 구분한 표",
+      "tags": [
+        "표",
+        "5행",
+        "3열"
+      ],
+      "collectionId": "bysu-430634",
+      "collectionTitle": "무신사 브랜드 컨셉 무료 PPT"
+    },
+    {
+      "id": "S-bysu-430634-06",
+      "order": 6,
+      "title": "비대칭 아이콘 카드 6개",
+      "description": "카메라·옷걸이·다리미 / 쇼핑백·이미지·메모 아이콘을 1:2:1과 1:1:2 비율로 배치",
+      "type": "light",
+      "file": "S-bysu-430634-06.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223059150706",
+      "preview": "previews/S-bysu-430634-06.png",
+      "layout": "카메라·옷걸이·다리미 / 쇼핑백·이미지·메모 아이콘을 1:2:1과 1:1:2 비율로 배치",
+      "tags": [
+        "아이콘",
+        "6개",
+        "비대칭 그리드"
+      ],
+      "collectionId": "bysu-430634",
+      "collectionTitle": "무신사 브랜드 컨셉 무료 PPT"
+    },
+    {
+      "id": "S-bysu-430634-07",
+      "order": 7,
+      "title": "상승 선 그래프와 기준 막대",
+      "description": "다크 바탕 위 4개 표식의 상승 곡선과 높이가 다른 회색 기준 막대 2개",
+      "type": "dark",
+      "file": "S-bysu-430634-07.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223059150706",
+      "preview": "previews/S-bysu-430634-07.png",
+      "layout": "다크 바탕 위 4개 표식의 상승 곡선과 높이가 다른 회색 기준 막대 2개",
+      "tags": [
+        "선 그래프",
+        "다크",
+        "4개 항목"
+      ],
+      "collectionId": "bysu-430634",
+      "collectionTitle": "무신사 브랜드 컨셉 무료 PPT"
+    },
+    {
+      "id": "S-bysu-430634-08",
+      "order": 8,
+      "title": "네 가지 목차",
+      "description": "다크 바탕 중앙 위쪽에 01–04 목차를 2×2로 배치하고 하단 중앙에 다음 화살표",
+      "type": "dark",
+      "file": "S-bysu-430634-08.html",
+      "sourceUrl": "https://blog.naver.com/bysu_ppt/223059150706",
+      "preview": "previews/S-bysu-430634-08.png",
+      "layout": "다크 바탕 중앙 위쪽에 01–04 목차를 2×2로 배치하고 하단 중앙에 다음 화살표",
+      "tags": [
+        "목차",
+        "다크",
+        "2×2"
+      ],
+      "collectionId": "bysu-430634",
+      "collectionTitle": "무신사 브랜드 컨셉 무료 PPT"
+    },
+    {
+      "id": "S-toss-01-cover-std",
+      "order": 1,
+      "title": "중앙 표지",
+      "description": "넓은 여백 안에 두 줄 제목을 중앙 배치하고, 토스 단어만 강조한 도입 표지.",
+      "type": "light",
+      "file": "S-toss-01-cover-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/01.png",
+      "layout": "중앙 2행 제목, 오른쪽 다음 화살표",
+      "tags": [
+        "표지"
+      ],
+      "collectionId": "bysu-325182",
+      "collectionTitle": "토스 브랜드 컨셉 PPT 템플릿"
+    },
+    {
+      "id": "S-toss-02-section-std",
+      "order": 2,
+      "title": "4단 목차",
+      "description": "중앙에 네 개의 둥근 가로 카드를 쌓고, 번호 배지와 각 목차 제목을 나란히 배치한 화면.",
+      "type": "light",
+      "file": "S-toss-02-section-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/02.png",
+      "layout": "숫자 아이콘을 포함한 긴 둥근 카드 4개, 세로 중앙",
+      "tags": [
+        "section"
+      ],
+      "collectionId": "bysu-325182",
+      "collectionTitle": "토스 브랜드 컨셉 PPT 템플릿"
+    },
+    {
+      "id": "S-toss-03-layout-std",
+      "order": 3,
+      "title": "챕터 구분",
+      "description": "짙은 배경 중앙에 ‘첫 번째’와 ‘첫 번째 제목을 작성해주세요’를 두 줄로 배치한 구분 화면.",
+      "type": "dark",
+      "file": "S-toss-03-layout-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/03.png",
+      "layout": "색상 소제목과 흰색 1행 제목, 화면 중앙",
+      "tags": [
+        "섹션 구분"
+      ],
+      "collectionId": "bysu-325182",
+      "collectionTitle": "토스 브랜드 컨셉 PPT 템플릿"
+    },
+    {
+      "id": "S-toss-04-kpi-std",
+      "order": 4,
+      "title": "KPI 2개 + 파이",
+      "description": "어두운 배경의 두 줄 메시지, 만족도·재구매율 100%와 우측 분리형 입체 파이차트.",
+      "type": "dark",
+      "file": "S-toss-04-kpi-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/04.png",
+      "layout": "왼쪽 메시지와 KPI 2개, 오른쪽 입체 파이, 하단 출처",
+      "tags": [
+        "KPI · 파이차트"
+      ],
+      "collectionId": "bysu-325182",
+      "collectionTitle": "토스 브랜드 컨셉 PPT 템플릿"
+    },
+    {
+      "id": "S-toss-05-timeline-std",
+      "order": 5,
+      "title": "3개년 타임라인",
+      "description": "중앙의 두 줄 제목과 하나의 수평선에 연결된 2020·2021·2022 연혁. 원본과 같이 연도별로 4·3·5개의 월별 항목을 배치했다.",
+      "type": "dark",
+      "file": "S-toss-05-timeline-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/05.png",
+      "layout": "상단 중앙 제목, 하단 연도 3열과 가로 연결선",
+      "tags": [
+        "timeline"
+      ],
+      "collectionId": "bysu-325182",
+      "collectionTitle": "토스 브랜드 컨셉 PPT 템플릿"
+    },
+    {
+      "id": "S-toss-06-showcase-std",
+      "order": 6,
+      "title": "이미지 2개 쇼케이스",
+      "description": "hero 전면 배경 위 왼쪽에 세 줄 핵심 문구와 네 줄 세부 내용을 배치하고, 오른쪽에 둥근 모서리의 세로 이미지 자리 두 개를 나란히 둔다.",
+      "type": "brand",
+      "file": "S-toss-06-showcase-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/06.png",
+      "layout": "좌측 메시지·설명, 우측 세로 이미지 슬롯 2개",
+      "tags": [
+        "컬러 전면 쇼케이스"
+      ],
+      "collectionId": "bysu-325182",
+      "collectionTitle": "토스 브랜드 컨셉 PPT 템플릿"
+    },
+    {
+      "id": "S-toss-07-callout-std",
+      "order": 7,
+      "title": "알림 콜아웃",
+      "description": "넓은 여백의 중앙에 라운드 카드와 종 아이콘을 배치하고, 두 줄 메시지의 핵심 구절을 강조한 알림형 화면.",
+      "type": "light",
+      "file": "S-toss-07-callout-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/07.png",
+      "layout": "중앙 그림자 카드, 상단 종 아이콘, 하단 메시지",
+      "tags": [
+        "callout"
+      ],
+      "collectionId": "bysu-325182",
+      "collectionTitle": "토스 브랜드 컨셉 PPT 템플릿"
+    },
+    {
+      "id": "S-toss-08-carousel-std",
+      "order": 8,
+      "title": "5장 캐러셀",
+      "description": "중앙 두 줄 제목과 세 줄 본문 아래에 크기가 다른 빈 카드 다섯 장을 겹친 캐러셀. 양쪽 화살표로 중심 카드를 이동한다.",
+      "type": "light",
+      "file": "S-toss-08-carousel-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/08.png",
+      "layout": "상단 제목·3행 설명, 하단 겹친 사각형 5개와 좌우 화살표",
+      "tags": [
+        "carousel"
+      ],
+      "collectionId": "bysu-325182",
+      "collectionTitle": "토스 브랜드 컨셉 PPT 템플릿"
+    },
+    {
+      "id": "S-toss-09-cards-std",
+      "order": 9,
+      "title": "3열 상세 카드",
+      "description": "중앙의 두 줄 제목 아래, 본문 여섯 줄과 체크 표시 강조 문구를 담은 동일한 크기의 카드 세 개를 배치한 상세 비교형 슬라이드.",
+      "type": "light",
+      "file": "S-toss-09-cards-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/09.png",
+      "layout": "상단 제목, 하단 제목·본문·체크 강조를 가진 카드 3개",
+      "tags": [
+        "cards"
+      ],
+      "collectionId": "bysu-325182",
+      "collectionTitle": "토스 브랜드 컨셉 PPT 템플릿"
+    },
+    {
+      "id": "S-toss-10-features-std",
+      "order": 10,
+      "title": "2×2 특징 설명",
+      "description": "중앙의 두 줄 제목 아래, 메모·수신함·노트북·팔레트 아이콘과 설명을 2×2로 배치한 화면.",
+      "type": "light",
+      "file": "S-toss-10-features-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/10.png",
+      "layout": "상단 제목, 하단 아이콘·소제목·본문의 2×2 그리드",
+      "tags": [
+        "features"
+      ],
+      "collectionId": "bysu-325182",
+      "collectionTitle": "토스 브랜드 컨셉 PPT 템플릿"
+    },
+    {
+      "id": "S-toss-11-numbered-std",
+      "order": 11,
+      "title": "2행 장문 목록",
+      "description": "중앙의 두 줄 제목 아래에 번호 배지와 세 줄 본문을 두 행으로 배치하고 세 개의 가로선으로 구분한다.",
+      "type": "light",
+      "file": "S-toss-11-numbered-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/11.png",
+      "layout": "상단 제목, 구분선으로 나눈 번호 장문 2행",
+      "tags": [
+        "번호형 2행 장문"
+      ],
+      "collectionId": "bysu-325182",
+      "collectionTitle": "토스 브랜드 컨셉 PPT 템플릿"
+    },
+    {
+      "id": "S-toss-12-checklist-std",
+      "order": 12,
+      "title": "3행 체크리스트",
+      "description": "중앙의 두 줄 제목 아래에 체크 아이콘·항목명·본문을 담은 넓은 가로 카드 세 개를 세로로 배치했다.",
+      "type": "light",
+      "file": "S-toss-12-checklist-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/12.png",
+      "layout": "상단 제목, 하단 체크 아이콘과 소제목·본문의 가로 카드 3개",
+      "tags": [
+        "checklist"
+      ],
+      "collectionId": "bysu-325182",
+      "collectionTitle": "토스 브랜드 컨셉 PPT 템플릿"
+    },
+    {
+      "id": "S-toss-13-chart-std",
+      "order": 13,
+      "title": "설명 + 막대 차트",
+      "description": "중앙 두 줄 제목 아래 왼쪽 설명 카드 두 개와 오른쪽 연도별 상승 막대그래프를 배치한 화면. 원본 예시 2020–2023년의 100·200·300·400을 유지했다.",
+      "type": "light",
+      "file": "S-toss-13-chart-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/13.png",
+      "layout": "상단 제목, 좌측 설명 카드 2개, 우측 막대 4개 차트",
+      "tags": [
+        "chart"
+      ],
+      "collectionId": "bysu-325182",
+      "collectionTitle": "토스 브랜드 컨셉 PPT 템플릿"
+    },
+    {
+      "id": "S-toss-14-table-std",
+      "order": 14,
+      "title": "비교표 + 결론",
+      "description": "중앙 두 줄 제목 아래에 2개 비교 열과 5개 항목 행을 배치하고, 하단 둥근 콜아웃에 특징 및 결론을 제시한 표형 슬라이드.",
+      "type": "light",
+      "file": "S-toss-14-table-std.html",
+      "sourceUrl": "https://notefolio.net/bysu.ppt/325182",
+      "preview": "previews/14.png",
+      "layout": "상단 제목, 3열 6행 표, 하단 체크 결론 띠",
+      "tags": [
+        "table"
+      ],
+      "collectionId": "bysu-325182",
+      "collectionTitle": "토스 브랜드 컨셉 PPT 템플릿"
+    }
+  ]
+}
+</script>
+<script>
+(() => {
+  'use strict';
+  const library=JSON.parse(document.getElementById('library-data').textContent);
+  const slides=library.slides, collections=library.collections;
+  const $=selector=>document.querySelector(selector), $$=selector=>[...document.querySelectorAll(selector)];
+  const grid=$('#grid'),viewer=$('#viewer'),cards=new Map();
+  let tone='all',filtered=[],current=0,opened=false,comparison=false,lastFocus=null;
+  const el=(tag,className,text)=>{const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=text;return node;};
+  for(const collection of collections){const option=el('option','',`${collection.title} (${collection.slideCount})`);option.value=collection.id;$('#collection').append(option);}
+  for(const slide of slides){
+    const article=el('article','card');article.dataset.id=slide.id;
+    const preview=el('button','preview');preview.setAttribute('aria-label',`${slide.collectionTitle} · ${slide.order} · ${slide.title} 미리보기`);
+    const img=el('img');img.src=slide.preview;img.alt='';img.width=960;img.height=540;img.loading='lazy';preview.append(img);
+    preview.addEventListener('click',()=>openSlide(filtered.findIndex(item=>item.id===slide.id)));
+    const line=el('div','card-line'),title=el('div','card-title'),link=el('a','open-link','HTML ↗');
+    title.append(el('span','number',String(slide.order).padStart(2,'0')),el('h2','',slide.title));
+    link.href=`slides/${slide.file}`;link.target='_blank';link.rel='noopener';link.setAttribute('aria-label',`${slide.title} 독립 HTML 열기`);
+    line.append(title,link);article.append(preview,el('p','collection-name',slide.collectionTitle),line,el('p','card-description',slide.description));grid.append(article);cards.set(slide.id,article);
+  }
+  $('#collection-count').textContent=collections.length;$('#total-count').textContent=slides.length;
+  function applyFilter(){
+    const collectionId=$('#collection').value,term=$('#search').value.trim().toLowerCase();
+    filtered=slides.filter(slide=>(collectionId==='all'||slide.collectionId===collectionId)&&(tone==='all'||slide.type===tone)&&[slide.title,slide.description,slide.collectionTitle,slide.layout,slide.order,...slide.tags].join(' ').toLowerCase().includes(term));
+    const shown=new Set(filtered.map(slide=>slide.id));for(const [id,card] of cards)card.hidden=!shown.has(id);
+    $('#visible-count').textContent=filtered.length;$('#empty').hidden=filtered.length>0;$('#present').disabled=filtered.length===0;
+    const summary=$('#selection-summary');summary.replaceChildren(document.createTextNode(`${filtered.length}개 화면`));
+    const collection=collections.find(item=>item.id===collectionId);
+    if(collection){const link=el('a','',`${collection.title} · 원본 작업 ↗`);link.href=collection.sourceUrl;link.target='_blank';link.rel='noopener';summary.append(document.createTextNode(' · '),link);}
+  }
+  $$('.filter').forEach(button=>button.addEventListener('click',()=>{tone=button.dataset.filter;$$('.filter').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));applyFilter();}));
+  $('#collection').addEventListener('change',applyFilter);$('#search').addEventListener('input',applyFilter);
+  function updateSlide(){
+    const slide=filtered[current];if(!slide)return;
+    $('#viewer-number').textContent=`${slide.collectionTitle} · ${String(slide.order).padStart(2,'0')}`;$('#viewer-title').textContent=slide.title;
+    $('#source-note').hidden=slide.sourceStatus!=='partial';$('#source-note').textContent=slide.sourceStatus==='partial'?`일부 원본 복원 · ${slide.sourceNote||'공개 이미지에 보이는 일부 영역을 바탕으로 복원했습니다.'}`:'';
+    $('#slide-frame').src=`slides/${slide.file}`;$('#slide-frame').title=`${slide.title} 슬라이드`;
+    const hasOriginal=Boolean(slide.sourceImage);$('#compare').hidden=!hasOriginal;if(hasOriginal){$('#original').src=slide.sourceImage;$('#original').alt=`bysu 원본 ${slide.order}: ${slide.title}`;}else{$('#original').removeAttribute('src');if(comparison)setComparison(false);}
+    $('#standalone').href=`slides/${slide.file}`;$('#source-label').href=slide.sourceUrl;
+    $('#position').textContent=`${String(current+1).padStart(2,'0')} / ${filtered.length}`;
+    $('#prev').disabled=current===0;$('#next').disabled=current===filtered.length-1;
+    history.replaceState(null,'',`#${encodeURIComponent(slide.id)}`);
+  }
+  function setComparison(value){comparison=value;$('#original').hidden=!value;$('#slide-frame').hidden=value;$('#compare').textContent=value?'HTML 보기':'원본 보기';$('#compare').setAttribute('aria-pressed',String(value));}
+  function openSlide(index){if(index<0||index>=filtered.length)return;lastFocus=document.activeElement;current=index;opened=true;setComparison(false);viewer.classList.add('is-open');document.body.classList.add('modal-open');document.querySelector('header').inert=true;document.querySelector('main').inert=true;updateSlide();$('#close').focus();}
+  async function closeSlide(){if(document.fullscreenElement){try{await document.exitFullscreen();}catch{}}opened=false;viewer.classList.remove('is-open');document.body.classList.remove('modal-open');document.querySelector('header').inert=false;document.querySelector('main').inert=false;$('#slide-frame').removeAttribute('src');history.replaceState(null,'',location.pathname+location.search);lastFocus?.focus();}
+  function move(delta){const next=Math.min(filtered.length-1,Math.max(0,current+delta));if(next!==current){current=next;updateSlide();}}
+  $('#prev').addEventListener('click',()=>move(-1));$('#next').addEventListener('click',()=>move(1));$('#close').addEventListener('click',closeSlide);$('#present').addEventListener('click',()=>openSlide(0));$('#compare').addEventListener('click',()=>setComparison(!comparison));
+  async function fullscreen(){try{if(document.fullscreenElement)await document.exitFullscreen();else if(viewer.requestFullscreen)await viewer.requestFullscreen();}catch{}}
+  $('#fullscreen').addEventListener('click',fullscreen);
+  function handleKey(event){
+    if(!opened)return;
+    if(event.key==='Escape'){event.preventDefault();closeSlide();}else if(event.key==='ArrowRight'||event.key==='PageDown'){event.preventDefault();move(1);}else if(event.key==='ArrowLeft'||event.key==='PageUp'){event.preventDefault();move(-1);}else if(event.key==='Home'){event.preventDefault();current=0;updateSlide();}else if(event.key==='End'){event.preventDefault();current=filtered.length-1;updateSlide();}else if(event.key.toLowerCase()==='f'){event.preventDefault();fullscreen();}else if(event.key==='Tab'){const controls=[...viewer.querySelectorAll('button:not(:disabled),a[href]')].filter(node=>node.getClientRects().length);const first=controls[0],last=controls.at(-1);if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}}
+  }
+  addEventListener('message',event=>{const data=event.data;if(event.source!==$('#slide-frame').contentWindow||data?.type!=='gnar-slide-key'||typeof data.key!=='string'||!['Escape','ArrowRight','PageDown','ArrowLeft','PageUp','Home','End','f','F'].includes(data.key))return;handleKey({key:data.key,shiftKey:Boolean(data.shiftKey),preventDefault(){}});});
+  document.addEventListener('keydown',handleKey);
+  applyFilter();
+  let initial='';try{initial=decodeURIComponent(location.hash.slice(1));}catch{}
+  const legacy=initial.match(/^slide-(\d+)$/);if(legacy){const original=slides.find(slide=>slide.collectionId==='bysu-325182'&&slide.order===+legacy[1]);if(original)initial=original.id;}
+  const initialIndex=filtered.findIndex(slide=>slide.id===initial);if(initialIndex>=0)openSlide(initialIndex);
+})();
+</script>
+</body>
+</html>

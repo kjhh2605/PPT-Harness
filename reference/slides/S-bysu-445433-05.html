@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="source" content="https://notefolio.net/bysu.ppt/445433">
+<meta name="reference-image" content="slide-05.webp">
+<title>파트너십 혜택 · PARTNERSHIP · Gnar</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root {
+  /* Gnar 브랜드 토큰 — Deep Indigo Ink (H 283). 원천: design/palettes/brand.json */
+  --hue: 283;
+  --bg: #EDE9E6;  /* 배경 */
+  --surface: #F7F3EF;  /* 카드·패널 */
+  --text: #262321;  /* 본문 */
+  --muted: #666260;  /* 보조 글자·캡션 */
+  --border: #D1CDCA;  /* 선·격자·비포커스 막대 */
+  --ink: #37356A;  /* 제목·강조 문장 */
+  --hero: #5A54AF;  /* 강조 한 곳(핵심 숫자·포커스 막대·구분선) */
+  --support: #8183A4;  /* 보조 막대·아이콘 */
+  --tint: #DEDFF5;  /* 콜아웃·표 머리 배경 띠 */
+  --brown: #826144;  /* 따뜻한 중립 1 */
+  --taupe: #736756;  /* 따뜻한 중립 2 */
+  --chart-1: var(--hero);
+  --chart-2: var(--support);
+  --chart-3: var(--brown);
+  --chart-4: var(--taupe);
+  --chart-5: var(--border);
+}
+
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+} }
+
+:root[data-theme="dark"] {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+}
+
+/* 발표별 색상 교체 레시피 (oklch 지원 브라우저). hex 토큰은 PPTX 변환용 기준값이며,
+ * 다른 색상으로 바꿀 때는 design/scripts/ladder.py 에 hue 값을 넣어 hex를 다시 생성한다.
+ *   light: ink oklch(.36 .09 H) hero oklch(.50 .14 H) support oklch(.62 .05 H) tint oklch(.91 .03 H)
+ *   dark : ink oklch(.86 .07 H) hero oklch(.70 .14 H) support oklch(.56 .05 H) tint oklch(.29 .04 H) */
+
+
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+.viewport { width: 100%; height: 100%; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center; overflow: hidden; }
+.slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; flex-shrink: 0; fill: var(--text); background: var(--surface); transform-origin: center center; }
+h1, h2, h3, p, figure { margin: 0; }
+svg { display: block; }
+.eyebrow { font-size: 25px; font-weight: 650; color: var(--muted); letter-spacing: -.4px; }
+.slide-title { font-size: 64px; font-weight: 750; line-height: 1.25; letter-spacing: -2.3px; color: var(--ink); word-break: keep-all; }
+.slide-copy { font-size: 28px; line-height: 1.6; letter-spacing: -.6px; color: var(--muted); word-break: keep-all; }
+.slide-header { position: absolute; top: 112px; left: 132px; right: 132px; }
+.slide-header .eyebrow { margin-bottom: 20px; }
+.slide-header .slide-copy { margin-top: 25px; }
+.slide-footer { position: absolute; left: 132px; right: 132px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; font-size: 20px; line-height: 1; color: var(--muted); }
+.wordmark { color: var(--ink); font-size: 30px; font-weight: 800; letter-spacing: -1.4px; }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, .viewport { width: 1920px; height: 1080px; overflow: visible; }
+  .slide { transform: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+
+.slide{background:var(--bg)}
+.page-heading{position:absolute;left:102px;top:104px}
+.kicker{font-size:28px;font-weight:600;line-height:1.4;color:var(--ink);margin-bottom:12px}
+.heading{font-size:62px;line-height:1.05;min-height:76px;font-weight:800;letter-spacing:-2.2px;color:var(--text)}
+.copy{font-size:28px;line-height:1.48;letter-spacing:-.8px;color:var(--muted);word-break:keep-all}
+.copy p+p{margin-top:18px}
+.scene{position:absolute;overflow:hidden;background:var(--tint)}
+.cloth,.scene-accessory,.photo-bg{position:absolute;width:100%;height:100%;inset:0}
+.scene-word{position:absolute;left:50px;top:40px;font-size:38px;font-weight:600;color:var(--ink);letter-spacing:-1.3px}
+.scene-line{position:absolute;left:50px;top:95px;right:25px;font-size:20px;line-height:1.5;color:var(--muted)}
+.scene-bag{position:absolute}.scene-bag.primary{left:15px;bottom:80px;width:390px;transform:rotate(-7deg)}
+.scene-bag.secondary{right:12px;bottom:95px;width:300px;transform:rotate(6deg)}
+.scene-accessory{pointer-events:none}.product-photo{position:relative;width:100%;height:100%;overflow:hidden;background:var(--surface)}
+.product-photo .product{position:absolute;left:4%;top:16%;width:92%;height:79%;display:grid;place-items:center}
+.product-photo .product svg{width:100%;height:100%}
+.mini-title{font-size:29px;font-weight:700;line-height:1.4;color:var(--text);margin-bottom:14px;letter-spacing:-.8px}
+.small-copy{font-size:28px;line-height:1.5;color:var(--muted);letter-spacing:-.8px;word-break:keep-all}
+.partnership-grid{position:absolute;left:102px;right:96px;top:788px;border-top:2px solid var(--border);padding-top:38px;display:grid;grid-template-columns:repeat(4,1fr);gap:42px}.partnership-grid .mini-title{font-size:28px}.partnership-grid .small-copy{font-size:28px;line-height:1.45}
+</style>
+</head>
+<body>
+<div class="viewport"><main class="slide" data-slide-id="S-bysu-445433-05" aria-label="파트너십 혜택 · PARTNERSHIP"><header class="page-heading"><p class="kicker">파트너십 혜택</p><h1 class="heading">PARTNERSHIP</h1></header><div class="partnership-images"><div style="position:absolute;left:0px;top:300px;width:108px;height:420px"><div class="product-photo"><svg class="photo-bg" viewBox="0 0 500 600" preserveAspectRatio="none" aria-hidden="true"><rect width="500" height="600" fill="var(--bg)"/><path d="M0 50Q200 200 500 20V0H0ZM0 500Q200 350 500 530V600H0Z" fill="var(--surface)"/><path d="M0 510Q240 420 500 540M0 60Q240 210 500 50" stroke="var(--border)" stroke-width="3" fill="none"/></svg><div class="product"><svg viewBox="155 0 100 240" preserveAspectRatio="xMidYMid slice" role="img" aria-label="chain"><g><path d="M73 104C60 4 240 4 227 104" fill="none" stroke="var(--text)" stroke-width="4" stroke-dasharray="5 4"/><rect x="52" y="93" width="196" height="119" rx="15" fill="var(--border)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/><path d="M53 105L150 165 247 105M53 137L150 197 247 137" fill="none" stroke="var(--border)" stroke-width="3"/><path d="M55 94L150 154 245 94" fill="none" stroke="var(--text)" stroke-width="4"/><rect x="138" y="145" width="25" height="25" rx="4" fill="var(--bg)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/></g></svg></div></div></div><div style="position:absolute;left:146px;top:334px;width:355px;height:350px"><div class="product-photo"><svg class="photo-bg" viewBox="0 0 500 600" preserveAspectRatio="none" aria-hidden="true"><rect width="500" height="600" fill="var(--bg)"/><path d="M0 50Q200 200 500 20V0H0ZM0 500Q200 350 500 530V600H0Z" fill="var(--surface)"/><path d="M0 510Q240 420 500 540M0 60Q240 210 500 50" stroke="var(--border)" stroke-width="3" fill="none"/><path d='M40 0H460L405 230 350 600H150L95 230Z' fill='var(--border)'/><path d='M90 30L140 290 215 350M410 30L360 290 290 350' fill='none' stroke='var(--surface)' stroke-width='45'/></svg><div class="product"><svg viewBox="0 0 300 240" role="img" aria-label="chain"><g><path d="M73 104C60 4 240 4 227 104" fill="none" stroke="var(--text)" stroke-width="4" stroke-dasharray="5 4"/><rect x="52" y="93" width="196" height="119" rx="15" fill="var(--support)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/><path d="M53 105L150 165 247 105M53 137L150 197 247 137" fill="none" stroke="var(--border)" stroke-width="3"/><path d="M55 94L150 154 245 94" fill="none" stroke="var(--text)" stroke-width="4"/><rect x="138" y="145" width="25" height="25" rx="4" fill="var(--bg)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/></g></svg></div></div></div><div style="position:absolute;left:541px;top:300px;width:404px;height:420px"><div class="product-photo"><svg class="photo-bg" viewBox="0 0 500 600" preserveAspectRatio="none" aria-hidden="true"><rect width="500" height="600" fill="var(--bg)"/><path d="M0 50Q200 200 500 20V0H0ZM0 500Q200 350 500 530V600H0Z" fill="var(--surface)"/><path d="M0 510Q240 420 500 540M0 60Q240 210 500 50" stroke="var(--border)" stroke-width="3" fill="none"/></svg><div class="product"><svg viewBox="0 0 300 240" role="img" aria-label="tote"><g><path d="M104 93C105 5 196 5 196 93" fill="none" stroke="var(--text)" stroke-width="10"/><path d="M110 93C111 21 189 21 190 93" fill="none" stroke="var(--border)" stroke-width="3"/><path d="M63 85L237 85 254 213 48 213Z" fill="var(--hero)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/><path d="M84 90L75 206M216 90L226 206" fill="none" stroke="var(--border)" stroke-width="3"/><path d="M55 191H249V212H49Z" fill="var(--border)"/><rect x="137" y="94" width="26" height="16" rx="3" fill="var(--bg)"/></g></svg></div></div></div><div style="position:absolute;left:983px;top:364px;width:355px;height:290px"><div class="product-photo"><svg class="photo-bg" viewBox="0 0 500 600" preserveAspectRatio="none" aria-hidden="true"><rect width="500" height="600" fill="var(--bg)"/><path d="M0 50Q200 200 500 20V0H0ZM0 500Q200 350 500 530V600H0Z" fill="var(--surface)"/><path d="M0 510Q240 420 500 540M0 60Q240 210 500 50" stroke="var(--border)" stroke-width="3" fill="none"/></svg><div class="product"><svg viewBox="0 0 300 240" role="img" aria-label="flap"><g><path d="M73 104C60 4 240 4 227 104" fill="none" stroke="var(--text)" stroke-width="9" /><rect x="52" y="93" width="196" height="119" rx="15" fill="var(--border)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/><path d="M53 105L150 165 247 105M53 137L150 197 247 137" fill="none" stroke="var(--border)" stroke-width="3"/><path d="M55 94L150 154 245 94" fill="none" stroke="var(--text)" stroke-width="4"/><rect x="138" y="145" width="25" height="25" rx="4" fill="var(--bg)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/></g></svg></div></div></div><div style="position:absolute;left:1377px;top:238px;width:316px;height:510px"><div class="product-photo"><svg class="photo-bg" viewBox="0 0 500 600" preserveAspectRatio="none" aria-hidden="true"><rect width="500" height="600" fill="var(--bg)"/><path d="M0 50Q200 200 500 20V0H0ZM0 500Q200 350 500 530V600H0Z" fill="var(--surface)"/><path d="M0 510Q240 420 500 540M0 60Q240 210 500 50" stroke="var(--border)" stroke-width="3" fill="none"/></svg><div class="product"><svg viewBox="0 0 300 240" role="img" aria-label="chain"><g><path d="M73 104C60 4 240 4 227 104" fill="none" stroke="var(--text)" stroke-width="4" stroke-dasharray="5 4"/><rect x="52" y="93" width="196" height="119" rx="15" fill="var(--support)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/><path d="M53 105L150 165 247 105M53 137L150 197 247 137" fill="none" stroke="var(--border)" stroke-width="3"/><path d="M55 94L150 154 245 94" fill="none" stroke="var(--text)" stroke-width="4"/><rect x="138" y="145" width="25" height="25" rx="4" fill="var(--bg)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/></g></svg></div></div></div><div style="position:absolute;left:1732px;top:318px;width:188px;height:350px"><div class="product-photo"><svg class="photo-bg" viewBox="0 0 500 600" preserveAspectRatio="none" aria-hidden="true"><rect width="500" height="600" fill="var(--bg)"/><path d="M0 50Q200 200 500 20V0H0ZM0 500Q200 350 500 530V600H0Z" fill="var(--surface)"/><path d="M0 510Q240 420 500 540M0 60Q240 210 500 50" stroke="var(--border)" stroke-width="3" fill="none"/></svg><div class="product"><svg viewBox="20 0 175 240" preserveAspectRatio="xMidYMid slice" role="img" aria-label="flap"><g><path d="M73 104C60 4 240 4 227 104" fill="none" stroke="var(--text)" stroke-width="9" /><rect x="52" y="93" width="196" height="119" rx="15" fill="var(--border)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/><path d="M53 105L150 165 247 105M53 137L150 197 247 137" fill="none" stroke="var(--border)" stroke-width="3"/><path d="M55 94L150 154 245 94" fill="none" stroke="var(--text)" stroke-width="4"/><rect x="138" y="145" width="25" height="25" rx="4" fill="var(--bg)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/></g></svg></div></div></div></div><div class="partnership-grid"><section><h2 class="mini-title">특별 할인 정책</h2><p class="small-copy">비용 부담을 줄일 수 있도록 장기 파트너십 계약을 체결한 셀러에게는 서비스 비용에 대해 특별 할인을 적용합니다.</p></section><section><h2 class="mini-title">맞춤형 복원</h2><p class="small-copy">각 파트너의 특성과 필요에 맞춘 맞춤형 복원 솔루션을 제공하여, 각 명품 아이템의 가치를 최대화합니다.</p></section><section><h2 class="mini-title">전문 교육 제공</h2><p class="small-copy">명품 관리 및 복원에 관한 교육 및 세미나를 정기적으로 제공하여, 최신 명품 관리 기술과 지식을 습득할 수 있도록 합니다.</p></section><section><h2 class="mini-title">전용 고객 지원</h2><p class="small-copy">파트너 셀러들이 전용으로 이용할 수 있는 고객 지원 라인을 마련하여 언제든지 문의하고 지원을 받을 수 있도록 합니다.</p></section></div></main></div>
+<script>
+(() => {
+  const slide = document.querySelector('.slide');
+  const fit = () => { slide.style.transform = `scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
+  const theme = new URLSearchParams(location.search).get('theme');
+  if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+  addEventListener('resize', fit); fit();
+  // file:// frames have isolated origins; relay navigation without reading parent DOM.
+  if (parent !== window) document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', 'Escape', 'f', 'F'].includes(event.key)) return;
+    if (event.target.closest('button,input,textarea,select,[contenteditable],.carousel-controls,.carousel-nav')) return;
+    queueMicrotask(() => {
+      if (!event.defaultPrevented) parent.postMessage({ type: 'gnar-slide-key', key: event.key, shiftKey: event.shiftKey }, '*');
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="source" content="https://notefolio.net/bysu.ppt/445433">
+<meta name="reference-image" content="slide-02.webp">
+<title>레더앤올 회사 소개 · OUR VISION · Gnar</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root {
+  /* Gnar 브랜드 토큰 — Deep Indigo Ink (H 283). 원천: design/palettes/brand.json */
+  --hue: 283;
+  --bg: #EDE9E6;  /* 배경 */
+  --surface: #F7F3EF;  /* 카드·패널 */
+  --text: #262321;  /* 본문 */
+  --muted: #666260;  /* 보조 글자·캡션 */
+  --border: #D1CDCA;  /* 선·격자·비포커스 막대 */
+  --ink: #37356A;  /* 제목·강조 문장 */
+  --hero: #5A54AF;  /* 강조 한 곳(핵심 숫자·포커스 막대·구분선) */
+  --support: #8183A4;  /* 보조 막대·아이콘 */
+  --tint: #DEDFF5;  /* 콜아웃·표 머리 배경 띠 */
+  --brown: #826144;  /* 따뜻한 중립 1 */
+  --taupe: #736756;  /* 따뜻한 중립 2 */
+  --chart-1: var(--hero);
+  --chart-2: var(--support);
+  --chart-3: var(--brown);
+  --chart-4: var(--taupe);
+  --chart-5: var(--border);
+}
+
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+} }
+
+:root[data-theme="dark"] {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+}
+
+/* 발표별 색상 교체 레시피 (oklch 지원 브라우저). hex 토큰은 PPTX 변환용 기준값이며,
+ * 다른 색상으로 바꿀 때는 design/scripts/ladder.py 에 hue 값을 넣어 hex를 다시 생성한다.
+ *   light: ink oklch(.36 .09 H) hero oklch(.50 .14 H) support oklch(.62 .05 H) tint oklch(.91 .03 H)
+ *   dark : ink oklch(.86 .07 H) hero oklch(.70 .14 H) support oklch(.56 .05 H) tint oklch(.29 .04 H) */
+
+
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+.viewport { width: 100%; height: 100%; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center; overflow: hidden; }
+.slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; flex-shrink: 0; fill: var(--text); background: var(--surface); transform-origin: center center; }
+h1, h2, h3, p, figure { margin: 0; }
+svg { display: block; }
+.eyebrow { font-size: 25px; font-weight: 650; color: var(--muted); letter-spacing: -.4px; }
+.slide-title { font-size: 64px; font-weight: 750; line-height: 1.25; letter-spacing: -2.3px; color: var(--ink); word-break: keep-all; }
+.slide-copy { font-size: 28px; line-height: 1.6; letter-spacing: -.6px; color: var(--muted); word-break: keep-all; }
+.slide-header { position: absolute; top: 112px; left: 132px; right: 132px; }
+.slide-header .eyebrow { margin-bottom: 20px; }
+.slide-header .slide-copy { margin-top: 25px; }
+.slide-footer { position: absolute; left: 132px; right: 132px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; font-size: 20px; line-height: 1; color: var(--muted); }
+.wordmark { color: var(--ink); font-size: 30px; font-weight: 800; letter-spacing: -1.4px; }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, .viewport { width: 1920px; height: 1080px; overflow: visible; }
+  .slide { transform: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+
+.slide{background:var(--bg)}
+.page-heading{position:absolute;left:102px;top:104px}
+.kicker{font-size:28px;font-weight:600;line-height:1.4;color:var(--ink);margin-bottom:12px}
+.heading{font-size:62px;line-height:1.05;min-height:76px;font-weight:800;letter-spacing:-2.2px;color:var(--text)}
+.copy{font-size:28px;line-height:1.48;letter-spacing:-.8px;color:var(--muted);word-break:keep-all}
+.copy p+p{margin-top:18px}
+.scene{position:absolute;overflow:hidden;background:var(--tint)}
+.cloth,.scene-accessory,.photo-bg{position:absolute;width:100%;height:100%;inset:0}
+.scene-word{position:absolute;left:50px;top:40px;font-size:38px;font-weight:600;color:var(--ink);letter-spacing:-1.3px}
+.scene-line{position:absolute;left:50px;top:95px;right:25px;font-size:20px;line-height:1.5;color:var(--muted)}
+.scene-bag{position:absolute}.scene-bag.primary{left:15px;bottom:80px;width:390px;transform:rotate(-7deg)}
+.scene-bag.secondary{right:12px;bottom:95px;width:300px;transform:rotate(6deg)}
+.scene-accessory{pointer-events:none}.product-photo{position:relative;width:100%;height:100%;overflow:hidden;background:var(--surface)}
+.product-photo .product{position:absolute;left:4%;top:16%;width:92%;height:79%;display:grid;place-items:center}
+.product-photo .product svg{width:100%;height:100%}
+.mini-title{font-size:29px;font-weight:700;line-height:1.4;color:var(--text);margin-bottom:14px;letter-spacing:-.8px}
+.small-copy{font-size:28px;line-height:1.5;color:var(--muted);letter-spacing:-.8px;word-break:keep-all}
+.vision-block{position:absolute;left:0;top:518px;width:795px;height:562px;background:var(--hero)}.scene-vision{left:340px;top:226px;width:670px;height:626px}.vision-copy{position:absolute;left:1090px;top:498px;width:710px}.vision-copy .heading{font-size:58px}.vision-copy .copy{margin-top:21px;font-size:28px;line-height:1.47}
+</style>
+</head>
+<body>
+<div class="viewport"><main class="slide" data-slide-id="S-bysu-445433-02" aria-label="레더앤올 회사 소개 · OUR VISION"><div class="vision-block"></div><div class="scene scene-vision"><svg viewBox="0 0 700 700" class="cloth" aria-hidden="true"><path d="M0 20Q150 200 370 40T700 100V0H0Z" fill="var(--bg)"/><path d="M0 520Q150 390 300 570T700 480V700H0Z" fill="var(--bg)"/><path d="M-30 340Q120 230 330 330T720 260M0 590Q170 490 330 615T700 570" fill="none" stroke="var(--border)" stroke-width="3"/></svg><div class="scene-word">Leather &amp; All</div><p class="scene-line">Leather &amp; All specializes in restoring luxury items<br>with expert craftsmanship and premium materials.</p><div class="scene-bag primary"><svg viewBox="0 0 300 240" role="img" aria-label="flap"><g><path d="M73 104C60 4 240 4 227 104" fill="none" stroke="var(--text)" stroke-width="9" /><rect x="52" y="93" width="196" height="119" rx="15" fill="var(--support)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/><path d="M53 105L150 165 247 105M53 137L150 197 247 137" fill="none" stroke="var(--border)" stroke-width="3"/><path d="M55 94L150 154 245 94" fill="none" stroke="var(--text)" stroke-width="4"/><rect x="138" y="145" width="25" height="25" rx="4" fill="var(--bg)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/></g></svg></div><div class="scene-bag secondary"><svg viewBox="0 0 300 240" role="img" aria-label="chain"><g><path d="M73 104C60 4 240 4 227 104" fill="none" stroke="var(--text)" stroke-width="4" stroke-dasharray="5 4"/><rect x="52" y="93" width="196" height="119" rx="15" fill="var(--border)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/><path d="M53 105L150 165 247 105M53 137L150 197 247 137" fill="none" stroke="var(--border)" stroke-width="3"/><path d="M55 94L150 154 245 94" fill="none" stroke="var(--text)" stroke-width="4"/><rect x="138" y="145" width="25" height="25" rx="4" fill="var(--bg)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/></g></svg></div><svg class="scene-accessory" viewBox="0 0 700 700" aria-hidden="true"><rect x="366" y="420" width="60" height="79" rx="5" fill="var(--bg)" stroke="var(--text)" stroke-width="3"/><rect x="382" y="396" width="28" height="25" fill="var(--border)" stroke="var(--text)" stroke-width="3"/><path d="M70 548Q170 510 235 556T400 551" fill="none" stroke="var(--text)" stroke-width="8"/><rect x="425" y="536" width="130" height="20" rx="8" fill="var(--border)" stroke="var(--text)" stroke-width="3"/></svg></div><section class="vision-copy"><p class="kicker">레더앤올 회사 소개</p><h1 class="heading">OUR VISION</h1><div class="copy"><p>레더앤올은 지속 가능한 방법으로 명품의 가치를 보존하고 재창조하는 것을 목표로 하며, 명품 소유자가 자신의 소중한 아이템을 최상의 상태로 유지할 수 있도록 돕는 것을 비전으로 삼습니다.</p><p>고객의 기대를 뛰어넘는 복원 서비스를 제공하고, 국내 최고의 명품 복원 전문 기업으로 자리매김하는 것을 목표로 합니다. 전문 기술을 바탕으로 명품 케어 산업에서 혁신을 만들어 갑니다.</p></div></section></main></div>
+<script>
+(() => {
+  const slide = document.querySelector('.slide');
+  const fit = () => { slide.style.transform = `scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
+  const theme = new URLSearchParams(location.search).get('theme');
+  if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+  addEventListener('resize', fit); fit();
+  // file:// frames have isolated origins; relay navigation without reading parent DOM.
+  if (parent !== window) document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', 'Escape', 'f', 'F'].includes(event.key)) return;
+    if (event.target.closest('button,input,textarea,select,[contenteditable],.carousel-controls,.carousel-nav')) return;
+    queueMicrotask(() => {
+      if (!event.defaultPrevented) parent.postMessage({ type: 'gnar-slide-key', key: event.key, shiftKey: event.shiftKey }, '*');
+    });
+  });
+})();
+</script>
+</body>
+</html>

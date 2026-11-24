@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="source" content="https://notefolio.net/bysu.ppt/445433">
+<meta name="reference-image" content="slide-03.webp">
+<title>복원 서비스 안내 · OUR SERVICE · Gnar</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root {
+  /* Gnar 브랜드 토큰 — Deep Indigo Ink (H 283). 원천: design/palettes/brand.json */
+  --hue: 283;
+  --bg: #EDE9E6;  /* 배경 */
+  --surface: #F7F3EF;  /* 카드·패널 */
+  --text: #262321;  /* 본문 */
+  --muted: #666260;  /* 보조 글자·캡션 */
+  --border: #D1CDCA;  /* 선·격자·비포커스 막대 */
+  --ink: #37356A;  /* 제목·강조 문장 */
+  --hero: #5A54AF;  /* 강조 한 곳(핵심 숫자·포커스 막대·구분선) */
+  --support: #8183A4;  /* 보조 막대·아이콘 */
+  --tint: #DEDFF5;  /* 콜아웃·표 머리 배경 띠 */
+  --brown: #826144;  /* 따뜻한 중립 1 */
+  --taupe: #736756;  /* 따뜻한 중립 2 */
+  --chart-1: var(--hero);
+  --chart-2: var(--support);
+  --chart-3: var(--brown);
+  --chart-4: var(--taupe);
+  --chart-5: var(--border);
+}
+
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+} }
+
+:root[data-theme="dark"] {
+  --bg: #181513;
+  --surface: #24211F;
+  --text: #E8E4E1;
+  --muted: #A19E9B;
+  --border: #383532;
+  --ink: #CACCFE;
+  --hero: #9391F2;
+  --support: #707191;
+  --tint: #28293F;
+  --brown: #B49072;
+  --taupe: #A39684;
+  color-scheme: dark;
+}
+
+/* 발표별 색상 교체 레시피 (oklch 지원 브라우저). hex 토큰은 PPTX 변환용 기준값이며,
+ * 다른 색상으로 바꿀 때는 design/scripts/ladder.py 에 hue 값을 넣어 hex를 다시 생성한다.
+ *   light: ink oklch(.36 .09 H) hero oklch(.50 .14 H) support oklch(.62 .05 H) tint oklch(.91 .03 H)
+ *   dark : ink oklch(.86 .07 H) hero oklch(.70 .14 H) support oklch(.56 .05 H) tint oklch(.29 .04 H) */
+
+
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; -webkit-font-smoothing: antialiased; }
+.viewport { width: 100%; height: 100%; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); place-items: center; overflow: hidden; }
+.slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; flex-shrink: 0; fill: var(--text); background: var(--surface); transform-origin: center center; }
+h1, h2, h3, p, figure { margin: 0; }
+svg { display: block; }
+.eyebrow { font-size: 25px; font-weight: 650; color: var(--muted); letter-spacing: -.4px; }
+.slide-title { font-size: 64px; font-weight: 750; line-height: 1.25; letter-spacing: -2.3px; color: var(--ink); word-break: keep-all; }
+.slide-copy { font-size: 28px; line-height: 1.6; letter-spacing: -.6px; color: var(--muted); word-break: keep-all; }
+.slide-header { position: absolute; top: 112px; left: 132px; right: 132px; }
+.slide-header .eyebrow { margin-bottom: 20px; }
+.slide-header .slide-copy { margin-top: 25px; }
+.slide-footer { position: absolute; left: 132px; right: 132px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; font-size: 20px; line-height: 1; color: var(--muted); }
+.wordmark { color: var(--ink); font-size: 30px; font-weight: 800; letter-spacing: -1.4px; }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, .viewport { width: 1920px; height: 1080px; overflow: visible; }
+  .slide { transform: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+
+.slide{background:var(--bg)}
+.page-heading{position:absolute;left:102px;top:104px}
+.kicker{font-size:28px;font-weight:600;line-height:1.4;color:var(--ink);margin-bottom:12px}
+.heading{font-size:62px;line-height:1.05;min-height:76px;font-weight:800;letter-spacing:-2.2px;color:var(--text)}
+.copy{font-size:28px;line-height:1.48;letter-spacing:-.8px;color:var(--muted);word-break:keep-all}
+.copy p+p{margin-top:18px}
+.scene{position:absolute;overflow:hidden;background:var(--tint)}
+.cloth,.scene-accessory,.photo-bg{position:absolute;width:100%;height:100%;inset:0}
+.scene-word{position:absolute;left:50px;top:40px;font-size:38px;font-weight:600;color:var(--ink);letter-spacing:-1.3px}
+.scene-line{position:absolute;left:50px;top:95px;right:25px;font-size:20px;line-height:1.5;color:var(--muted)}
+.scene-bag{position:absolute}.scene-bag.primary{left:15px;bottom:80px;width:390px;transform:rotate(-7deg)}
+.scene-bag.secondary{right:12px;bottom:95px;width:300px;transform:rotate(6deg)}
+.scene-accessory{pointer-events:none}.product-photo{position:relative;width:100%;height:100%;overflow:hidden;background:var(--surface)}
+.product-photo .product{position:absolute;left:4%;top:16%;width:92%;height:79%;display:grid;place-items:center}
+.product-photo .product svg{width:100%;height:100%}
+.mini-title{font-size:29px;font-weight:700;line-height:1.4;color:var(--text);margin-bottom:14px;letter-spacing:-.8px}
+.small-copy{font-size:28px;line-height:1.5;color:var(--muted);letter-spacing:-.8px;word-break:keep-all}
+.service-copy{position:absolute;left:1048px;top:100px;width:766px;font-size:28px;line-height:1.4}.service-tile{position:absolute;width:370px;height:330px;background:var(--surface);display:grid;place-items:center}.service-tile svg{width:270px;height:250px}.service-tile:nth-child(n+5){background:var(--bg);border:1px solid var(--border)}
+</style>
+</head>
+<body>
+<div class="viewport"><main class="slide" data-slide-id="S-bysu-445433-03" aria-label="복원 서비스 안내 · OUR SERVICE"><header class="page-heading"><p class="kicker">복원 서비스 안내</p><h1 class="heading">OUR SERVICE</h1></header><p class="service-copy copy">가죽 제품의 스크래치 제거, 천 제품의 얼룩 제거, 금속 부속품의 도금, 구조적 손상의 수선 등 모든 종류의 복원 작업을 전문적으로 수행합니다. 모든 복원 과정은 엄격한 품질 관리하에 이루어지고 있으며, 안전하고 효과적으로 처리될 수 있도록 보장합니다.</p><div class="service-products"><div class="service-tile" style="left:170px;top:385px" aria-label="지갑"><svg viewBox="0 0 300 240" role="img" aria-label="지갑"><g><rect x="55" y="75" width="190" height="132" rx="12" fill="var(--hero)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/><path d="M62 86L150 141 238 86M62 111L150 166 238 111M62 137L150 192 238 137" fill="none" stroke="var(--border)" stroke-width="3"/><rect x="137" y="152" width="27" height="23" rx="5" fill="var(--bg)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/></g></svg></div><div class="service-tile" style="left:576px;top:330px" aria-label="토트백"><svg viewBox="0 0 300 240" role="img" aria-label="토트백"><g><path d="M104 93C105 5 196 5 196 93" fill="none" stroke="var(--text)" stroke-width="10"/><path d="M110 93C111 21 189 21 190 93" fill="none" stroke="var(--border)" stroke-width="3"/><path d="M63 85L237 85 254 213 48 213Z" fill="var(--support)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/><path d="M84 90L75 206M216 90L226 206" fill="none" stroke="var(--border)" stroke-width="3"/><path d="M55 191H249V212H49Z" fill="var(--border)"/><rect x="137" y="94" width="26" height="16" rx="3" fill="var(--bg)"/></g></svg></div><div class="service-tile" style="left:982px;top:385px" aria-label="클러치"><svg viewBox="0 0 300 240" role="img" aria-label="클러치"><g><rect x="30" y="86" width="240" height="123" rx="15" fill="var(--border)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/><path d="M33 139H267M40 89L155 205M78 87L196 205M118 87L238 205M158 87L267 195M199 87L267 154M243 87L267 111M35 185L134 87M54 208L177 87M98 208L217 87M142 208L258 93M185 208L270 123M229 208L270 166" fill="none" stroke="var(--border)" stroke-width="2"/></g></svg></div><div class="service-tile" style="left:1388px;top:330px" aria-label="스니커즈"><svg viewBox="0 0 300 240" role="img" aria-label="스니커즈"><g><path d="M28 154L70 138 112 103 170 116 203 138 246 113 266 177 258 194 40 194 23 177Z" fill="var(--bg)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/><path d="M120 108L154 116 183 163 146 163Z" fill="var(--support)"/><path d="M157 118L178 122 202 162 182 162Z" fill="var(--text)"/><path d="M28 174H264M92 123L129 138M105 114L141 130" stroke="var(--muted)" stroke-width="4"/><path d="M237 120L248 141 256 142 246 113Z" fill="var(--text)"/></g></svg></div><div class="service-tile" style="left:170px;top:749px" aria-label="파우치"><svg viewBox="0 0 300 240" role="img" aria-label="파우치"><g><path d="M45 82Q150 66 255 82L266 203Q150 219 34 203Z" fill="var(--border)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/><path d="M46 84H257" stroke="var(--border)" stroke-width="7"/><path d="M252 81L274 95 279 120" fill="none" stroke="var(--text)" stroke-width="5"/><rect x="138" y="91" width="24" height="13" rx="3" fill="var(--bg)"/></g></svg></div><div class="service-tile" style="left:576px;top:694px" aria-label="숄더백"><svg viewBox="0 0 300 240" role="img" aria-label="숄더백"><g><path d="M73 104C60 4 240 4 227 104" fill="none" stroke="var(--text)" stroke-width="9" /><rect x="52" y="93" width="196" height="119" rx="15" fill="var(--border)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/><path d="M53 105L150 165 247 105M53 137L150 197 247 137" fill="none" stroke="var(--border)" stroke-width="3"/><path d="M55 94L150 154 245 94" fill="none" stroke="var(--text)" stroke-width="4"/><rect x="138" y="145" width="25" height="25" rx="4" fill="var(--bg)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/></g></svg></div><div class="service-tile" style="left:982px;top:749px" aria-label="체인백"><svg viewBox="0 0 300 240" role="img" aria-label="체인백"><g><path d="M73 104C60 4 240 4 227 104" fill="none" stroke="var(--text)" stroke-width="4" stroke-dasharray="5 4"/><rect x="52" y="93" width="196" height="119" rx="15" fill="var(--border)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/><path d="M53 105L150 165 247 105M53 137L150 197 247 137" fill="none" stroke="var(--border)" stroke-width="3"/><path d="M55 94L150 154 245 94" fill="none" stroke="var(--text)" stroke-width="4"/><rect x="138" y="145" width="25" height="25" rx="4" fill="var(--bg)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/></g></svg></div><div class="service-tile" style="left:1388px;top:694px" aria-label="핸드백"><svg viewBox="0 0 300 240" role="img" aria-label="핸드백"><g><path d="M104 93C105 5 196 5 196 93" fill="none" stroke="var(--text)" stroke-width="10"/><path d="M110 93C111 21 189 21 190 93" fill="none" stroke="var(--border)" stroke-width="3"/><path d="M63 85L237 85 254 213 48 213Z" fill="var(--border)" stroke="var(--text)" stroke-width="3" stroke-linejoin="round"/><path d="M84 90L75 206M216 90L226 206" fill="none" stroke="var(--border)" stroke-width="3"/><path d="M55 191H249V212H49Z" fill="var(--border)"/><rect x="137" y="94" width="26" height="16" rx="3" fill="var(--bg)"/></g></svg></div></div></main></div>
+<script>
+(() => {
+  const slide = document.querySelector('.slide');
+  const fit = () => { slide.style.transform = `scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
+  const theme = new URLSearchParams(location.search).get('theme');
+  if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+  addEventListener('resize', fit); fit();
+  // file:// frames have isolated origins; relay navigation without reading parent DOM.
+  if (parent !== window) document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', 'Escape', 'f', 'F'].includes(event.key)) return;
+    if (event.target.closest('button,input,textarea,select,[contenteditable],.carousel-controls,.carousel-nav')) return;
+    queueMicrotask(() => {
+      if (!event.defaultPrevented) parent.postMessage({ type: 'gnar-slide-key', key: event.key, shiftKey: event.shiftKey }, '*');
+    });
+  });
+})();
+</script>
+</body>
+</html>

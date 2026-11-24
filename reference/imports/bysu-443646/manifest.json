@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "id": "bysu-443646",
+  "title": "Notion 노션 브랜드 컨셉 무료 PPT 템플릿",
+  "source_url": "https://notefolio.net/bysu.ppt/443646",
+  "pages": [
+    {
+      "id": "S-bysu-443646-01",
+      "title": "Notion 브랜드 컨셉 템플릿",
+      "html": "reference/slides/S-bysu-443646-01.html",
+      "preview": "reference/previews/S-bysu-443646-01.png",
+      "layout": "상단 책상 비주얼과 헤드폰, 좌측 제목·소제목·소유자",
+      "summary": "상단 책상 비주얼과 헤드폰, 좌측 제목·소제목·소유자",
+      "source_status": "complete"
+    },
+    {
+      "id": "S-bysu-443646-02",
+      "title": "Contents",
+      "html": "reference/slides/S-bysu-443646-02.html",
+      "preview": "reference/previews/S-bysu-443646-02.png",
+      "layout": "중앙 브라우저 창 안의 제목과 4개 세로 목차",
+      "summary": "중앙 브라우저 창 안의 제목과 4개 세로 목차",
+      "source_url": "https://blog.naver.com/bysu_ppt/223019258047",
+      "source_status": "complete"
+    },
+    {
+      "id": "S-bysu-443646-03",
+      "title": "Next Slide",
+      "html": "reference/slides/S-bysu-443646-03.html",
+      "preview": "reference/previews/S-bysu-443646-03.png",
+      "layout": "어두워진 목차 창 위의 중앙 전환 모달과 토글",
+      "summary": "어두워진 목차 창 위의 중앙 전환 모달과 토글",
+      "source_url": "https://blog.naver.com/bysu_ppt/223019258047",
+      "source_status": "complete"
+    },
+    {
+      "id": "S-bysu-443646-04",
+      "title": "특징 4개",
+      "html": "reference/slides/S-bysu-443646-04.html",
+      "preview": "reference/previews/S-bysu-443646-04.png",
+      "layout": "좌측 노션 탐색 사이드바와 우측 2×2 특징 그리드",
+      "summary": "좌측 노션 탐색 사이드바와 우측 2×2 특징 그리드",
+      "source_url": "https://blog.naver.com/bysu_ppt/223019258047",
+      "source_status": "complete"
+    },
+    {
+      "id": "S-bysu-443646-05",
+      "title": "갤러리 카드 2개",
+      "html": "reference/slides/S-bysu-443646-05.html",
+      "preview": "reference/previews/S-bysu-443646-05.png",
+      "layout": "좌측 탐색 사이드바와 우측 빈 이미지·설명을 가진 갤러리 카드 2개",
+      "summary": "좌측 탐색 사이드바와 우측 빈 이미지·설명을 가진 갤러리 카드 2개",
+      "source_url": "https://blog.naver.com/bysu_ppt/223019258047",
+      "source_status": "complete"
+    },
+    {
+      "id": "S-bysu-443646-06",
+      "title": "Date · Name · Status",
+      "html": "reference/slides/S-bysu-443646-06.html",
+      "preview": "reference/previews/S-bysu-443646-06.png",
+      "layout": "좌측 탐색 사이드바와 우측 3열·6행 상태 데이터 표",
+      "summary": "좌측 탐색 사이드바와 우측 3열·6행 상태 데이터 표",
+      "source_url": "https://blog.naver.com/bysu_ppt/223019258047",
+      "source_status": "complete"
+    },
+    {
+      "id": "S-bysu-443646-07",
+      "title": "체크리스트 2개",
+      "html": "reference/slides/S-bysu-443646-07.html",
+      "preview": "reference/previews/S-bysu-443646-07.png",
+      "layout": "좌측 사이드바와 우측 2열 체크리스트: 각 3개 글머리 항목과 3개 순서 항목",
+      "summary": "좌측 사이드바와 우측 2열 체크리스트: 각 3개 글머리 항목과 3개 순서 항목",
+      "source_url": "https://blog.naver.com/bysu_ppt/223019258047",
+      "source_status": "complete"
+    },
+    {
+      "id": "S-bysu-443646-08",
+      "title": "Planning · Complete",
+      "html": "reference/slides/S-bysu-443646-08.html",
+      "preview": "reference/previews/S-bysu-443646-08.png",
+      "layout": "좌측 사이드바와 Planning 2개·Complete 3개의 칸반 카드",
+      "summary": "좌측 사이드바와 Planning 2개·Complete 3개의 칸반 카드",
+      "source_url": "https://blog.naver.com/bysu_ppt/223019258047",
+      "source_status": "complete"
+    }
+  ]
+}

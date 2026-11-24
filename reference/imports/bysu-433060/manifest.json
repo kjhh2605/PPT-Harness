@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "id": "bysu-433060",
+  "title": "네이버 브랜드 컨셉 무료 PPT 템플릿",
+  "source_url": "https://notefolio.net/bysu.ppt/433060",
+  "pages": [
+    {
+      "id": "S-bysu-433060-01",
+      "title": "브랜드 컨셉 표지",
+      "html": "reference/slides/S-bysu-433060-01.html",
+      "preview": "reference/previews/S-bysu-433060-01.png",
+      "layout": "왼쪽 4행 영문 제목과 상단 양끝 메타데이터",
+      "summary": "왼쪽 4행 영문 제목과 상단 양끝 메타데이터"
+    },
+    {
+      "id": "S-bysu-433060-02",
+      "title": "3열 목차",
+      "html": "reference/slides/S-bysu-433060-02.html",
+      "preview": "reference/previews/S-bysu-433060-02.png",
+      "layout": "상단 프로젝트명과 발표자, 중앙의 3개 목차 열",
+      "summary": "상단 프로젝트명과 발표자, 중앙의 3개 목차 열",
+      "source_url": "https://blog.naver.com/bysu_ppt/222928374668"
+    },
+    {
+      "id": "S-bysu-433060-03",
+      "title": "4열 기술 소개",
+      "html": "reference/slides/S-bysu-433060-03.html",
+      "preview": "reference/previews/S-bysu-433060-03.png",
+      "layout": "제목 아래 넓은 여백과 칩·화면·친환경·드론 아이콘 4열",
+      "summary": "제목 아래 넓은 여백과 칩·화면·친환경·드론 아이콘 4열",
+      "source_url": "https://blog.naver.com/bysu_ppt/222928374668"
+    },
+    {
+      "id": "S-bysu-433060-04",
+      "title": "3열 기능 카드",
+      "html": "reference/slides/S-bysu-433060-04.html",
+      "preview": "reference/previews/S-bysu-433060-04.png",
+      "layout": "상단 아이콘 면과 하단 설명으로 나뉜 동일 크기 카드 3개",
+      "summary": "상단 아이콘 면과 하단 설명으로 나뉜 동일 크기 카드 3개",
+      "source_url": "https://blog.naver.com/bysu_ppt/222928374668"
+    },
+    {
+      "id": "S-bysu-433060-05",
+      "title": "키워드 비교표",
+      "html": "reference/slides/S-bysu-433060-05.html",
+      "preview": "reference/previews/S-bysu-433060-05.png",
+      "layout": "전폭 키워드 띠 아래 3열 제목과 각 3행 내용",
+      "summary": "전폭 키워드 띠 아래 3열 제목과 각 3행 내용",
+      "source_url": "https://blog.naver.com/bysu_ppt/222928374668"
+    },
+    {
+      "id": "S-bysu-433060-06",
+      "title": "만족도 KPI 카드",
+      "html": "reference/slides/S-bysu-433060-06.html",
+      "preview": "reference/previews/S-bysu-433060-06.png",
+      "layout": "본문과 원형 100% 배지를 묶은 가로 카드 2×2",
+      "summary": "본문과 원형 100% 배지를 묶은 가로 카드 2×2",
+      "source_url": "https://blog.naver.com/bysu_ppt/222928374668"
+    },
+    {
+      "id": "S-bysu-433060-07",
+      "title": "중앙 메시지 카드",
+      "html": "reference/slides/S-bysu-433060-07.html",
+      "preview": "reference/previews/S-bysu-433060-07.png",
+      "layout": "넓은 중립 배경 중앙의 체크 배지·메시지·Discover 버튼",
+      "summary": "넓은 중립 배경 중앙의 체크 배지·메시지·Discover 버튼",
+      "source_url": "https://blog.naver.com/bysu_ppt/222928374668"
+    },
+    {
+      "id": "S-bysu-433060-08",
+      "title": "화살표 섹션 구분",
+      "html": "reference/slides/S-bysu-433060-08.html",
+      "preview": "reference/previews/S-bysu-433060-08.png",
+      "layout": "왼쪽 두 줄 섹션 제목과 오른쪽의 가는 진행 화살표",
+      "summary": "왼쪽 두 줄 섹션 제목과 오른쪽의 가는 진행 화살표",
+      "source_url": "https://blog.naver.com/bysu_ppt/222928374668"
+    },
+    {
+      "id": "S-bysu-433060-09",
+      "title": "3열 이미지 설명",
+      "html": "reference/slides/S-bysu-433060-09.html",
+      "preview": "reference/previews/S-bysu-433060-09.png",
+      "layout": "가로로 나란한 이미지 자리 3개와 아래의 제목·설명",
+      "summary": "가로로 나란한 이미지 자리 3개와 아래의 제목·설명",
+      "source_url": "https://blog.naver.com/bysu_ppt/222928374668"
+    },
+    {
+      "id": "S-bysu-433060-10",
+      "title": "상단 메시지와 전폭 이미지",
+      "html": "reference/slides/S-bysu-433060-10.html",
+      "preview": "reference/previews/S-bysu-433060-10.png",
+      "layout": "상단 왼쪽 2행 강조 제목·오른쪽 설명과 하단 전폭 이미지 자리",
+      "summary": "상단 왼쪽 2행 강조 제목·오른쪽 설명과 하단 전폭 이미지 자리",
+      "source_url": "https://blog.naver.com/bysu_ppt/222928374668"
+    },
+    {
+      "id": "S-bysu-433060-11",
+      "title": "6행 설명 표",
+      "html": "reference/slides/S-bysu-433060-11.html",
+      "preview": "reference/previews/S-bysu-433060-11.png",
+      "layout": "제목 아래 넓은 여백과 2열·6행의 가는 선 설명 표",
+      "summary": "제목 아래 넓은 여백과 2열·6행의 가는 선 설명 표",
+      "source_url": "https://blog.naver.com/bysu_ppt/222928374668"
+    },
+    {
+      "id": "S-bysu-433060-12",
+      "title": "상승 차트와 특징 카드",
+      "html": "reference/slides/S-bysu-433060-12.html",
+      "preview": "reference/previews/S-bysu-433060-12.png",
+      "layout": "좌측 4개 연도 상승 막대와 우측 2×2 특징 카드",
+      "summary": "좌측 4개 연도 상승 막대와 우측 2×2 특징 카드",
+      "source_url": "https://blog.naver.com/bysu_ppt/222928374668"
+    }
+  ]
+}
